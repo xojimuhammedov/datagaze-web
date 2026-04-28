@@ -37,6 +37,14 @@ export const SecureSensitive = () => {
 
   return (
     <section className="w-full bg-[#F9FAFB] overflow-hidden">
+      <style>{`
+        @media (min-width: 1024px) {
+          .pin-right-browser {
+            left: auto !important;
+            right: calc(-1 * (max(0px, 50vw - 640px) + 24px)) !important;
+          }
+        }
+      `}</style>
       <div className="mx-auto max-w-7xl px-6">
         <Tabs defaultValue="overview" className="w-full pb-40">
           <div className="flex justify-center mb-16">
@@ -46,16 +54,17 @@ export const SecureSensitive = () => {
                   <TabsTrigger
                     key={val}
                     value={val}
-                    className="data-[state=active]:bg-white  data-[state=active]:shadow-md py-6 px-8 rounded-2xl transition-all duration-300"
+                    className="group data-[state=active]:bg-white data-[state=active]:shadow-md py-6 px-8 rounded-2xl transition-all duration-500 active:scale-[0.96]"
                   >
-                    <div className="flex gap-2 items-center cursor-pointer">
+                    <div className="flex gap-2 items-center cursor-pointer transition-transform duration-500 ease-out group-data-[state=active]:scale-[1.04]">
                       <Image
                         src={[logo1, logo2, logo3, logo4][idx]}
                         alt="logo"
                         width={30}
                         height={33}
+                        className="transition-transform duration-500 ease-out group-hover:scale-110 group-hover:-rotate-6 group-data-[state=active]:scale-110 group-data-[state=active]:rotate-0"
                       />
-                      <span className="font-medium text-gray-800 text-base">
+                      <span className="font-medium text-gray-800 text-base transition-colors duration-500 group-data-[state=active]:text-black">
                         Datagaze DLP
                       </span>
                     </div>
@@ -65,26 +74,41 @@ export const SecureSensitive = () => {
             </TabsList>
           </div>
 
-          {["overview", "analytics", "reports", "settings"].map((val, idx) => (
+          {["overview", "analytics", "reports", "settings"].map((val, idx) => {
+            const tabContents = [
+              {
+                title: "Secure Your Sensitive Data with Advanced DLP Solutions",
+                desc: "Protect your organization from internal threats and prevent data leaks with Datagaze's robust Data Loss Prevention (DLP) technology.",
+              },
+              {
+                title: "Comprehensive Threat Detection and Response with SIEM",
+                desc: "Enhance your cybersecurity posture by identifying and responding to threats in real-time using Datagaze's powerful SIEM tools.",
+              },
+              {
+                title: "Streamlined Security Audits and Compliance Reporting",
+                desc: "Generate comprehensive reports and ensure regulatory compliance seamlessly with Datagaze's advanced auditing features.",
+              },
+              {
+                title: "Comprehensive Staff Monitoring and Management System",
+                desc: "Enhance your workforce efficiency by tracking activities, managing tasks, and responding to issues in real-time with our powerful staff management tools.",
+              },
+            ];
+
+            return (
             <TabsContent key={val} value={val} className="outline-none">
               <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-0">
                 <div className="z-10 py-6 lg:py-20 lg:col-span-7">
                   <h2 className="text-4xl font-semibold leading-[1.1] text-gray-900 mb-8 tracking-tight max-w-2xl">
-                    Secure Your Sensitive Data with Advanced DLP Solutions
+                    {tabContents[idx].title}
                   </h2>
                   <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                    Protect your organization from internal threats and prevent
-                    data leaks with Datagaze&apos;s robust Data Loss Prevention
-                    (DLP) technology.
+                    {tabContents[idx].desc}
                   </p>
                 </div>
 
-                <div className="relative w-full h-[500px] lg:h-[830px] lg:col-span-5">
+                <div className="relative w-full h-[500px] lg:h-[712px] lg:col-span-5">
                   <div
-                    className="absolute top-0 left-0 bottom-0"
-                    style={{
-                      width: "calc(40vw + 100%)",
-                    }}
+                    className="absolute top-0 left-0 w-full lg:w-[572px] h-full lg:h-[712px] pin-right-browser"
                   >
                     <div className="relative w-full h-full">
                       <Image
@@ -99,7 +123,8 @@ export const SecureSensitive = () => {
                 </div>
               </div>
             </TabsContent>
-          ))}
+          );
+        })}
         </Tabs>
 
         <div className="border bg-white p-10 grid grid-cols-3 gap-2 shadow-md rounded-3xl">

@@ -4,11 +4,11 @@ export default function Hero() {
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
         <div className="max-w-xl">
           <div className="block">
-            <div className="inline-flex mb-12 cursor-pointer items-center gap-3 bg-white rounded-full px-4 py-1 shadow-sm border border-gray-100">
-              <span className="text-gray-700 text-sm font-medium whitespace-nowrap">
+            <div className="inline-flex mb-12 cursor-pointer items-center gap-3 bg-white rounded-full px-2 py-1.5 shadow-sm border border-gray-100">
+              <span className="text-gray-700 ml-1 text-sm font-medium whitespace-nowrap">
                 Just launched White Hat Security check
               </span>
-              <button className="bg-blue-600 hover:bg-blue-700 transition-colors text-white text-sm font-semibold px-5 py-1 rounded-full whitespace-nowrap">
+              <button className="bg-blue-600 hover:bg-blue-700 cursor-pointer transition-colors text-white text-sm font-semibold px-5 py-1 rounded-full whitespace-nowrap">
                 Book consultancy
               </button>
             </div>

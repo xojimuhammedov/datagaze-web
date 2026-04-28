@@ -45,7 +45,7 @@ const OurImpakt = () => {
             </Button>
             <Button
               variant="outline"
-              className="py-5 px-4 cursor-pointer rounded-2xl shadow"
+              className="py-5 px-4 cursor-pointer border-none rounded-2xl shadow"
             >
               <span className="text-base font-normal">Talk with sales</span>
               <GoArrowUpRight />
