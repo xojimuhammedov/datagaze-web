@@ -1,0 +1,30 @@
+import str from "@/public/product-unreleased/star.svg";
+import Image from "next/image";
+
+const Stars = () => {
+  return (
+    <section className="w-full py-20  bg-[#F8F8F8] ">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex flex-col gap-10 items-center">
+          <div className="flex gap-2">
+            {Array.from({ length: 5 }).map((_, i) => (
+              <Image key={i} src={str} alt="Star" />
+            ))}
+          </div>
+          <h1 className="text-4xl font-semibold text-center w-200">
+            I have been using them for a year now. Everything is detailed and
+            well organized and, of course, damn beautiful.
+          </h1>
+
+          <div className="flex flex-col items-center gap-2">
+            <div className="w-[86px] h-[86px] bg-[#D9D9D9] rounded-full text-center"></div>
+            <p className="text-center text-[22px] font-medium">Elon Musk</p>
+            <p className="text-muted-foreground text-[22px]">CEO and CTO of SpaceX</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Stars;

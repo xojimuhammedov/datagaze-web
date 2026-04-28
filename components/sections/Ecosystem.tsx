@@ -1,0 +1,85 @@
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
+import security from "@/public/ecosystem/security.svg";
+import cyber from "@/public/ecosystem/cyber_center.svg";
+import certificate from "@/public/ecosystem/certificate.svg";
+
+export default function Ecosystem() {
+  const features = [
+    {
+      icon: <Image src={security} alt="security" />,
+      title: "EV-Code signing certificates from Microsoft and Digicert",
+      description:
+        "Software products developed by Datagaze are certified by Microsoft and Digicert. This prevents the use of fake software or software from untrusted sources.",
+    },
+    {
+      icon: <Image src={cyber} alt="security" />,
+      title:
+        "Security and Compliance Certificate from SUE 'Cybersecurity Center'",
+      description:
+        "Datagaze products and services are certified by the State Unitary Enterprise 'Cybersecurity Center,' adhering to the legal requirements of the Republic of Uzbekistan.",
+    },
+    {
+      icon: <Image src={certificate} alt="security" />,
+      title: "Experts and consultants with many years of experience",
+      description:
+        "All services are provided by highly qualified specialists with years of experience, ensuring the highest quality in both products and services.",
+    },
+  ];
+
+  return (
+    <section className="w-full bg-[#F9FAFB]">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 flex flex-col gap-6">
+        {/* Top Main Card */}
+        <div className="bg-white pt-6 pl-10 rounded-3xl flex flex-col lg:flex-row items-center gap-12 shadow-sm border border-gray-100">
+          {/* Left Text Content */}
+          <div className="flex-1 flex flex-col items-start gap-6">
+            <h2 className="text-4xl md:text-5xl font-medium text-gray-900 leading-[1.15]">
+              Comprehensive Data Security Ecosystem
+            </h2>
+            <p className="text-lg md:text-xl text-gray-600 font-medium">
+              Datagaze offers seamless security solutions to protect your data
+              and infrastructure.
+            </p>
+            <p className="text-gray-500">
+              Software products developed by Datagaze are certified by Microsoft
+              and Digicert.
+            </p>
+            <button className="cursor-pointer mt-4 inline-flex items-center gap-2 rounded-[18px] shadow-lg border-gray-300 px-2 py-2.5 text-base font-normal text-gray-700 hover:bg-gray-50 transition-colors">
+              Talk with sales
+              <ArrowUpRight className="w-4 h-4 text-gray-500" />
+            </button>
+          </div>
+          <div className="flex-1 w-full md:min-h-[520px] relative">
+            <Image
+              src="/images/technoImg.svg"
+              alt="Dashboard overview"
+              className="absolute rounded-br-[24px]"
+              fill
+            />
+          </div>
+        </div>
+
+        {/* Bottom Feature Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-3xl p-6 flex flex-col gap-6 shadow-sm border border-gray-100"
+            >
+              <div className="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center shadow-md shadow-blue-600/20">
+                {feature.icon}
+              </div>
+              <h3 className="text-lg font-medium text-[#14151A] leading-snug">
+                {feature.title}
+              </h3>
+              <p className="text-base font-normal text-gray-500 leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
