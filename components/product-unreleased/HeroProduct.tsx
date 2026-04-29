@@ -4,7 +4,7 @@ import img from "@/public/product-unreleased/unreleased.svg";
 
 const HeroProduct = () => {
   return (
-    <section className="w-full py-10  bg-[#F8F8F8] pt-30 pb-35 ">
+    <section className="w-full py-20 pt-40">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-8 items-center pb-20">
           <Image src={logo} alt="logo" />

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Stars = () => {
   return (
-    <section className="w-full py-20  bg-[#F8F8F8] ">
+    <section className="w-full py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col gap-10 items-center">
           <div className="flex gap-2">

@@ -16,21 +16,43 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-const components = [
+import dlp_logo from "@/public/dlp/dlp_logo.svg";
+import dlp_img from "@/public/dlp/img1.svg";
+import siem_logo from "@/public/siem/siem_logo.svg";
+import siem_img from "@/public/siem/img.svg";
+import staff_logo from "@/public/staff/staff_logo.svg";
+import staff_img from "@/public/staff/staff.png";
+import waff_logo from "@/public/waff/waff_logo.svg";
+import waff_img from "@/public/waff/img_waff.svg";
+
+const products = [
   {
-    title: "Analytics",
-    href: "#",
-    description: "Powerful analytics tools for your business.",
+    title: "Datagaze DLP",
+    href: "/dlp",
+    description: "System monitors flow of data exchanged on your network.",
+    logo: dlp_logo,
+    image: dlp_img,
   },
   {
-    title: "Dashboards",
-    href: "#",
-    description: "Visualize your data with modern dashboards.",
+    title: "Datagaze SIEM",
+    href: "/siem",
+    description: "Monitors and analyzes security events across your network.",
+    logo: siem_logo,
+    image: siem_img,
   },
   {
-    title: "Automation",
-    href: "#",
-    description: "Automate workflows and improve efficiency.",
+    title: "Datagaze Staff",
+    href: "/staff",
+    description: "Monitors and analyzes staff activities and productivity.",
+    logo: staff_logo,
+    image: staff_img,
+  },
+  {
+    title: "Datagaze WAF",
+    href: "/waff",
+    description: "Protects web applications from common web exploits.",
+    logo: waff_logo,
+    image: waff_img,
   },
 ];
 
@@ -52,15 +74,12 @@ const resources = [
   },
 ];
 const productOptions = ["Analytics", "Dashboards", "Automation"];
-const languageOptions = [{ label: "Eng", value: "en" }];
+const languageOptions = [{ label: "English", value: "en" }];
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const pathname = usePathname();
 
-  const navItemClass = `px-4 py-3 rounded-xs text-sm font-medium text-gray-800 transition-colors ${
-    pathname === "/about" ? "bg-transparent" : "bg-[#F7F7F8]"
-  }`;
+  const navItemBase = "h-[40px] px-[14px] py-[10px] flex items-center gap-[6px] text-sm font-medium text-gray-800 transition-colors bg-[rgba(10,15,41,0.04)] hover:bg-[rgba(10,15,41,0.08)] no-underline whitespace-nowrap";
 
   return (
     <nav className="absolute top-0 left-0 w-full z-50">
@@ -73,65 +92,79 @@ export default function Navbar() {
               alt="logo"
               width={180}
               height={40}
-              className="w-[130px]"
+              className="w-[160px]"
             />
           </Link>
         </div>
 
         {/* Desktop Menu */}
-        <div className={`hidden lg:flex items-center gap-2 border rounded-2xl px-10 ${pathname === '/about' ? 'shadow-[0px_3px_10px_2px_#0000000D] bg-[#FFFFFF33]' : 'shadow-md bg-white'}`}>
-          {/* Products Dropdown */}
-          <NavigationMenu>
-            <NavigationMenuList>
+        <div className="hidden lg:flex items-center">
+          <NavigationMenu viewport={false} className="max-w-none">
+            <NavigationMenuList className="gap-1">
+              {/* Products Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={navItemClass}>
+                <NavigationMenuTrigger className={`${navItemBase} rounded-l-[40px] rounded-r-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
                   Products
                 </NavigationMenuTrigger>
 
-                <NavigationMenuContent>
-                  <ul className="grid w-[500px] gap-3 p-4 md:grid-cols-2">
-                    {components.map((component) => (
-                      <ListItem
-                        key={component.title}
-                        title={component.title}
-                        href={component.href}
-                      >
-                        {component.description}
-                      </ListItem>
+                <NavigationMenuContent className="md:left-1/2 md:-translate-x-1/2 md:top-full md:mt-2">
+                  <ul className="flex flex-col w-[356px] p-3 gap-[10px] shadow-[0px_40px_64px_-32px_rgba(0,0,0,0.1)] relative overflow-hidden">
+                    {products.map((product) => (
+                      <NavigationMenuLink key={product.title} asChild>
+                        <Link
+                          href={product.href}
+                          className="flex flex-col items-start cursor-pointer gap-4 h-min overflow-hidden p-4 relative no-underline w-full hover:bg-[rgba(10,15,41,0.08)] transition-colors rounded-[8px]"
+                        >
+                          <div className="flex items-center gap-4">
+                            <div className="w-10 h-10 flex items-center justify-center border rounded-lg bg-white overflow-hidden p-1.5 shadow-sm">
+                              <Image
+                                src={product.logo}
+                                alt={product.title}
+                                width={28}
+                                height={28}
+                                className="object-contain"
+                              />
+                            </div>
+                            <h4 className="text-base font-medium text-gray-900 leading-tight">
+                              {product.title}
+                            </h4>
+                          </div>
+                        </Link>
+                      </NavigationMenuLink>
                     ))}
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
 
-          <Link href="#" className={navItemClass}>
-            Services
-          </Link>
-
-          {/* Resources */}
-          <NavigationMenu>
-            <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={navItemClass}>
+                <NavigationMenuLink asChild>
+                  <Link href="/service" className={`${navItemBase} rounded-[4px]  hover:bg-[rgba(10,15,41,0.08)]`}>
+                    Services
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              {/* Resources */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className={`${navItemBase} rounded-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
                   Resources
                 </NavigationMenuTrigger>
 
-                <NavigationMenuContent>
-                  <ul className="flex flex-col w-[240px] p-2">
+                <NavigationMenuContent className="md:left-1/2 md:-translate-x-1/2 md:top-full md:mt-2">
+                  <ul className="flex flex-col w-[356px] p-3 gap-[10px] shadow-[0px_40px_64px_-32px_rgba(0,0,0,0.1)] relative overflow-hidden">
                     {resources.map((item) => (
                       <li key={item.title}>
                         <NavigationMenuLink asChild>
                           <Link
                             href={item.href}
-                            className="block px-3 py-2 rounded-md hover:bg-gray-100"
+                            className="flex flex-col items-start cursor-pointer gap-6 h-min overflow-hidden p-4 relative no-underline bg-white w-full hover:bg-[rgba(10,15,41,0.08)] transition-colors rounded-[8px]"
                           >
-                            <div className="flex flex-col gap-1">
-                              <span className="text-sm font-medium">
+                            <div className="flex flex-col gap-2">
+                              <span className="text-base font-medium text-gray-900">
                                 {item.title}
                               </span>
 
-                              <p className="text-xs text-gray-500">
+                              <p className="text-sm text-gray-500 leading-relaxed">
                                 {item.description}
                               </p>
                             </div>
@@ -142,31 +175,42 @@ export default function Navbar() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="#" className={`${navItemBase} rounded-[4px]`}>
+                    News
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild>
+                  <Link href="/about" className={`${navItemBase} rounded-l-[4px] rounded-r-[40px]`}>
+                    Company
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
-
-          <Link href="#" className={navItemClass}>
-            News
-          </Link>
-
-          <Link href="/about" className={navItemClass}>
-            Company
-          </Link>
         </div>
 
         {/* Right side */}
-        <div className="hidden lg:flex items-center gap-3">
-          <div className="flex items-center  rounded-2xl shadow-md gap-1 px-4 py-2 border">
+        <div className="hidden lg:flex items-center gap-2">
+          <div className="flex items-center bg-[rgba(10,15,41,0.04)] rounded-l-[100px] rounded-r-[12px] gap-[6px] px-[12px] py-[10px] h-[40px] w-min relative overflow-hidden">
             <Globe className=" w-4 h-4 text-gray-600" />
 
-            <select className="text-base appearance-none">
+            <select className="text-xs appearance-none bg-transparent outline-none cursor-pointer font-medium">
               {languageOptions.map((language) => (
                 <option key={language.value}>{language.label}</option>
               ))}
             </select>
           </div>
 
-          <Link href="/contact" className="text-base bg-[#0055FF] text-white px-5 py-2 rounded-2xl font-normal">
+          <Link
+            href="/contact"
+            className="text-xs bg-[#2563eb] text-white w-[90px] h-[40px] flex items-center justify-center rounded-l-[12px] rounded-r-[100px] font-normal shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] no-underline"
+          >
             Get in touch
           </Link>
         </div>

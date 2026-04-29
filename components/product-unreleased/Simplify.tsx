@@ -7,9 +7,9 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const Simplify = () => {
   return (
-    <section className="w-full py-20  bg-[#F8F8F8] ">
+    <section className="w-full py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex gap-2 items-center border rounded-2xl bg-white px-10 py-15">
+        <div className="flex items-center border rounded-2xl bg-white px-10 py-15">
           <div className="relative w-full flex justify-center items-center">
             {/* STAND (pastda) */}
             <Image
@@ -26,7 +26,7 @@ const Simplify = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-10 ">
+          <div className="flex flex-col gap-6">
             <div className="px-2 py-1 rounded-2xl bg-[#EBF1FF] flex gap-2 border border-[#D3E1FF] w-fit">
               <p className="bg-white rounded-2xl px-4 text-[#0055FF] text-base font-medium">
                 Trial period
@@ -36,7 +36,7 @@ const Simplify = () => {
               </p>
             </div>
 
-            <h2 className="font-semibold text-4xl ">
+            <h2 className="font-semibold text-4xl">
               Simplify Your Security Strategy
             </h2>
             <p className="text-base font-normal text-muted-foreground">

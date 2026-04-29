@@ -27,7 +27,7 @@ const OurImpakt = () => {
   ];
 
   return (
-    <section className="w-full py-20  bg-[#F8F8F8] ">
+    <section className="w-full">
       <div className="mx-auto max-w-7xl px-6">
         <div className="p-30 flex flex-col items-center text-center gap-6">
           <h2 className="text-4xl sm:text-4xl lg:text-5xl max-w-3xl font-medium leading-tight text-gray-900">
@@ -51,7 +51,7 @@ const OurImpakt = () => {
         </div>
 
         <div className="bg-white p-12 rounded-2xl border flex relative min-h-[550px] overflow-hidden">
-          <div className="flex flex-col gap-10 justify-center">
+          <div className="flex flex-col gap-6 justify-center">
             <div className="font-semibold text-5xl">4X</div>
             <h3 className="font-semibold text-xl">Better low-lights photos</h3>
             <p className="font-normal text-lg text-muted-foreground w-150">
