@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 
+import { usePathname } from "next/navigation";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -54,12 +56,14 @@ const languageOptions = [{ label: "Eng", value: "en" }];
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  const navItemClass =
-    "bg-[#F7F7F8] px-4 py-3 rounded-xs text-sm font-medium text-gray-800 transition-colors ";
+  const navItemClass = `px-4 py-3 rounded-xs text-sm font-medium text-gray-800 transition-colors ${
+    pathname === "/about" ? "bg-transparent" : "bg-[#F7F7F8]"
+  }`;
 
   return (
-    <nav className="w-full">
+    <nav className="absolute top-0 left-0 w-full z-50">
       <div className="max-w-7xl mx-auto flex w-full items-center justify-between py-6">
         {/* Logo */}
         <div className="flex items-center">
@@ -75,7 +79,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center gap-2 border rounded-2xl shadow-md px-10">
+        <div className={`hidden lg:flex items-center gap-2 border rounded-2xl px-10 ${pathname === '/about' ? 'shadow-[0px_3px_10px_2px_#0000000D] bg-[#FFFFFF33]' : 'shadow-md bg-white'}`}>
           {/* Products Dropdown */}
           <NavigationMenu>
             <NavigationMenuList>
@@ -162,14 +166,11 @@ export default function Navbar() {
             </select>
           </div>
 
-          <Link href="/contact" className="">
-            <button className="text-base bg-[#0055FF] text-white px-5 py-2 rounded-2xl font-normal ">
-              Get in touch
-            </button>
+          <Link href="/contact" className="text-base bg-[#0055FF] text-white px-5 py-2 rounded-2xl font-normal">
+            Get in touch
           </Link>
         </div>
 
-        {/* Mobile button */}
         <button
           className="lg:hidden"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
