@@ -36,9 +36,9 @@ const Simplify = () => {
               </p>
             </div>
 
-            <h1 className="font-semibold text-4xl ">
+            <h2 className="font-semibold text-4xl ">
               Simplify Your Security Strategy
-            </h1>
+            </h2>
             <p className="text-base font-normal text-muted-foreground">
               We specialize in safeguarding organizations. Let us protect your
               data, so you can focus on your core mission. Get in touch for a
@@ -46,14 +46,11 @@ const Simplify = () => {
             </p>
 
             <div className="flex gap-3">
-              <Button className="py-5 px-4 bg-blue-600 hover:bg-blue-700 cursor-pointer text-base font-normal rounded-2xl">
+              <Button className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-semibold text-white cursor-pointer">
                 Get a demo
               </Button>
-              <Button
-                variant="outline"
-                className="py-5 px-4 cursor-pointer rounded-2xl shadow"
-              >
-                <span className="text-base font-normal">Talk with sales</span>
+              <Button className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden">
+                Talk with sales
                 <GoArrowUpRight />
               </Button>
             </div>

@@ -4,12 +4,12 @@ import Image from "next/image";
 
 const IntelligenceDlp = () => {
   return (
-    <section className="w-full py-10  bg-[#F9FAFB] pt-30  ">
+    <section className="w-full py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="bg-white p-8 border rounded-2xl flex flex-col gap-10 items-center">
-          <h1 className="text-5xl font-medium w-150 text-center ">
+        <div className="bg-white p-6 border rounded-2xl flex flex-col gap-10 items-center">
+          <h2 className="text-5xl font-medium w-150 text-center">
             Automated tasks through artificial intelligence
-          </h1>
+          </h2>
           <p className="w-175 text-center text-[20px] text-muted-foreground">
             Datagaze DLP (Data Loss Prevention System) constantly monitors the
             flow of data exchanged on your network.

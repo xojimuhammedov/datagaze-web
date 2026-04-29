@@ -4,13 +4,12 @@ import dlp_img1 from "@/public/dlp/img1.svg";
 
 const DlpHero = () => {
   return (
-    <section className="w-full py-10  bg-[#F9FAFB] pt-30  ">
+    <section className="w-full py-10">
       <div className="mx-auto max-w-7xl px-6">
-      
-        <div className="flex flex-col gap-8 items-center pb-20">
+        <div className="flex flex-col gap-8 items-center pt-40 pb-20">
           <Image src={logo} alt="logo" />
-          <h1 className="text-6xl font-medium ">Datagaze DLP</h1>
-          <p className="w-175 text-center text-[20px] text-muted-foreground">
+          <h1 className="text-6xl font-medium mb-4">Datagaze DLP</h1>
+          <p className="w-175 text-center text-xl text-muted-foreground">
             Datagaze DLP (Data Loss Prevention System) constantly monitors the
             flow of data exchanged on your network.
           </p>

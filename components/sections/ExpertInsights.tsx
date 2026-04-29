@@ -10,9 +10,9 @@ const ExpertInsights = () => {
     <section className="w-full py-20  bg-[#F9FAFB] pb-50">
       <div className="mx-auto max-w-7xl px-6 ">
         <div className=" flex flex-col items-center text-center gap-6 pb-30">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl max-w-2xl font-medium leading-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl max-w-2xl font-medium leading-tight text-gray-900">
             Stay Ahead with Expert Insights
-          </h1>
+          </h2>
 
           <p className="text-xl  sm:text-lg text-gray-600 max-w-2xl">
             Gain valuable perspectives on the latest trends in cybersecurity.

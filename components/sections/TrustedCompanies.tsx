@@ -18,9 +18,9 @@ export default function TrustedCompanies() {
   return (
     <section className="w-full py-1 pb-20 ">
       <div className="mx-auto max-w-7xl px-6 flex flex-col items-center gap-4 overflow-hidden">
-        <h1 className="text-center text-base font-medium ">
+        <h2 className="text-center text-base font-medium ">
           Trusted By Leading Organizations
-        </h1>
+        </h2>
 
         <div className="relative w-full">
           {/* Chap tomondagi fade effekti */}

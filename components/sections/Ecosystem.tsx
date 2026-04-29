@@ -45,7 +45,7 @@ export default function Ecosystem() {
               Software products developed by Datagaze are certified by Microsoft
               and Digicert.
             </p>
-            <button className="cursor-pointer mt-4 inline-flex items-center gap-2 rounded-[18px] shadow-lg border-gray-300 px-2 py-2.5 text-base font-normal text-gray-700 hover:bg-gray-50 transition-colors">
+            <button className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 mt-4 hover:bg-gray-50 transition-colors">
               Talk with sales
               <ArrowUpRight className="w-4 h-4 text-gray-500" />
             </button>

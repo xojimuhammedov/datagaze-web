@@ -4,12 +4,12 @@ import siem_img from "@/public/siem/img.svg";
 
 const Siem = () => {
   return (
-    <section className="w-full py-10  bg-[#F9FAFB] pt-30  ">
+    <section className="w-full py-10">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col gap-8 items-center pb-18">
+        <div className="flex flex-col gap-8 items-center pt-40 pb-20">
           <Image src={logo} alt="logo" />
-          <h1 className="text-6xl font-medium ">Datagaze SIEM</h1>
-          <p className="w-165 text-center text-[20px] text-muted-foreground">
+          <h1 className="text-6xl font-medium mb-4">Datagaze SIEM</h1>
+          <p className="w-165 text-center text-xl text-muted-foreground">
             Datagaze SIEM (Security Information and Event Management)
             continuously monitors and analyzes security events across your
             network, detecting threats and anomalies in real time.

@@ -132,7 +132,7 @@ export const SecureSensitive = () => {
             const number = parseInt(item.number.replace("+", ""));
             return (
               <div key={index} className="p-4">
-                <h1 className="text-4xl text-center font-semibold">
+                <div className="text-4xl text-center font-semibold">
                   <CountUp
                     end={number}
                     duration={1}
@@ -140,7 +140,7 @@ export const SecureSensitive = () => {
                     scrollSpyOnce={false}
                   />
                   +
-                </h1>
+                </div>
 
                 <h2 className="text-center font-medium text-base mt-2">
                   {item.name}

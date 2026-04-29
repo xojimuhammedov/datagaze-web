@@ -59,38 +59,39 @@ const Comprehensive = () => {
 
   return (
     <section className="w-full py-16  sm:py-20 lg:py-30">
-      <div className="mx-auto  w-full max-w-7xl  px-6 ">
+      <div className="mx-auto  w-full max-w-7xl px-6">
         <div className="flex flex-col gap-2 items-center pb-15">
-          <h1 className="text-center text-5xl sm:text-4xl lg:text-5xl max-w-2xl font-semibold leading-tight text-gray-900 pb-6">
+          <h2 className="text-center text-5xl sm:text-4xl lg:text-5xl max-w-2xl font-medium leading-tight text-gray-900 pb-6">
             Comprehensive Cybersecurity Assessment: Safeguard Your System
-          </h1>
+          </h2>
 
-          <p className="text-center text-[22px] font-medium  text-muted-foreground max-w-2xl">
+          <p className="text-center text-xl font-normal  text-muted-foreground max-w-2xl">
             From penetration testing to employee training, our audit identifies
             vulnerabilities, strengthens defenses, and ensures your security
             protocols meet industry standards.
           </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-7 w-full">
+        <div className="grid grid-cols-3 gap-6 w-full">
           {features.map((item, index) => (
             <div
               key={index}
-              className="p-6 border rounded-xl shadow-sm hover:shadow-md transition flex flex-col gap-6"
+              className="flex flex-col items-start place-self-start bg-white rounded-[24px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] flex-none gap-8 h-full overflow-hidden p-10 relative w-full border border-[#DEE0E3] transition hover:shadow-md"
             >
               <Image
                 src={item.icon}
                 alt={item.title}
-                width={25}
-                height={25}
-                className="mb-4 "
+                width={20}
+                height={20}
               />
 
-              <h3 className="text-xl font-semibold mb-2 w-60">{item.title}</h3>
+              <div className="flex flex-col gap-4">
+                <h6 className="text-2xl font-medium mb-2 w-60">{item.title}</h6>
 
-              <p className="text-base font-normal text-muted-foreground">
-                {item.description}
-              </p>
+                <p className="text-base font-normal text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

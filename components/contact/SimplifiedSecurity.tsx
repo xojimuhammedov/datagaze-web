@@ -20,11 +20,11 @@ const SimplifiedSecurity = () => {
               demo today and see how we make data security simpler.
             </p>
             <div className="flex gap-3">
-              <Button className="py-5 bg-[#0055FF] hover:bg-[#0055FF]/90 shadow-[0px_4px_10px_0px_#0000000D] rounded-[18px] cursor-pointer text-base">
+              <Button className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-semibold text-white cursor-pointer">
                 Get a demo
               </Button>
-              <Button variant="outline" className="py-5 cursor-pointer shadow-[0px_4px_10px_0px_#0000000D] bg-[#FFFFFF33] rounded-[18px] border-none">
-                <span className="text-base">Talk with sales</span>
+              <Button className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden">
+                Talk with sales
                 <GoArrowUpRight />
               </Button>
             </div>

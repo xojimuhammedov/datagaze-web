@@ -6,9 +6,9 @@ const ImpactNumbers = () => {
     <section className="w-full py-12">
       <div className="mx-auto max-w-7xl px-6 ">
         <div className="p-30 flex flex-col items-center text-center gap-6">
-          <h1 className="text-5xl sm:text-4xl lg:text-5xl max-w-3xl font-medium leading-tight text-gray-900">
+          <h2 className="text-5xl sm:text-4xl lg:text-5xl max-w-3xl font-medium leading-tight text-gray-900">
             Our Impact in Numbers
-          </h1>
+          </h2>
 
           <p className="text-2xl font-medium  sm:text-lg text-gray-600 max-w-2xl">
             We collaborate with numerous large organizations to help them secure
@@ -16,14 +16,11 @@ const ImpactNumbers = () => {
           </p>
 
           <div className="flex gap-3">
-            <Button className="py-5 px-4 rounded-2xl bg-blue-600 hover:bg-blue-700 cursor-pointer text-base font-normal">
+            <Button className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-semibold text-white cursor-pointer">
               Get a demo
             </Button>
-            <Button
-              variant="outline"
-              className="py-5 px-4 rounded-2xl text-base font-normal cursor-pointer"
-            >
-              <span className="text-base">Talk with sales</span>
+            <Button className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden">
+              Talk with sales
               <GoArrowUpRight />
             </Button> 
           </div>

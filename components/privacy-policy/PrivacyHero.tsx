@@ -1,12 +1,11 @@
-import Image from "next/image";
-import React from "react";
+
 
 const PrivacyHero = () => {
   return (
-    <section className="w-full py-10  bg-[#F9FAFB] pt-30  ">
+    <section className="w-full py-10">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col gap-8 items-center pb-50">
-          <h1 className="text-6xl font-medium ">Privacy and Policy</h1>
+        <div className="flex flex-col gap-8 items-center py-40">
+          <h1 className="text-6xl font-medium">Privacy and Policy</h1>
           <p className="w-175 text-center text-[20px] text-muted-foreground">
             Your Privacy, Our Priority.
           </p>

@@ -10,23 +10,23 @@ const Controlled = () => {
   const channels: Item[] = [
     {
       icons: "/dlp/icons/web.svg",
-      name: "Web Monitoring",
-      description: "Track web traffic for suspicious activity.",
+      name: "Web-Site Control",
+      description: "Manage website access.",
     },
     {
       icons: "/dlp/icons/email.svg",
-      name: "Email Monitoring",
+      name: "Email control",
       description: "Oversee email activity.",
     },
     {
       icons: "/dlp/icons/print.svg",
       name: "Printing control",
-      description: "Track and analyze device activity.",
+      description: "Monitor printed documents.",
     },
     {
       icons: "/dlp/icons/usb.svg",
       name: "USB storages Control",
-      description: "Regulate USB use.",
+      description: "Control USB usage.",
     },
     {
       icons: "/dlp/icons/microphone.svg",
@@ -103,28 +103,28 @@ const Controlled = () => {
   ];
 
   return (
-    <section className="w-full py-10  bg-[#F9FAFB] pt-30 pb-50 ">
+    <section className="w-full py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="p-8  flex flex-col gap-10 items-center pb-25">
-          <h1 className="text-5xl font-medium w-150 text-center ">
+          <h2 className="text-5xl font-medium w-150 text-center ">
             Controlled Channels
-          </h1>
+          </h2>
           <p className="w-175 text-center text-[20px] text-muted-foreground">
             Monitor and manage secure communication pathways within your
             network.
           </p>
         </div>
 
-        <div className="bg-white border rounded-2xl grid grid-cols-3 p-6 gap-8">
+        <div className="bg-white border border-[#DEE0E3] rounded-[24px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] py-8 px-6 grid grid-cols-3 gap-16 relative overflow-hidden">
           {channels.map((item, index) => {
             return (
-              <div key={index} className="p-6  flex flex-col gap-3">
+              <div key={index} className="p-6 flex flex-col gap-3">
                 <div className="text-2xl text-blue-600 border w-14 h-14 flex items-center justify-center rounded-xl">
                   <Image
                     src={item.icons}
                     alt={item.name}
-                    width={24}
-                    height={24}
+                    width={20}
+                    height={20}
                   />
                 </div>
 

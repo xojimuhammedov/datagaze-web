@@ -11,10 +11,10 @@ const Stars = () => {
               <Image key={i} src={str} alt="Star" />
             ))}
           </div>
-          <h1 className="text-4xl font-semibold text-center w-200">
+          <h2 className="text-4xl font-semibold text-center w-200">
             I have been using them for a year now. Everything is detailed and
             well organized and, of course, damn beautiful.
-          </h1>
+          </h2>
 
           <div className="flex flex-col items-center gap-2">
             <div className="w-[86px] h-[86px] bg-[#D9D9D9] rounded-full text-center"></div>

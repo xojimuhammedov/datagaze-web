@@ -20,20 +20,20 @@ const Partnership = () => {
           </p>
 
           <div className="flex pt-4 gap-3">
-            <Button className="py-5 bg-[#0055FF] hover:bg-[#0055FF]/90 shadow-[0px_4px_10px_0px_#0000000D] rounded-[18px] cursor-pointer text-base">
+            <Button className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-semibold text-white cursor-pointer">
               Get a demo
             </Button>
-            <Button variant="outline" className="py-5 cursor-pointer shadow-[0px_4px_10px_0px_#0000000D] bg-[#FFFFFF33] rounded-[18px] border-none">
-              <span className="text-base">Talk with sales</span>
+            <Button className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden">
+              Talk with sales
               <GoArrowUpRight />
             </Button>
           </div>
         </div>
 
-        <div className="rounded-2xl bg-white p-10 flex gap-10 items-center relative h-[580px] mb-8 overflow-hidden">
+        <div className="bg-white rounded-[24px] pt-[40px] pl-[40px] pr-0 pb-0 flex flex-row gap-[80px] items-center relative h-min w-full mb-8 overflow-hidden transform-none origin-center opacity-100 flex-none">
           {/* left */}
-          <div className="z-10 max-w-xl">
-            <h2 className="text-2xl pb-5 font-medium">
+          <div className="z-10 max-w-xl flex flex-col items-start flex-1 gap-[16px]">
+            <h2 className="text-2xl font-medium">
               Registered as a Legal Entity in Uzbekistan
             </h2>
             <p className="text-muted-foreground">
@@ -44,32 +44,40 @@ const Partnership = () => {
 
           {/* right */}
 
-          <div className="self-end">
+          <div
+            className="self-end border border-[#DEE0E3] transform-none origin-center flex-none h-[542px] overflow-hidden relative w-[579px]"
+            style={{
+              filter:
+                "drop-shadow(rgba(0, 0, 0, 0.02) 0px 2.76726px 2px) drop-shadow(rgba(0, 0, 0, 0.027) 0px 6.6501px 3px) drop-shadow(rgba(0, 0, 0, 0.035) 0px 12.5216px 6px) drop-shadow(rgba(0, 0, 0, 0.043) 0px 22.3363px 10px) drop-shadow(rgba(0, 0, 0, 0.05) 0px 41.7776px 19px) drop-shadow(rgba(0, 0, 0, 0.07) 0px 100px 45px)",
+            }}
+          >
             <Image
               src={guvohnoma}
               alt="person"
-              className="absolute w-150 object-cover top-12 right-0"
+              className="block w-full h-full rounded-[inherit] object-top object-cover"
             />
           </div>
         </div>
 
-        <div className="grid  grid-cols-[1.5fr_2fr] gap-8 ">
-          <div className="bg-white p-10 rounded-2xl relative h-160 flex gap-5 flex-col overflow-hidden">
-            <h1 className="text-[24px] font-medium">Certified by the Cybersecurity</h1>
-            <p className="text-md text-muted-foreground ">
-              Our system has undergone rigorous testing and evaluation by the
-              Cyber Security Center, earning a trusted certification for its
-              security and reliability.
-            </p>
+        <div className="grid grid-cols-[1.5fr_2fr] gap-8">
+          <div className="bg-white rounded-[24px] pt-[40px] px-[40px] pb-0 relative h-auto flex gap-[24px] flex-col items-center self-stretch flex-1 overflow-hidden transform-none origin-center">
+            <div className="flex flex-col items-start flex-none gap-[16px] h-min overflow-hidden p-0 relative w-full">
+              <h3 className="text-[24px] font-medium">Certified by the Cybersecurity</h3>
+              <p className="text-md text-muted-foreground ">
+                Our system has undergone rigorous testing and evaluation by the
+                Cyber Security Center, earning a trusted certification for its
+                security and reliability.
+              </p>
+            </div>
             <Image
               src={sertifikat}
               alt="Sertifikat"
-              className="absolute top-55 w-110 shadow-2xl left-1/2 -translate-x-1/2"
+              className="absolute top-50 w-110 shadow-2xl left-1/2 -translate-x-1/2"
             />
           </div>
 
-          <div className="bg-white p-10 rounded-2xl relative h-160 flex gap-5 flex-col overflow-hidden">
-            <h1 className="text-[24px] font-medium">Resident of IT Park</h1>
+          <div className="bg-white rounded-[24px] pt-[40px] px-[40px] pb-0 relative h-160 flex gap-5 flex-col overflow-hidden transform-none origin-center">
+            <h3 className="text-[24px] font-medium">Resident of IT Park</h3>
             <i className="text-md w-140 text-muted-foreground ">
               Proudly recognized as a resident of IT Park, granting us access to
               a leading environment for innovation and technological
@@ -78,7 +86,7 @@ const Partnership = () => {
             <Image
               src={it_sertifikat}
               alt="Sertifikat"
-              className="absolute top-58 w-150 shadow-2xl"
+              className="absolute top-40 w-150 h-130"
             />
           </div>
         </div>
