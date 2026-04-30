@@ -36,7 +36,7 @@ export const SecureSensitive = () => {
   ];
 
   return (
-    <section className="w-full bg-[#F9FAFB] overflow-hidden">
+    <section className="w-full overflow-hidden">
       <style>{`
         @media (min-width: 1024px) {
           .pin-right-browser {

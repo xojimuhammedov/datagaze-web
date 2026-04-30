@@ -22,16 +22,16 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-10">
-            <Link href="/" className="text-xl text-muted-foreground">
+            <Link href="/about" className="text-xl text-muted-foreground">
               Company
             </Link>
-            <Link href="/" className="text-xl text-muted-foreground">
+            <Link href="/service" className="text-xl text-muted-foreground">
               Services
             </Link>
             <Link href="/" className="text-xl text-muted-foreground">
               Blog
             </Link>
-            <Link href="/" className="text-xl text-muted-foreground">
+            <Link href="/contact" className="text-xl text-muted-foreground">
               Contacts
             </Link>
           </div>

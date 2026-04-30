@@ -103,7 +103,7 @@ export default function Navbar() {
             <NavigationMenuList className="gap-1">
               {/* Products Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={`${navItemBase} rounded-l-[40px] rounded-r-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
+                <NavigationMenuTrigger className={`${navItemBase} !rounded-l-[40px] !rounded-r-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
                   Products
                 </NavigationMenuTrigger>
 
@@ -138,7 +138,7 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/service" className={`${navItemBase} rounded-[4px]  hover:bg-[rgba(10,15,41,0.08)]`}>
+                  <Link href="/service" className={`${navItemBase} !rounded-[4px] hover:bg-[rgba(10,15,41,0.08)]`}>
                     Services
                   </Link>
                 </NavigationMenuLink>
@@ -146,7 +146,7 @@ export default function Navbar() {
 
               {/* Resources */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={`${navItemBase} rounded-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
+                <NavigationMenuTrigger className={`${navItemBase} !rounded-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
                   Resources
                 </NavigationMenuTrigger>
 
@@ -178,7 +178,7 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="#" className={`${navItemBase} rounded-[4px]`}>
+                  <Link href="#" className={`${navItemBase} !rounded-[4px] hover:bg-[rgba(10,15,41,0.08)]`}>
                     News
                   </Link>
                 </NavigationMenuLink>
@@ -186,7 +186,7 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/about" className={`${navItemBase} rounded-l-[4px] rounded-r-[40px]`}>
+                  <Link href="/about" className={`${navItemBase} !rounded-l-[4px] !rounded-r-[40px] hover:bg-[rgba(10,15,41,0.08)]`}>
                     Company
                   </Link>
                 </NavigationMenuLink>

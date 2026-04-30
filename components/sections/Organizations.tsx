@@ -100,14 +100,9 @@ const Organizations = () => {
                       src={item.logo}
                       alt={item.name}
                       fill
-                      className="object-contain p-4  transition-all duration-300"
+                      className="object-contain p-4 transition-all duration-300 grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100"
                     />
                   </div>
-
-                  {/* Logotip ostidagi nomi (Hover bo'lganda chiqadi) */}
-                  <span className="absolute -bottom-8 scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 transition-all duration-300 bg-slate-800 text-white text-xs py-1 px-3 rounded-full whitespace-nowrap z-50">
-                    {item.name}
-                  </span>
                 </Link>
               </div>
             ))}

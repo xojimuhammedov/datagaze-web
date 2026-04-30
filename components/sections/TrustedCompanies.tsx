@@ -48,14 +48,13 @@ export default function TrustedCompanies() {
               {[...companies, ...companies].map((img, index) => (
                 <CarouselItem
                   key={`company-${index}`}
-                  className="basis-1/3 md:basis-1/5 lg:basis-1/6 transition-none!"
-                >
+                  className="basis-1/4 md:basis-1/7 lg:basis-1/9 transition-none!">
                   <div className="px-2 py-2 flex items-center justify-center">
                     <Image
                       src={img}
                       alt="logo"
-                      width={90}
-                      height={70}
+                      width={80}
+                      height={60}
                       className="object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-opacity duration-300"
                     />
                   </div>
