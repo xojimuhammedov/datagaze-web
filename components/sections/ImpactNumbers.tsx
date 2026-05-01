@@ -1,7 +1,11 @@
+"use client";
+
 import { GoArrowUpRight } from "react-icons/go";
 import { Button } from "../ui/button";
+import { useModal } from "@/context/ModalContext";
 
 const ImpactNumbers = () => {
+  const { openSalesModal, openDemoModal } = useModal();
   return (
     <section className="w-full py-12">
       <div className="mx-auto max-w-7xl px-6 ">
@@ -16,10 +20,16 @@ const ImpactNumbers = () => {
           </p>
 
           <div className="flex gap-3">
-            <Button className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-semibold text-white cursor-pointer">
+            <Button 
+              className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-semibold text-white cursor-pointer"
+              onClick={openDemoModal}
+            >
               Get a demo
             </Button>
-            <Button className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden">
+            <Button 
+              className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden"
+              onClick={openSalesModal}
+            >
               Talk with sales
               <GoArrowUpRight />
             </Button> 

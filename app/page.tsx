@@ -17,7 +17,7 @@ export default function Home() {
       <Ecosystem />
       <ImpactNumbers />
       <SecureSensitive />
-       <CtaSection />
+      <CtaSection />
       <Organizations />
       <ExpertInsights />
     </main>

@@ -108,12 +108,12 @@ export default function Navbar() {
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent className="md:left-1/2 md:-translate-x-1/2 md:top-full md:mt-2">
-                  <ul className="flex flex-col w-[356px] p-3 gap-[10px] shadow-[0px_40px_64px_-32px_rgba(0,0,0,0.1)] relative overflow-hidden">
+                  <ul className="flex flex-col w-[286px] p-3 gap-2 shadow-[0px_40px_64px_-32px_rgba(0,0,0,0.1)] relative overflow-hidden">
                     {products.map((product) => (
                       <NavigationMenuLink key={product.title} asChild>
                         <Link
                           href={product.href}
-                          className="flex flex-col items-start cursor-pointer gap-4 h-min overflow-hidden p-4 relative no-underline w-full hover:bg-[rgba(10,15,41,0.08)] transition-colors rounded-[8px]"
+                          className="flex flex-col items-start cursor-pointer gap-4 h-min overflow-hidden p-2 relative no-underline w-full hover:bg-[rgba(10,15,41,0.08)] transition-colors rounded-[8px]"
                         >
                           <div className="flex items-center gap-4">
                             <div className="w-10 h-10 flex items-center justify-center border rounded-lg bg-white overflow-hidden p-1.5 shadow-sm">

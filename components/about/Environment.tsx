@@ -27,13 +27,13 @@ const Environment = () => {
             Something about our work environment
           </h2>
 
-          <p className="text-base  sm:text-lg text-gray-600 max-w-2xl">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
             We create a space where teamwork and new ideas come together to
             build effective cybersecurity solutions.
           </p>
         </div>
 
-        <div className="relative w-full">
+        <div className="relative w-full mt-16">
           {/* left fade */}
           <div className="pointer-events-none absolute left-0 top-0 h-full w-40 bg-gradient-to-r from-[#F9FAFB] to-transparent z-10" />
 

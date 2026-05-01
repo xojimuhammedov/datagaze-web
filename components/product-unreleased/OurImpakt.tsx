@@ -1,10 +1,14 @@
+"use client";
+
 import React from "react";
 import { Button } from "../ui/button";
 import { GoArrowUpRight } from "react-icons/go";
 import impakt from "@/public/product-unreleased/impackt.svg";
 import Image from "next/image";
+import { useModal } from "@/context/ModalContext";
 
 const OurImpakt = () => {
+  const { openSalesModal, openDemoModal } = useModal();
   const data = [
     {
       title: "4x",
@@ -40,10 +44,16 @@ const OurImpakt = () => {
           </p>
 
           <div className="flex gap-3">
-            <Button className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-semibold text-white cursor-pointer">
+            <Button 
+              className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-semibold text-white cursor-pointer"
+              onClick={openDemoModal}
+            >
               Get a demo
             </Button>
-            <Button className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden">
+            <Button 
+              className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden"
+              onClick={openSalesModal}
+            >
               Talk with sales
               <GoArrowUpRight />
             </Button>
@@ -59,7 +69,10 @@ const OurImpakt = () => {
               all pages at once. Create a unique look in just a few minutes.
             </p>
 
-            <Button className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden">
+            <Button 
+              className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden"
+              onClick={openSalesModal}
+            >
               Talk with sales
               <GoArrowUpRight />
             </Button>

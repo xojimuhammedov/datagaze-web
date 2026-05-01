@@ -65,34 +65,34 @@ export default function Hero() {
               <div className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-medium text-gray-900">Full name</span>
+                    <span className="text-xs font-medium text-gray-900">Full name</span>
                     <input 
                       type="text" 
                       placeholder="Akmal Karimov"
-                      className="w-full h-[44px] px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
+                      className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
                     />
                   </label>
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-medium text-gray-900">Phone number</span>
+                    <span className="text-xs font-medium text-gray-900">Phone number</span>
                     <input 
                       type="tel" 
                       placeholder="+998"
-                      className="w-full h-[44px] px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
+                      className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
                     />
                   </label>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-medium text-gray-900">Select product type</span>
-                    <select className="w-full h-[44px] px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
+                    <span className="text-xs font-medium text-gray-900">Select product type</span>
+                    <select className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="DLP">Datagaze DLP</option>
                       <option value="SIEM">Datagaze SIEM</option>
                     </select>
                   </label>
                   <label className="flex flex-col gap-2">
-                    <span className="text-sm font-medium text-gray-900">Company size</span>
-                    <select className="w-full h-[44px] px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
+                    <span className="text-xs font-medium text-gray-900">Company size</span>
+                    <select className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="50-100">50-100</option>
                       <option value="100-200">100-200</option>
                       <option value="200 - 500">More than 500 Employees</option>
@@ -103,7 +103,7 @@ export default function Hero() {
 
               <button 
                 type="submit"
-                className="w-full h-[40px] bg-[#2563eb] hover:bg-blue-700 text-white font-semibold text-[14px] rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center"
+                className="w-full h-10 cursor-pointer bg-[#2563eb] hover:bg-blue-700 text-white font-semibold text-sm rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center"
               >
                 Submit
               </button>

@@ -6,7 +6,7 @@ import { FaTelegram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <section className="w-full pb-10 bg-[#F9FAFB]">
+    <section className="w-full pb-10">
       <div className=" mx-auto max-w-7xl px-6 pb-15">
         <div className="flex items-center justify-between mx-auto max-w-7xl">
           <div>

@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   description: "Datagaze UI",
 };
 
+import { ModalProvider } from "@/context/ModalContext";
+import TalkWithSalesModal from "@/components/layout/TalkWithSalesModal";
+import GetDemoModal from "@/components/layout/GetDemoModal";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,9 +26,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full bg-[#f7f7f8] font-sans">
-        <Navbar />
-        {children}
-        <Footer />
+        <ModalProvider>
+          <Navbar />
+          {children}
+          <Footer />
+          <TalkWithSalesModal />
+          <GetDemoModal />
+        </ModalProvider>
       </body>
     </html>
   );
