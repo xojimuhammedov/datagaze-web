@@ -12,26 +12,25 @@ import logo3 from "@/public/logos/logo3.svg";
 import logo4 from "@/public/logos/logo4.svg";
 
 import CountUp from "react-countup";
+import { useTranslation } from "react-i18next";
 
 export const SecureSensitive = () => {
+  const { t } = useTranslation();
   const statistics = [
     {
       number: "6+",
-      name: "Over 6 Years of Expertise",
-      description:
-        "Delivering customized cybersecurity solutions across government and business sectors with decades of experience.",
+      name: t('secure_sensitive.statistics.stat1.name'),
+      description: t('secure_sensitive.statistics.stat1.description'),
     },
     {
       number: "15000+",
-      name: "Devices Secured",
-      description:
-        "Protecting over 12,000 endpoints with cutting-edge tools designed to prevent data breaches and internal threats.",
+      name: t('secure_sensitive.statistics.stat2.name'),
+      description: t('secure_sensitive.statistics.stat2.description'),
     },
     {
       number: "25+",
-      name: "Highly Skilled Specialists",
-      description:
-        "Our expert team crafts advanced solutions to ensure comprehensive data security for your organization.",
+      name: t('secure_sensitive.statistics.stat3.name'),
+      description: t('secure_sensitive.statistics.stat3.description'),
     },
   ];
 
@@ -65,7 +64,7 @@ export const SecureSensitive = () => {
                         className="transition-transform duration-500 ease-out group-hover:scale-110 group-hover:-rotate-6 group-data-[state=active]:scale-110 group-data-[state=active]:rotate-0"
                       />
                       <span className="font-medium text-gray-800 text-base transition-colors duration-500 group-data-[state=active]:text-black">
-                        Datagaze DLP
+                        Datagaze {[ "DLP", "SIEM", "Reports", "Staff" ][idx]}
                       </span>
                     </div>
                   </TabsTrigger>
@@ -77,20 +76,20 @@ export const SecureSensitive = () => {
           {["overview", "analytics", "reports", "settings"].map((val, idx) => {
             const tabContents = [
               {
-                title: "Secure Your Sensitive Data with Advanced DLP Solutions",
-                desc: "Protect your organization from internal threats and prevent data leaks with Datagaze's robust Data Loss Prevention (DLP) technology.",
+                title: t('secure_sensitive.tabs.tab1.title'),
+                desc: t('secure_sensitive.tabs.tab1.description'),
               },
               {
-                title: "Comprehensive Threat Detection and Response with SIEM",
-                desc: "Enhance your cybersecurity posture by identifying and responding to threats in real-time using Datagaze's powerful SIEM tools.",
+                title: t('secure_sensitive.tabs.tab2.title'),
+                desc: t('secure_sensitive.tabs.tab2.description'),
               },
               {
-                title: "Streamlined Security Audits and Compliance Reporting",
-                desc: "Generate comprehensive reports and ensure regulatory compliance seamlessly with Datagaze's advanced auditing features.",
+                title: t('secure_sensitive.tabs.tab3.title'),
+                desc: t('secure_sensitive.tabs.tab3.description'),
               },
               {
-                title: "Comprehensive Staff Monitoring and Management System",
-                desc: "Enhance your workforce efficiency by tracking activities, managing tasks, and responding to issues in real-time with our powerful staff management tools.",
+                title: t('secure_sensitive.tabs.tab4.title'),
+                desc: t('secure_sensitive.tabs.tab4.description'),
               },
             ];
 

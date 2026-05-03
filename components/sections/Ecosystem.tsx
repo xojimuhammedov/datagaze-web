@@ -6,28 +6,26 @@ import security from "@/public/ecosystem/security.svg";
 import cyber from "@/public/ecosystem/cyber_center.svg";
 import certificate from "@/public/ecosystem/certificate.svg";
 import { useModal } from "@/context/ModalContext";
+import { useTranslation } from "react-i18next";
 
 export default function Ecosystem() {
+  const { t } = useTranslation();
   const { openSalesModal } = useModal();
   const features = [
     {
       icon: <Image src={security} alt="security" />,
-      title: "EV-Code signing certificates from Microsoft and Digicert",
-      description:
-        "Software products developed by Datagaze are certified by Microsoft and Digicert. This prevents the use of fake software or software from untrusted sources.",
+      title: t('ecosystem.features.feature1.title'),
+      description: t('ecosystem.features.feature1.description'),
     },
     {
       icon: <Image src={cyber} alt="security" />,
-      title:
-        "Security and Compliance Certificate from SUE 'Cybersecurity Center'",
-      description:
-        "Datagaze products and services are certified by the State Unitary Enterprise 'Cybersecurity Center,' adhering to the legal requirements of the Republic of Uzbekistan.",
+      title: t('ecosystem.features.feature2.title'),
+      description: t('ecosystem.features.feature2.description'),
     },
     {
       icon: <Image src={certificate} alt="security" />,
-      title: "Experts and consultants with many years of experience",
-      description:
-        "All services are provided by highly qualified specialists with years of experience, ensuring the highest quality in both products and services.",
+      title: t('ecosystem.features.feature3.title'),
+      description: t('ecosystem.features.feature3.description'),
     },
   ];
 
@@ -39,21 +37,19 @@ export default function Ecosystem() {
           {/* Left Text Content */}
           <div className="flex-1 flex flex-col items-start gap-6">
             <h2 className="text-4xl md:text-5xl font-medium text-gray-900 leading-[1.15]">
-              Comprehensive Data Security Ecosystem
+              {t('ecosystem.title')}
             </h2>
             <p className="text-lg md:text-xl text-gray-600 font-medium">
-              Datagaze offers seamless security solutions to protect your data
-              and infrastructure.
+              {t('ecosystem.subtitle')}
             </p>
             <p className="text-gray-500">
-              Software products developed by Datagaze are certified by Microsoft
-              and Digicert.
+              {t('ecosystem.desc')}
             </p>
             <button 
               className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 mt-4 hover:bg-gray-50 transition-colors"
               onClick={openSalesModal}
             >
-              Talk with sales
+              {t('ecosystem.talk_sales')}
               <ArrowUpRight className="w-4 h-4 text-gray-500" />
             </button>
           </div>

@@ -1,6 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full py-16  sm:py-20 lg:py-40">
       <div className="mx-auto grid w-full max-w-7xl items-center px-6 lg:grid-cols-2">
@@ -26,21 +31,20 @@ export default function Hero() {
                 {/* Content */}
                 <div className="relative flex items-center gap-[10px] pl-[20px] pr-[6px] py-1 z-10 no-underline">
                   <span className="text-gray-700 text-sm font-medium whitespace-nowrap">
-                    Just launched White Hat Security check
+                    {t('hero.badge')}
                   </span>
                   <button className="bg-[#2563eb] hover:bg-blue-700 cursor-pointer transition-colors text-white text-sm font-semibold px-4 py-1 rounded-[328px] whitespace-nowrap flex items-center justify-center">
-                    Book consultancy
+                    {t('hero.cta')}
                   </button>
                 </div>
               </div>
             </div>
           </Link>
           <h1 className="whitespace-pre-wrap font-medium break-words font-medium not-italic text-[#14151a] text-[32px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
-            Cybersecurity Solutions for Organizations and Enterprises
+            {t('hero.title')}
           </h1>
           <p className="whitespace-pre-wrap break-words text-[#6b6d78] font-medium text-[22px] md:text-[20px] leading-[24px] md:leading-[28px] tracking-[-0.01em] mt-6">
-            Protect your network with Datagaze’s advanced DLP, SIEM, and
-            security technologies.
+            {t('hero.description')}
           </p>
         </div>
 
@@ -58,14 +62,14 @@ export default function Hero() {
             >
               <div className="flex flex-col">
                 <h3 className="text-xl font-medium text-[#14151a] leading-[28px] tracking-[-0.01em]">
-                  Experience innovation firsthand. Schedule your demo today.
+                  {t('hero.form_title')}
                 </h3>
               </div>
 
               <div className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label className="flex flex-col gap-2">
-                    <span className="text-xs font-medium text-gray-900">Full name</span>
+                    <span className="text-xs font-medium text-gray-900">{t('hero.full_name')}</span>
                     <input 
                       type="text" 
                       placeholder="Akmal Karimov"
@@ -73,7 +77,7 @@ export default function Hero() {
                     />
                   </label>
                   <label className="flex flex-col gap-2">
-                    <span className="text-xs font-medium text-gray-900">Phone number</span>
+                    <span className="text-xs font-medium text-gray-900">{t('hero.phone_number')}</span>
                     <input 
                       type="tel" 
                       placeholder="+998"
@@ -84,14 +88,14 @@ export default function Hero() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label className="flex flex-col gap-2">
-                    <span className="text-xs font-medium text-gray-900">Select product type</span>
+                    <span className="text-xs font-medium text-gray-900">{t('hero.product_type')}</span>
                     <select className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="DLP">Datagaze DLP</option>
                       <option value="SIEM">Datagaze SIEM</option>
                     </select>
                   </label>
                   <label className="flex flex-col gap-2">
-                    <span className="text-xs font-medium text-gray-900">Company size</span>
+                    <span className="text-xs font-medium text-gray-900">{t('hero.company_size')}</span>
                     <select className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="50-100">50-100</option>
                       <option value="100-200">100-200</option>
@@ -105,7 +109,7 @@ export default function Hero() {
                 type="submit"
                 className="w-full h-10 cursor-pointer bg-[#2563eb] hover:bg-blue-700 text-white font-semibold text-sm rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center"
               >
-                Submit
+                {t('hero.submit')}
               </button>
             </form>
           </div>

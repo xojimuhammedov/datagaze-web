@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 import { ModalProvider } from "@/context/ModalContext";
 import TalkWithSalesModal from "@/components/layout/TalkWithSalesModal";
 import GetDemoModal from "@/components/layout/GetDemoModal";
+import I18nProvider from "@/components/providers/I18nProvider";
 
 export default function RootLayout({
   children,
@@ -26,13 +27,15 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full bg-[#f7f7f8] font-sans">
-        <ModalProvider>
-          <Navbar />
-          {children}
-          <Footer />
-          <TalkWithSalesModal />
-          <GetDemoModal />
-        </ModalProvider>
+        <I18nProvider>
+          <ModalProvider>
+            <Navbar />
+            {children}
+            <Footer />
+            <TalkWithSalesModal />
+            <GetDemoModal />
+          </ModalProvider>
+        </I18nProvider>
       </body>
     </html>
   );

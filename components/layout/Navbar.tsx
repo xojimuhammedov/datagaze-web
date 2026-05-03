@@ -6,6 +6,7 @@ import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
 
 import { usePathname } from "next/navigation";
+import { useTranslation } from "react-i18next";
 
 import {
   NavigationMenu,
@@ -27,6 +28,7 @@ import waff_img from "@/public/waff/img_waff.svg";
 
 const products = [
   {
+    id: "dlp",
     title: "Datagaze DLP",
     href: "/dlp",
     description: "System monitors flow of data exchanged on your network.",
@@ -34,6 +36,7 @@ const products = [
     image: dlp_img,
   },
   {
+    id: "siem",
     title: "Datagaze SIEM",
     href: "/siem",
     description: "Monitors and analyzes security events across your network.",
@@ -41,6 +44,7 @@ const products = [
     image: siem_img,
   },
   {
+    id: "staff",
     title: "Datagaze Staff",
     href: "/staff",
     description: "Monitors and analyzes staff activities and productivity.",
@@ -48,6 +52,7 @@ const products = [
     image: staff_img,
   },
   {
+    id: "waf",
     title: "Datagaze WAF",
     href: "/waff",
     description: "Protects web applications from common web exploits.",
@@ -58,26 +63,38 @@ const products = [
 
 const resources = [
   {
+    id: "documentation",
     title: "Documentation",
     href: "#",
     description: "Read about product technical docs",
   },
   {
+    id: "blog",
     title: "Blog",
     href: "#",
     description: "Industry articles and and useful insights",
   },
   {
+    id: "events",
     title: "Events",
     href: "#",
     description: "Company and product updates",
   },
 ];
 const productOptions = ["Analytics", "Dashboards", "Automation"];
-const languageOptions = [{ label: "English", value: "en" }];
+const languageOptions = [
+  { label: "English", value: "en" },
+  { label: "O'zbekcha", value: "uz" },
+  { label: "Русский", value: "ru" },
+];
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   const navItemBase = "h-[40px] px-[14px] py-[10px] flex items-center gap-[6px] text-sm font-medium text-gray-800 transition-colors bg-[rgba(10,15,41,0.04)] hover:bg-[rgba(10,15,41,0.08)] no-underline whitespace-nowrap";
 
@@ -103,8 +120,8 @@ export default function Navbar() {
             <NavigationMenuList className="gap-1">
               {/* Products Dropdown */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={`${navItemBase} !rounded-l-[40px] !rounded-r-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
-                  Products
+                <NavigationMenuTrigger className={`${navItemBase} cursor-pointer !rounded-l-[40px] !rounded-r-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
+                  {t('navbar.products')}
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent className="md:left-1/2 md:-translate-x-1/2 md:top-full md:mt-2">
@@ -126,7 +143,7 @@ export default function Navbar() {
                               />
                             </div>
                             <h4 className="text-base font-medium text-gray-900 leading-tight">
-                              {product.title}
+                              {t(`navbar.products_list.${product.id}`)}
                             </h4>
                           </div>
                         </Link>
@@ -138,16 +155,16 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/service" className={`${navItemBase} !rounded-[4px] hover:bg-[rgba(10,15,41,0.08)]`}>
-                    Services
+                  <Link href="/service" className={`${navItemBase} !rounded-[4px] hover:!bg-[rgba(10,15,41,0.08)]`}>
+                    {t('navbar.services')}
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* Resources */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={`${navItemBase} !rounded-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
-                  Resources
+                <NavigationMenuTrigger className={`${navItemBase} cursor-pointer !rounded-[4px] hover:!bg-[rgba(10,15,41,0.08)] data-[state=open]:!bg-[rgba(10,15,41,0.08)]`}>
+                  {t('navbar.resources')}
                 </NavigationMenuTrigger>
 
                 <NavigationMenuContent className="md:left-1/2 md:-translate-x-1/2 md:top-full md:mt-2">
@@ -161,9 +178,8 @@ export default function Navbar() {
                           >
                             <div className="flex flex-col gap-2">
                               <span className="text-base font-medium text-gray-900">
-                                {item.title}
+                                {t(`navbar.resources_list.${item.id}`)}
                               </span>
-
                               <p className="text-sm text-gray-500 leading-relaxed">
                                 {item.description}
                               </p>
@@ -178,16 +194,16 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="#" className={`${navItemBase} !rounded-[4px] hover:bg-[rgba(10,15,41,0.08)]`}>
-                    News
+                  <Link href="#" className={`${navItemBase} !rounded-[4px] hover:!bg-[rgba(10,15,41,0.08)]`}>
+                    {t('navbar.news')}
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/about" className={`${navItemBase} !rounded-l-[4px] !rounded-r-[40px] hover:bg-[rgba(10,15,41,0.08)]`}>
-                    Company
+                  <Link href="/about" className={`${navItemBase} !rounded-l-[4px] !rounded-r-[40px] hover:!bg-[rgba(10,15,41,0.08)]`}>
+                    {t('navbar.company')}
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -200,9 +216,15 @@ export default function Navbar() {
           <div className="flex items-center bg-[rgba(10,15,41,0.04)] rounded-l-[100px] rounded-r-[12px] gap-[6px] px-[12px] py-[10px] h-[40px] w-min relative overflow-hidden">
             <Globe className=" w-4 h-4 text-gray-600" />
 
-            <select className="text-xs appearance-none bg-transparent outline-none cursor-pointer font-medium">
+            <select 
+              value={i18n.language}
+              onChange={(e) => changeLanguage(e.target.value)}
+              className="text-xs appearance-none bg-transparent outline-none cursor-pointer font-medium"
+            >
               {languageOptions.map((language) => (
-                <option key={language.value}>{language.label}</option>
+                <option key={language.value} value={language.value}>
+                  {language.label}
+                </option>
               ))}
             </select>
           </div>
@@ -211,7 +233,7 @@ export default function Navbar() {
             href="/contact"
             className="text-xs bg-[#2563eb] text-white w-[90px] h-[40px] flex items-center justify-center rounded-l-[12px] rounded-r-[100px] font-normal shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] no-underline"
           >
-            Get in touch
+            {t('navbar.get_in_touch')}
           </Link>
         </div>
 
@@ -226,9 +248,21 @@ export default function Navbar() {
       {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="border-t p-4 lg:hidden flex flex-col gap-3">
+          <select 
+            value={i18n.language}
+            onChange={(e) => changeLanguage(e.target.value)}
+            className="bg-gray-100 p-3 rounded-lg text-sm font-medium"
+          >
+            {languageOptions.map((language) => (
+              <option key={language.value} value={language.value}>
+                {language.label}
+              </option>
+            ))}
+          </select>
+
           <select className="bg-gray-100 p-3">
             <option disabled selected>
-              Products
+              {t('navbar.products')}
             </option>
 
             {productOptions.map((option) => (
@@ -237,15 +271,15 @@ export default function Navbar() {
           </select>
 
           <Link href="#" className="bg-gray-100 p-3">
-            Services
+            {t('navbar.services')}
           </Link>
 
           <Link href="#" className="bg-gray-100 p-3">
-            News
+            {t('navbar.news')}
           </Link>
 
           <Link href="#" className="bg-gray-100 p-3">
-            Company
+            {t('navbar.company')}
           </Link>
         </div>
       )}

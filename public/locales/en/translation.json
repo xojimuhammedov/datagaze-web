@@ -1,0 +1,138 @@
+{
+  "navbar": {
+    "products": "Products",
+    "services": "Services",
+    "resources": "Resources",
+    "news": "News",
+    "company": "Company",
+    "get_in_touch": "Get in touch",
+    "products_list": {
+      "dlp": "Datagaze DLP",
+      "siem": "Datagaze SIEM",
+      "staff": "Datagaze Staff",
+      "waf": "Datagaze WAF"
+    },
+    "resources_list": {
+      "documentation": "Documentation",
+      "blog": "Blog",
+      "events": "Events"
+    }
+  },
+  "hero": {
+    "badge": "Just launched White Hat Security check",
+    "cta": "Book consultancy",
+    "title": "Cybersecurity Solutions for Organizations and Enterprises",
+    "description": "Protect your network with Datagaze’s advanced DLP, SIEM, and security technologies.",
+    "form_title": "Experience innovation firsthand. Schedule your demo today.",
+    "full_name": "Full name",
+    "phone_number": "Phone number",
+    "product_type": "Select product type",
+    "company_size": "Company size",
+    "submit": "Submit"
+  },
+  "cta_section": {
+    "title": "Simplified Security for Organizations",
+    "description": "Focus on growth while we protect your data. Our solutions are designed to secure your systems with ease and efficiency. Get a demo today and see how we make data security simpler.",
+    "get_demo": "Get a demo",
+    "talk_sales": "Talk with sales"
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "blog": "Blog",
+    "contacts": "Contacts",
+    "rights": "© 2026 Datagaze LLC. All rights reserved.",
+    "prohibited": "Unauthorized copying or distribution of any material without prior written consent is strictly prohibited."
+  },
+  "security_solutions": {
+    "title": "Leading, High-Quality Security Solutions",
+    "description": "Discover our advanced security solutions, built to protect your network with reliable and seamless security integration."
+  },
+  "trusted_companies": {
+    "title": "Trusted By Leading Organizations"
+  },
+  "ecosystem": {
+    "title": "Comprehensive Data Security Ecosystem",
+    "subtitle": "Datagaze offers seamless security solutions to protect your data and infrastructure.",
+    "desc": "Software products developed by Datagaze are certified by Microsoft and Digicert.",
+    "talk_sales": "Talk with sales",
+    "features": {
+      "feature1": {
+        "title": "EV-Code signing certificates from Microsoft and Digicert",
+        "description": "Software products developed by Datagaze are certified by Microsoft and Digicert. This prevents the use of fake software or software from untrusted sources."
+      },
+      "feature2": {
+        "title": "Security and Compliance Certificate from SUE 'Cybersecurity Center'",
+        "description": "Datagaze products and services are certified by the State Unitary Enterprise 'Cybersecurity Center,' adhering to the legal requirements of the Republic of Uzbekistan."
+      },
+      "feature3": {
+        "title": "Experts and consultants with many years of experience",
+        "description": "All services are provided by highly qualified specialists with years of experience, ensuring the highest quality in both products and services."
+      }
+    }
+  },
+  "impact_numbers": {
+    "title": "Our Impact in Numbers",
+    "description": "We collaborate with numerous large organizations to help them secure their data. Our solutions guarantee reliability and efficiency.",
+    "get_demo": "Get a demo",
+    "talk_sales": "Talk with sales"
+  },
+  "expert_insights": {
+    "title": "Stay Ahead with Expert Insights",
+    "description": "Gain valuable perspectives on the latest trends in cybersecurity. Our team shares in-depth research, company news, and actionable insights to help you stay informed and secure.",
+    "see_more": "See more articles",
+    "articles": {
+      "article1": {
+        "title": "Another step into the global arena",
+        "text": "Last week was full of important events. Representatives of our company participated in the international technological forum 'Euroasia Techweek 2025' held in Istanbul on April 17–19 as part of the delegation of Uzbekistan."
+      },
+      "article2": {
+        "title": "Datagaze – a national brand that has become a leader in the Uzbekistan cybersecurity market",
+        "text": "Datagaze – a national brand that has become a leader in the Uzbekistan cybersecurity market"
+      }
+    }
+  },
+  "secure_sensitive": {
+    "tabs": {
+      "tab1": {
+        "title": "Secure Your Sensitive Data with Advanced DLP Solutions",
+        "description": "Protect your organization from internal threats and prevent data leaks with Datagaze's robust Data Loss Prevention (DLP) technology."
+      },
+      "tab2": {
+        "title": "Comprehensive Threat Detection and Response with SIEM",
+        "description": "Enhance your cybersecurity posture by identifying and responding to threats in real-time using Datagaze's powerful SIEM tools."
+      },
+      "tab3": {
+        "title": "Streamlined Security Audits and Compliance Reporting",
+        "description": "Generate comprehensive reports and ensure regulatory compliance seamlessly with Datagaze's advanced auditing features."
+      },
+      "tab4": {
+        "title": "Comprehensive Staff Monitoring and Management System",
+        "description": "Enhance your workforce efficiency by tracking activities, managing tasks, and responding to issues in real-time with our powerful staff management tools."
+      }
+    },
+    "statistics": {
+      "stat1": {
+        "name": "Over 6 Years of Expertise",
+        "description": "Delivering customized cybersecurity solutions across government and business sectors with decades of experience."
+      },
+      "stat2": {
+        "name": "Devices Secured",
+        "description": "Protecting over 12,000 endpoints with cutting-edge tools designed to prevent data breaches and internal threats."
+      },
+      "stat3": {
+        "name": "Highly Skilled Specialists",
+        "description": "Our expert team crafts advanced solutions to ensure comprehensive data security for your organization."
+      }
+    }
+  },
+  "environment": {
+    "title": "Something about our work environment",
+    "description": "We create a space where teamwork and new ideas come together to build effective cybersecurity solutions."
+  },
+  "organizations": {
+    "title": "Partnered with Top Organizations",
+    "description": "We collaborate with leading organizations that rely on our solutions to keep their data secure.",
+    "orgs_count": "Organizations"
+  }
+}

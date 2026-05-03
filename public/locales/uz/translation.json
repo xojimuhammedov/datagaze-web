@@ -1,0 +1,138 @@
+{
+  "navbar": {
+    "products": "Mahsulotlar",
+    "services": "Xizmatlar",
+    "resources": "Resurslar",
+    "news": "Yangiliklar",
+    "company": "Kompaniya",
+    "get_in_touch": "Bog'lanish",
+    "products_list": {
+      "dlp": "Datagaze DLP",
+      "siem": "Datagaze SIEM",
+      "staff": "Datagaze Staff",
+      "waf": "Datagaze WAF"
+    },
+    "resources_list": {
+      "documentation": "Hujjatlar",
+      "blog": "Blog",
+      "events": "Tadbirlar"
+    }
+  },
+  "hero": {
+    "badge": "Yangi White Hat Security tekshiruvi ishga tushirildi",
+    "cta": "Konsultatsiya band qilish",
+    "title": "Tashkilotlar va korxonalar uchun kiberxavfsizlik yechimlari",
+    "description": "Tarmog'ingizni Datagaze'ning ilg'or DLP, SIEM va xavfsizlik texnologiyalari bilan himoya qiling.",
+    "form_title": "Innovatsiyani o'z ko'zingiz bilan ko'ring. Demoni bugun rejalashtiring.",
+    "full_name": "To'liq ism",
+    "phone_number": "Telefon raqami",
+    "product_type": "Mahsulot turini tanlang",
+    "company_size": "Kompaniya hajmi",
+    "submit": "Yuborish"
+  },
+  "cta_section": {
+    "title": "Tashkilotlar uchun soddalashtirilgan xavfsizlik",
+    "description": "Biz ma'lumotlaringizni himoya qilayotganimizda siz o'sishga e'tibor qarating. Bizning yechimlarimiz tizimlaringizni qulay va samarali himoya qilish uchun mo'ljallangan. Bugun demoni oling va ma'lumotlar xavfsizligini qanday soddalashtirishimizni ko'ring.",
+    "get_demo": "Demoni olish",
+    "talk_sales": "Sotuvlar bo'limi bilan bog'lanish"
+  },
+  "footer": {
+    "company": "Kompaniya",
+    "services": "Xizmatlar",
+    "blog": "Blog",
+    "contacts": "Kontaktlar",
+    "rights": "© 2026 Datagaze LLC. Barcha huquqlar himoyalangan.",
+    "prohibited": "Oldindan yozma roziliksiz har qanday materialni ruxsatsiz nusxalash yoki tarqatish qat'iyan man etiladi."
+  },
+  "security_solutions": {
+    "title": "Yetakchi va yuqori sifatli xavfsizlik yechimlari",
+    "description": "Tarmog'ingizni ishonchli va uzluksiz xavfsizlik integratsiyasi bilan himoya qilish uchun yaratilgan ilg'or xavfsizlik yechimlarimiz bilan tanishing."
+  },
+  "trusted_companies": {
+    "title": "Yetakchi tashkilotlar tomonidan ishonch bildirilgan"
+  },
+  "ecosystem": {
+    "title": "Ma'lumotlar xavfsizligining keng qamrovli ekotizimi",
+    "subtitle": "Datagaze ma'lumotlaringiz va infratuzilmangizni himoya qilish uchun uzluksiz xavfsizlik yechimlarini taklif etadi.",
+    "desc": "Datagaze tomonidan ishlab chiqilgan dasturiy mahsulotlar Microsoft va Digicert tomonidan sertifikatlangan.",
+    "talk_sales": "Sotuvlar bo'limi bilan bog'lanish",
+    "features": {
+      "feature1": {
+        "title": "Microsoft va Digicert'dan EV-Code imzolash sertifikatlari",
+        "description": "Datagaze tomonidan ishlab chiqilgan dasturiy mahsulotlar Microsoft va Digicert tomonidan sertifikatlangan. Bu soxta dasturiy ta'minot yoki ishonchsiz manbalardan foydalanishning oldini oladi."
+      },
+      "feature2": {
+        "title": "'Kiberxavfsizlik markazi' DUK tomonidan berilgan Xavfsizlik va muvofiqlik sertifikati",
+        "description": "Datagaze mahsulotlari va xizmatlari O'zbekiston Respublikasining qonunchilik talablariga rioya qilgan holda 'Kiberxavfsizlik markazi' davlat unitar korxonasi tomonidan sertifikatlangan."
+      },
+      "feature3": {
+        "title": "Ko'p yillik tajribaga ega ekspert va maslahatchilar",
+        "description": "Barcha xizmatlar ko'p yillik tajribaga ega yuqori malakali mutaxassislar tomonidan taqdim etiladi, bu mahsulot va xizmatlarning eng yuqori sifatini ta'minlaydi."
+      }
+    }
+  },
+  "impact_numbers": {
+    "title": "Bizning ta'sirimiz raqamlarda",
+    "description": "Biz ko'plab yirik tashkilotlar bilan ularning ma'lumotlarini himoya qilishda hamkorlik qilamiz. Bizning yechimlarimiz ishonchlilik va samaradorlikni kafolatlaydi.",
+    "get_demo": "Demoni olish",
+    "talk_sales": "Sotuvlar bo'limi bilan bog'lanish"
+  },
+  "expert_insights": {
+    "title": "Ekspert maslahatlari bilan oldinda bo'ling",
+    "description": "Kiberxavfsizlik sohasidagi so'nggi tendentsiyalar bo'yicha qimmatli fikrlarga ega bo'ling. Bizning jamoamiz sizga xabardor va xavfsiz bo'lishingizga yordam berish uchun chuqur tadqiqotlar, kompaniya yangiliklari va amaliy tushunchalar bilan o'rtoqlashadi.",
+    "see_more": "Ko'proq maqolalarni ko'rish",
+    "articles": {
+      "article1": {
+        "title": "Global maydonga yana bir qadam",
+        "text": "O'tgan hafta muhim voqeliklarga boy bo'ldi. 17–19-aprel kunlari Istanbul shahrida bo‘lib o‘tgan 'Euroasia Techweek 2025' xalqaro texnologik forumida kompaniyamiz vakillari O‘zbekiston delegatsiyasi tarkibida ishtirok etdilar."
+      },
+      "article2": {
+        "title": "“Datagaze” – O‘zbekiston kiberxavfsizlik bozorining yetakchisiga aylangan milliy brend",
+        "text": "“Datagaze” – O‘zbekiston kiberxavfsizlik bozorining yetakchisiga aylangan milliy brend"
+      }
+    }
+  },
+  "secure_sensitive": {
+    "tabs": {
+      "tab1": {
+        "title": "Ilg'or DLP yechimlari bilan maxfiy ma'lumotlaringizni himoya qiling",
+        "description": "Datagaze'ning mustahkam ma'lumotlar yo'qolishining oldini olish (DLP) texnologiyasi bilan tashkilotingizni ichki tahdidlardan himoya qiling va ma'lumotlar sizib chiqishini oldini oling."
+      },
+      "tab2": {
+        "title": "SIEM bilan keng qamrovli tahdidlarni aniqlash va ularga javob berish",
+        "description": "Datagaze'ning kuchli SIEM vositalaridan foydalangan holda real vaqt rejimida tahdidlarni aniqlash va ularga javob berish orqali kiberxavfsizlik holatini yaxshilang."
+      },
+      "tab3": {
+        "title": "Soddalashtirilgan xavfsizlik auditlari va muvofiqlik hisoboti",
+        "description": "Datagaze'ning ilg'or audit xususiyatlari bilan keng qamrovli hisobotlarni yarating va tartibga solish qoidalariga rioya qilishni uzluksiz ta'minlang."
+      },
+      "tab4": {
+        "title": "Xodimlarni monitoring qilish va boshqarishning keng qamrovli tizimi",
+        "description": "Bizning kuchli xodimlarni boshqarish vositalarimiz bilan faoliyatni kuzatish, vazifalarni boshqarish va muammolarga real vaqtda javob berish orqali ishchi kuchingiz samaradorligini oshiring."
+      }
+    },
+    "statistics": {
+      "stat1": {
+        "name": "6 yildan ortiq tajriba",
+        "description": "O'n yillik tajribaga ega davlat va biznes sektorlarida moslashtirilgan kiberxavfsizlik yechimlarini yetkazib berish."
+      },
+      "stat2": {
+        "name": "Himoyalangan qurilmalar",
+        "description": "Ma'lumotlar buzilishi va ichki tahdidlarning oldini olish uchun mo'ljallangan zamonaviy vositalar bilan 12 000 dan ortiq so'nggi nuqtalarni himoya qilish."
+      },
+      "stat3": {
+        "name": "Yuqori malakali mutaxassislar",
+        "description": "Bizning ekspert jamoamiz tashkilotingiz uchun ma'lumotlar xavfsizligini ta'minlash uchun ilg'or yechimlarni ishlab chiqadi."
+      }
+    }
+  },
+  "environment": {
+    "title": "Bizning ish muhitimiz haqida bir oz",
+    "description": "Biz samarali kiberxavfsizlik yechimlarini yaratish uchun jamoaviy ish va yangi g'oyalar birlashadigan maydonni yaratamiz."
+  },
+  "organizations": {
+    "title": "Eng yaxshi tashkilotlar bilan hamkorlik",
+    "description": "Biz o'z ma'lumotlarini xavfsiz saqlash uchun bizning yechimlarimizga tayanadigan yetakchi tashkilotlar bilan hamkorlik qilamiz.",
+    "orgs_count": "Tashkilotlar"
+  }
+}

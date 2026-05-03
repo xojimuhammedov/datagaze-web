@@ -7,8 +7,10 @@ import peron2 from "@/public/texnological/person2.avif";
 import peron3 from "@/public/texnological/person3.avif";
 import AutoScroll from "embla-carousel-auto-scroll";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const Environment = () => {
+  const { t } = useTranslation();
   const images = [peron1, peron2, peron3, peron1, peron2, peron3];
 
   const plugin = useRef(
@@ -24,12 +26,11 @@ const Environment = () => {
       <div className="mx-auto max-w-7xl px-6 ">
         <div className="p-24M flex flex-col items-center text-center gap-6">
           <h2 className="text-4xl sm:text-4xl lg:text-5xl max-w-3xl font-semibold leading-tight text-gray-900">
-            Something about our work environment
+            {t('environment.title')}
           </h2>
 
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
-            We create a space where teamwork and new ideas come together to
-            build effective cybersecurity solutions.
+            {t('environment.description')}
           </p>
         </div>
 

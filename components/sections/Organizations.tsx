@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 const Organizations = () => {
+  const { t } = useTranslation();
   const companies = [
     {
       logo: "/organization/cyber.svg",
@@ -59,12 +62,11 @@ const Organizations = () => {
       <div className="mx-auto max-w-7xl px-6  ">
         <div className="p-30 flex flex-col items-center text-center gap-6">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl max-w-2xl font-medium leading-tight text-gray-900">
-            Partnered with Top Organizations
+            {t('organizations.title')}
           </h2>
 
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
-            We collaborate with leading organizations that rely on our solutions
-            to keep their data secure.
+            {t('organizations.description')}
           </p>
         </div>
 
@@ -75,7 +77,7 @@ const Organizations = () => {
                 40+
               </span>
               <span className="text-2xl md:text-4xl font-semibold bg-gradient-to-r from-fuchsia-500 via-purple-600 to-blue-700 bg-clip-text text-transparent">
-                Organizations
+                {t('organizations.orgs_count')}
               </span>
             </div>
           </div>

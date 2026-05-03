@@ -3,8 +3,10 @@
 import Image from "next/image";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import AutoScroll from "embla-carousel-auto-scroll";
+import { useTranslation } from "react-i18next";
 
 export default function TrustedCompanies() {
+  const { t } = useTranslation();
   const companies = [
     "/trusted_organization/dtm.svg",
     "/trusted_organization/ichki_ishlar.svg",
@@ -19,7 +21,7 @@ export default function TrustedCompanies() {
     <section className="w-full py-1 pb-20 ">
       <div className="mx-auto max-w-7xl px-6 flex flex-col items-center gap-4 overflow-hidden">
         <h2 className="text-center text-base font-medium ">
-          Trusted By Leading Organizations
+          {t('trusted_companies.title')}
         </h2>
 
         <div className="relative w-full">

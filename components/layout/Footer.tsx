@@ -1,10 +1,13 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaTelegram } from "react-icons/fa6";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <section className="w-full pb-10">
       <div className=" mx-auto max-w-7xl px-6 pb-15">
@@ -23,16 +26,16 @@ const Footer = () => {
 
           <div className="flex gap-10">
             <Link href="/about" className="text-xl text-muted-foreground">
-              Company
+              {t('footer.company')}
             </Link>
             <Link href="/service" className="text-xl text-muted-foreground">
-              Services
+              {t('footer.services')}
             </Link>
             <Link href="/" className="text-xl text-muted-foreground">
-              Blog
+              {t('footer.blog')}
             </Link>
             <Link href="/contact" className="text-xl text-muted-foreground">
-              Contacts
+              {t('footer.contacts')}
             </Link>
           </div>
 
@@ -59,12 +62,11 @@ const Footer = () => {
 
       <div className="flex flex-col gap-3 mx-auto max-w-7xl px-6 pt-15 ">
         <span className="text-[#5E5E5E] text-xl">
-          © 2026 Datagaze LLC. All rights reserved.
+          {t('footer.rights')}
         </span>
 
         <span className="text-muted-foreground text-base">
-          Unauthorized copying or distribution of any material without prior
-          written consent is strictly prohibited.
+          {t('footer.prohibited')}
         </span>
       </div>
     </section>
