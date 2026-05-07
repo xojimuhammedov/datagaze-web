@@ -4,12 +4,12 @@ import img from "@/public/product-unreleased/unreleased.svg";
 
 const HeroProduct = () => {
   return (
-    <section className="w-full py-20 pt-40">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="w-full py-10 pt-20 lg:py-20 lg:pt-40">
+      <div className="mx-auto max-w-7xl px-4 lg:px-6">
         <div className="flex flex-col gap-8 items-center pb-20">
           <Image src={logo} alt="logo" />
-          <h1 className="text-6xl font-medium ">Datagaze DLP</h1>
-          <p className="w-175 text-center text-[20px] text-muted-foreground">
+          <h1 className="text-4xl lg:text-6xl font-medium mb-4">Datagaze DLP</h1>
+          <p className="w-full lg:w-175 text-center text-lg lg:text-xl text-muted-foreground">
             Datagaze DLP (Data Loss Prevention System) constantly monitors the
             flow of data exchanged on your network.
           </p>

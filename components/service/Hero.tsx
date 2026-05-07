@@ -2,13 +2,13 @@
 
 const Hero = () => {
   return (
-    <section className="w-full py-16 sm:py-20 lg:py-30">
-      <div className="mx-auto grid w-full max-w-7xl items-center px-6 lg:grid-cols-2 pt-36">
-        <div className="max-w-2xl">
-          <h1 className="font-medium text-[#14151a] text-[32px] md:text-5xl leading-[40px] md:leading-[56px] tracking-[-0.01em]">
+    <section className="w-full py-10 lg:py-20">
+      <div className="mx-auto grid w-full max-w-7xl items-center px-4 lg:px-6 gap-16 lg:grid-cols-2 pt-36">
+        <div className="max-w-2xl flex flex-col gap-8">
+          <h1 className="font-medium text-[#14151a] text-4xl md:text-5xl leading-[40px] md:leading-[56px]">
             Complete Security Check: Protect Your System
           </h1>
-          <p className="break-words text-[#6b6d78] font-medium text-[22px] md:text-[20px] leading-[24px] md:leading-[28px] tracking-[-0.01em] mt-6">
+          <p className="text-[#6b6d78] font-medium text-xl leading-[24px]">
             Our audit not only identifies risks but also reinforces your defenses to keep your data safe from evolving threats.
           </p>
         </div>
