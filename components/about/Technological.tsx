@@ -11,14 +11,14 @@ import d1 from "@/public/texnological/d1.svg";
 const Technological = () => {
   const icons = [icon1, icon2, icon3, icon4, icon5, icon6];
   return (
-    <section className="w-full py-20 pb-20 pt-40">
+    <section className="w-full py-20 pt-40">
       <div className="mx-auto max-w-6xl px-6 ">
-        <div className="grid grid-cols-2 items-center ">
-          <div className="grid grid-cols-3 gap-4 w-fit place-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 items-center">
+          <div className="grid grid-cols-3 gap-4 w-fit place-items-center mx-auto lg:mx-0">
             {icons?.map((icon, i) => (
               <div
                 key={i}
-                className={`flex items-center justify-center rounded-2xl shadow-[0px_8px_24px_0px_#0000000A] bg-white p-6 ${i % 2 === 0 ? "w-[104px] h-[104px]" : "w-[120px] h-[120px]"
+                className={`flex items-center justify-center rounded-2xl shadow-[0px_8px_24px_0px_#0000000A] bg-white p-6 ${i % 2 === 0 ? "w-[90px] h-[90px] md:w-[104px] md:h-[104px]" : "w-[100px] h-[100px] md:w-[120px] md:h-[120px]"
                   }`}
               >
                 <Image src={icon} alt={`partner logo ${i + 1}`} className="w-full h-full object-contain" />
@@ -26,11 +26,11 @@ const Technological = () => {
             ))}
           </div>
 
-          <div>
-            <h2 className="text-[36px] font-medium leading-none pb-4">
+          <div className="flex flex-col gap-5 items-center lg:items-start">
+            <h2 className="text-2xl md:text-4xl text-center lg:text-start font-medium pb-4">
               Ensuring Data Security. Driving Technological Progress.
             </h2>
-            <p className="text-lg font-normal text-muted-foreground">
+            <p className="text-base font-normal text-center lg:text-start">
               At Datagaze LLC, our primary goal is to provide reliable and
               modern cybersecurity solutions by ensuring data security. By
               applying innovations, we help our clients solve complex
@@ -40,7 +40,7 @@ const Technological = () => {
         </div>
       </div>
       <div className="mx-auto max-w-7xl px-6">
-        <div className="bg-white rounded-[20px] p-5 flex items-center gap-15 mt-30 border">
+        <div className="bg-white rounded-[20px] p-5 flex items-center flex-col lg:flex-row gap-15 mt-30 border">
           <div>
             <Image
               src={person}
@@ -53,14 +53,14 @@ const Technological = () => {
 
           <div className="flex flex-col gap-5">
             <Image src={d1} alt="quote" width={90} height={90} />
-            <p className="text-xl font-normal">
+            <p className="text-lg lg:text-xl font-normal">
               Our main goal is to be a reliable and long-term partner in the
               field of information security and cybersecurity, provide
               convenience to customers and constantly develop products and
               services. Give your security in good hands.
             </p>
 
-            <span className="text-xl text-muted-foreground">
+            <span className="text-lg lg:text-xl text-muted-foreground">
               Azamjon Nabijonov <br /> CTO
             </span>
           </div>

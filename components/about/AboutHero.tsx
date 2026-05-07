@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const AboutHero = () => {
   return (
-    <section className="w-full bg-[#F9FAFB] bg-[url('/images/rectangle23.svg')] bg-top bg-no-repeat bg-cover pt-32 pb-20">
+    <section className="w-full bg-[#F9FAFB] bg-[url('/images/rectangle23.svg')] bg-top bg-no-repeat bg-cover pt-32 pb-20 px-4">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center gap-6 border p-8 rounded-[20px] bg-[linear-gradient(128.4deg,#FFFFFF_13.5%,#EBF7FF_66.51%)]">
           <div className="mb-10">
@@ -11,11 +11,11 @@ const AboutHero = () => {
               alt="logo"
               width={150}
               height={50}
-              className="w-[340px]"
+              className="w-[200px] lg:w-[340px]"
             />
           </div>
 
-          <h2 className="text-4xl font-medium text-center mb-8">
+          <h2 className="text-3xl lg:text-4xl font-medium text-center mb-8">
             Datagaze LLC is the first national company providing cybersecurity
             solutions for medium and large enterprises.{" "}
           </h2>

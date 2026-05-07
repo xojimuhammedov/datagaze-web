@@ -22,10 +22,10 @@ const Environment = () => {
   );
 
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-12 lg:py-20">
       <div className="mx-auto max-w-7xl px-6 ">
         <div className="p-24M flex flex-col items-center text-center gap-6">
-          <h2 className="text-4xl sm:text-4xl lg:text-5xl max-w-3xl font-semibold leading-tight text-gray-900">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl max-w-3xl font-medium leading-tight text-gray-900">
             {t('environment.title')}
           </h2>
 

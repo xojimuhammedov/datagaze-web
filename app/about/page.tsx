@@ -2,7 +2,7 @@ import AboutHero from "@/components/about/AboutHero";
 import Environment from "@/components/about/Environment";
 import Partnership from "@/components/about/Partnership";
 import Technological from "@/components/about/Technological";
-import CtaSection from "@/components/about/CtaSection";
+import Organization from "@/components/service/Organization";
 
 export default function About() {
   return (
@@ -11,7 +11,7 @@ export default function About() {
       <Technological />
       <Partnership />
       <Environment />
-      <CtaSection />
+      <Organization />
     </main>
   );
 }

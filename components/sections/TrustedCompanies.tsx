@@ -18,7 +18,7 @@ export default function TrustedCompanies() {
   ];
 
   return (
-    <section className="w-full py-16">
+    <section className="w-full py-8">
       <div className="mx-auto max-w-7xl px-6 flex flex-col items-center gap-4 overflow-hidden">
         <h2 className="text-center text-sm md:text-base font-medium ">
           {t('trusted_companies.title')}

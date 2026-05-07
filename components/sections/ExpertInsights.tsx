@@ -12,7 +12,7 @@ const ExpertInsights = () => {
   return (
     <section className="w-full py-16 pb-20 lg:py-20 lg:pb-50">
       <div className="mx-auto max-w-7xl px-6 ">
-        <div className=" flex flex-col items-center text-center gap-6 pb-30">
+        <div className=" flex flex-col items-center text-center gap-6 pb-24 lg:pb-30">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl max-w-2xl font-medium leading-tight text-gray-900">
             {t('expert_insights.title')}
           </h2>

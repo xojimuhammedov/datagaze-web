@@ -7,7 +7,7 @@ import { GoArrowUpRight } from "react-icons/go";
 import { useModal } from "@/context/ModalContext";
 import { useTranslation } from "react-i18next";
 
-const Organization = () => {
+const CtaSection = () => {
   const { t } = useTranslation();
   const { openSalesModal, openDemoModal } = useModal();
   return (
@@ -46,4 +46,4 @@ const Organization = () => {
   );
 };
 
-export default Organization;
+export default CtaSection;

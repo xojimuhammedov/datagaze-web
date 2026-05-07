@@ -7,7 +7,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="w-full py-16  sm:py-20 lg:py-40">
+    <section className="w-full py-16 pt-40 lg:py-40 lg:pb-16">
       <div className="mx-auto grid w-full max-w-7xl items-center px-4 md:px-6 gap-16 lg:gap-0 lg:grid-cols-2">
         <div className="max-w-xl">
           <Link className="hidden md:block" href={'/service'}>
@@ -40,16 +40,16 @@ export default function Hero() {
               </div>
             </div>
           </Link>
-          <h1 className="font-medium text-[#14151a] text-4xl md:text-[48px] leading-[44px] md:leading-[56px] tracking-[-0.01em] text-center md:text-start">
+          <h1 className="font-medium text-[#14151a] text-4xl md:text-[48px] leading-[44px] md:leading-[56px] text-center md:text-start max-w-xs mx-auto lg:max-w-none lg:mx-0">
             {t('hero.title')}
           </h1>
-          <p className="text-[#6b6d78] font-medium text-xl lg::text-[22px] mt-6 text-center md:text-start">
+          <p className="text-[#6b6d78] font-medium text-xl lg:text-[22px] mt-6 text-center md:text-start">
             {t('hero.description')}
           </p>
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[561px] rounded-[12px] overflow-hidden p-[1.5px] group">
+          <div className="relative w-full max-w-[551px] rounded-[12px] overflow-hidden p-[1.5px] group">
             {/* Dual Rotating Border Animation */}
             <div className="absolute inset-[-200%] animate-rotate bg-[conic-gradient(from_0deg,transparent_320deg,#2563eb_360deg,transparent_40deg)] opacity-100" />
             <div className="absolute inset-[-200%] animate-rotate-reverse bg-[conic-gradient(from_0deg,transparent_320deg,#2563eb_360deg,transparent_40deg)] opacity-100" />

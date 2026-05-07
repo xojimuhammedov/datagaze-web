@@ -31,10 +31,10 @@ export default function Ecosystem() {
   ];
 
   return (
-    <section className="w-full bg-[#F9FAFB]">
+    <section className="w-full">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 flex flex-col gap-6">
         {/* Top Main Card */}
-        <div className="bg-white pt-6 rounded-3xl flex flex-col lg:flex-row items-start lg:items-center md:gap-8 lg:gap-12 shadow-sm border border-gray-100">
+        <div className="bg-white pt-6 rounded-3xl flex flex-col lg:flex-row items-start lg:items-center md:gap-8 shadow-sm border border-gray-100">
           {/* Left Text Content */}
           <div className="flex-1 flex flex-col items-start gap-6 px-4 lg:pl-10">
             <h2 className="text-4xl md:text-5xl font-medium text-gray-900 leading-[1.15]">
@@ -66,7 +66,7 @@ export default function Ecosystem() {
 
         {/* Bottom Feature Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {features.map((feature, index) => (
+          {features?.map((feature, index) => (
             <div
               key={index}
               className="bg-white rounded-3xl p-6 flex flex-col gap-6 shadow-sm border border-gray-100"

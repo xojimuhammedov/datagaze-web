@@ -99,7 +99,7 @@ export default function Navbar() {
   const navItemBase = "h-[40px] px-[14px] py-[10px] flex items-center gap-[6px] text-sm font-medium text-gray-800 transition-colors bg-[rgba(10,15,41,0.04)] hover:bg-[rgba(10,15,41,0.08)] no-underline whitespace-nowrap";
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-50">
+    <nav className="absolute top-0 left-0 w-full z-50 px-5 lg:px-0">
       <div className="max-w-7xl mx-auto flex w-full items-center justify-between py-6">
         {/* Logo */}
         <div className="flex items-center">

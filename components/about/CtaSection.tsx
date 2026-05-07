@@ -17,29 +17,29 @@ const Organization = () => {
             <Image src={img} alt="Img" className="" />
           </div>
           <div className="">
-            <h2 className="font-medium text-4xl pb-10 max-w-xl">
+            <h2 className="text-3xl lg:text-4xl font-medium pb-10 max-w-xl">
               Simplified Security for Organizations
             </h2>
-            <p className="text-lg text-muted-foreground pb-10">
+            <p className="text-sm lg:text-base text-muted-foreground pb-10">
               Focus on growth while we protect your data. Our solutions are
               designed to secure your systems with ease and efficiency. Get a
               demo today and see how we make data security simpler.
             </p>
-            <div className="flex gap-4">
-              <Button 
-                className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-medium text-white"
-                onClick={openDemoModal}
-              >
-                Get a demo
-              </Button>
-              <Button 
-                className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-medium text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden"
-                onClick={openSalesModal}
-              >
-                Talk with sales
-                <GoArrowUpRight />
-              </Button>
-            </div>
+            <div className="grid grid-cols-2 w-full lg:flex justify-center gap-3">
+            <Button
+              className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-10 w-full lg:w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-xs font-medium text-white cursor-pointer"
+              onClick={openDemoModal}
+            >
+              Get a demo
+            </Button>
+            <Button
+              className="bg-white border border-[#DEE0E3] h-10 w-full lg:w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-xs font-medium text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden"
+              onClick={openSalesModal}
+            >
+              Talk with sales
+              <GoArrowUpRight />
+            </Button>
+          </div>
           </div>
         </div>
       </div>

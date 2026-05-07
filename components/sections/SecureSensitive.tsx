@@ -45,7 +45,7 @@ export const SecureSensitive = () => {
         }
       `}</style>
       <div className="mx-auto max-w-7xl px-6">
-        <Tabs defaultValue="overview" className="w-full pb-40">
+        <Tabs defaultValue="overview" className="w-full pb-24 lg:pb-40">
           <div className="flex justify-center mb-16">
             <TabsList className="bg-[#eeeff1] px-1 py-7 h-auto rounded-2xl border border-gray-100 shadow-inner">
               {["overview", "analytics", "reports", "settings"].map(
@@ -64,7 +64,7 @@ export const SecureSensitive = () => {
                         className="transition-transform duration-500 ease-out group-hover:scale-110 group-hover:-rotate-6 group-data-[state=active]:scale-110 group-data-[state=active]:rotate-0"
                       />
                       <span className="font-medium text-gray-800 text-base transition-colors duration-500 group-data-[state=active]:text-black">
-                        Datagaze {[ "DLP", "SIEM", "Reports", "Staff" ][idx]}
+                        Datagaze {["DLP", "SIEM", "Reports", "Staff"][idx]}
                       </span>
                     </div>
                   </TabsTrigger>
@@ -94,43 +94,41 @@ export const SecureSensitive = () => {
             ];
 
             return (
-            <TabsContent key={val} value={val} className="outline-none">
-              <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-12 lg:gap-0">
-                <div className="z-10 py-6 lg:py-20 lg:col-span-7">
-                  <h2 className="text-4xl font-semibold leading-[1.1] text-gray-900 mb-8 tracking-tight max-w-2xl">
-                    {tabContents[idx].title}
-                  </h2>
-                  <p className="text-lg text-gray-600 leading-relaxed max-w-lg">
-                    {tabContents[idx].desc}
-                  </p>
-                </div>
+              <TabsContent key={val} value={val} className="outline-none">
+                <div className="grid grid-cols-1 lg:grid-cols-12 items-center gap-4 lg:gap-0">
+                  <div className="z-10 py-4 lg:py-20 lg:col-span-7">
+                    <h2 className="text-3xl lg:text-4xl font-medium text-gray-900 mb-8 tracking-tight max-w-2xl">
+                      {tabContents[idx].title}
+                    </h2>
+                    <p className="text-sm lg:text-lg text-gray-600 leading-relaxed max-w-lg">
+                      {tabContents[idx].desc}
+                    </p>
+                  </div>
 
-                <div className="relative w-full h-[500px] lg:h-[712px] lg:col-span-5">
-                  <div
-                    className="absolute top-0 left-0 w-full lg:w-[572px] h-full lg:h-[712px] pin-right-browser"
-                  >
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={[img1, img2, img3, img4][idx]}
-                        alt="DLP Interface"
-                        fill
-                        className="object-cover rounded-xl lg:rounded-l-[20px] border border-gray-200"
-                        priority
-                      />
+                  <div className="relative w-full h-[500px] lg:h-[712px] lg:col-span-5">
+                    <div className="absolute top-0 left-0 w-full lg:w-[572px] h-full lg:h-[712px] pin-right-browser">
+                      <div className="relative w-full h-full">
+                        <Image
+                          src={[img1, img2, img3, img4][idx]}
+                          alt="DLP Interface"
+                          fill
+                          className="object-cover rounded-xl lg:rounded-l-[20px] border border-gray-200"
+                          priority
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </TabsContent>
-          );
-        })}
+              </TabsContent>
+            );
+          })}
         </Tabs>
 
-        <div className="border bg-white p-10 grid grid-cols-3 gap-2 shadow-md rounded-3xl">
+        <div className="border bg-white p-4 lg:p-10 grid grid-cols-1 lg:grid-cols-3 gap-2 shadow-md rounded-3xl">
           {statistics.map((item, index) => {
             const number = parseInt(item.number.replace("+", ""));
             return (
-              <div key={index} className="p-4">
+              <div key={index} className="p-4 flex flex-col gap-4 lg:gap-6">
                 <div className="text-4xl text-center font-semibold">
                   <CountUp
                     end={number}
@@ -141,11 +139,11 @@ export const SecureSensitive = () => {
                   +
                 </div>
 
-                <h2 className="text-center font-medium text-base mt-2">
+                <h2 className="text-center font-medium text-base">
                   {item.name}
                 </h2>
 
-                <p className="text-muted-foreground text-center mt-2">
+                <p className="text-muted-foreground text-sm text-center">
                   {item.description}
                 </p>
               </div>
