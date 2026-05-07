@@ -6,7 +6,7 @@ const ContactHero = () => {
       contact: "+998 93 561 14 22",
       href: "tel:+998935611422",
       description: "Call Us Anytime: We’re Here to Help",
-      icon: <Phone fill="#1153E3" className="text-blue-600 size-8" />,
+      icon: <Phone fill="#1153E3" className="text-blue-600 size-6 md:size-8" />,
     },
     {
       contact: "info@datagaze.uz",
@@ -21,19 +21,19 @@ const ContactHero = () => {
   ];
 
   return (
-    <section className="w-full py-20  bg-[#F9FAFB]  pt-40">
-      <div className="mx-auto max-w-7xl px-6 ">
-        <div className="p-16 flex flex-col items-center text-center gap-10">
+    <section className="w-full py-16 lg:py-20 pt-40">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="p-5 lg:p-16 flex flex-col items-center text-center gap-10">
           <h2 className="text-[64px] font-medium leading-none text-center text-gray-900 max-w-3xl">
             Contact us
           </h2>
 
-          <p className="text-[20px] font-normal text-center text-[rgb(107,109,120)] max-w-2xl">
+          <p className="text-lg md:text-[20px] font-normal text-center text-[rgb(107,109,120)] max-w-max md:max-w-2xl">
             Do you have any questions or simply want to get in touch? Contact us, and we will respond ASAP!
           </p>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="mt-12 lg:mt-0 grid grid-cols-1 md:grid-cols-2 gap-6">
           {contacts.map((item, index) => (
             <div
               key={index}
@@ -42,11 +42,11 @@ const ContactHero = () => {
               <div>{item.icon}</div>
               <a
                 href={item.href}
-                className="text-[30px] font-medium leading-none hover:underline hover:text-blue-600 transition-colors w-fit"
+                className="text-xl lg:text-[30px] font-medium leading-none hover:underline hover:text-blue-600 transition-colors w-fit"
               >
                 {item.contact}
               </a>
-              <p className="text-muted-foreground ">{item.description}</p>
+              <p className="text-sm lg:text-lg text-muted-foreground ">{item.description}</p>
             </div>
           ))}
         </div>

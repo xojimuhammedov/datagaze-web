@@ -2,16 +2,16 @@
 
 const PrivacyHero = () => {
   return (
-    <section className="w-full py-10">
+    <section className="w-full py-8 lg:py-10">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col gap-8 items-center py-40">
-          <h1 className="text-6xl font-medium">Privacy and Policy</h1>
-          <p className="w-175 text-center text-[20px] text-muted-foreground">
+        <div className="flex flex-col gap-8 items-center py-12 lg:py-40">
+          <h1 className="text-4xl lg:text-6xl font-medium">Privacy and Policy</h1>
+          <p className="w-full lg:w-175 text-center text-base lg:text-xl text-muted-foreground">
             Your Privacy, Our Priority.
           </p>
         </div>
 
-        <div className="flex flex-col gap-10 text-[22px] text-muted-foreground w-250 mx-auto font-medium pb-35">
+        <div className="flex flex-col gap-6 lg:gap-10 text-base lg:text-xl text-muted-foreground w-full lg:w-250 mx-auto font-medium pb-10 lg:pb-35">
           <p>Introduction</p>
           <p>
             At Datagaze, we are deeply committed to protecting your privacy and

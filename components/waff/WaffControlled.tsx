@@ -72,22 +72,22 @@ const WaffControlled = () => {
     },
   ];
   return (
-    <section className="w-full py-20">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="p-8 flex flex-col gap-10 items-center pb-20">
-          <h2 className="text-5xl font-medium w-150 text-center ">
+    <section className="w-full py-10">
+      <div className="mx-auto max-w-7xl px-4 lg:px-6">
+        <div className="p-0 lg:p-8 flex flex-col gap-10 items-center pb-25">
+          <h2 className="text-4xl lg:text-5xl font-medium w-full lg:w-150 text-center ">
             Controlled Channels
           </h2>
-          <p className="w-175 text-center text-[20px] text-muted-foreground">
+          <p className="w-full lg:w-175 text-center text-lg lg:text-xl text-muted-foreground">
             Monitor and manage secure communication pathways within your
             network.
           </p>
         </div>
- 
-        <div className="bg-white border border-[#DEE0E3] rounded-[24px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] py-8 px-6 grid grid-cols-3 gap-16 relative overflow-hidden">
+
+        <div className="bg-white border border-[#DEE0E3] rounded-[24px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] py-5 lg:py-8 px-5 lg:px-6 grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-16 relative overflow-hidden">
           {channels.map((item, index) => {
             return (
-              <div key={index} className="p-6 flex flex-col gap-3">
+              <div key={index} className="p-0 lg:p-6 flex flex-col gap-3">
                 <div className="text-2xl text-blue-600 border w-14 h-14 flex items-center justify-center rounded-xl">
                   <Image
                     src={item.icons}
@@ -97,9 +97,9 @@ const WaffControlled = () => {
                   />
                 </div>
 
-                <h3 className="text-lg font-medium">{item.name}</h3>
+                <h3 className="text-base lg:text-lg font-medium">{item.name}</h3>
 
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm lg:text-base font-normal text-muted-foreground">
                   {item.description}
                 </p>
               </div>

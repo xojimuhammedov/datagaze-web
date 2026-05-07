@@ -7,7 +7,7 @@ export default function Contact() {
     <main className="w-full">
       <ContactHero />
       <Map />
-      <SimplifiedSecurity />
+      {/* <SimplifiedSecurity /> */}
     </main>
   );
 }
