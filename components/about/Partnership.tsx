@@ -25,13 +25,13 @@ const Partnership = () => {
 
           <div className="flex pt-4 gap-3">
             <Button 
-              className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-[40px] w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-[12px] leading-[16px] font-semibold text-white cursor-pointer"
+              className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-10 w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-xs leading-[16px] font-medium text-white cursor-pointer"
               onClick={openDemoModal}
             >
               Get a demo
             </Button>
             <Button 
-              className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden"
+              className="bg-white border border-[#DEE0E3] h-10 w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-xs leading-[16px] font-medium text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden"
               onClick={openSalesModal}
             >
               Talk with sales

@@ -58,7 +58,7 @@ const Hero = () => {
 
               <button
                 type="submit"
-                className="w-full h-10 bg-[#2563eb] hover:bg-blue-700 text-white font-semibold text-[14px] rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center"
+                className="w-full h-10 bg-[#2563eb] hover:bg-blue-700 text-white font-medium text-xs rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center"
               >
                 Submit
               </button>

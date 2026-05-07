@@ -33,7 +33,7 @@ export default function Hero() {
                   <span className="text-gray-700 text-sm font-medium whitespace-nowrap">
                     {t('hero.badge')}
                   </span>
-                  <button className="bg-[#2563eb] hover:bg-blue-700 cursor-pointer transition-colors text-white text-sm font-semibold px-4 py-1 rounded-[328px] whitespace-nowrap flex items-center justify-center">
+                  <button className="bg-[#2563eb] hover:bg-blue-700 cursor-pointer transition-colors text-white text-sm font-medium px-4 py-1 rounded-[328px] whitespace-nowrap flex items-center justify-center">
                     {t('hero.cta')}
                   </button>
                 </div>
@@ -107,7 +107,7 @@ export default function Hero() {
 
               <button 
                 type="submit"
-                className="w-full h-10 cursor-pointer bg-[#2563eb] hover:bg-blue-700 text-white font-semibold text-sm rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center"
+                className="w-full h-10 cursor-pointer bg-[#2563eb] hover:bg-blue-700 text-white font-medium text-sm rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center"
               >
                 {t('hero.submit')}
               </button>
