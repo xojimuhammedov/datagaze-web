@@ -33,7 +33,7 @@ const OurImpakt = () => {
   return (
     <section className="w-full py-10 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 lg:px-6">
-        <div className="flex flex-col items-center text-center gap-6">
+        <div className="flex flex-col items-center text-center gap-6 pb-8 lg:pb-0">
           <h2 className="text-3xl lg:text-5xl max-w-3xl font-medium leading-tight text-gray-900">
             Our Impact in Numbers
           </h2>
@@ -43,15 +43,15 @@ const OurImpakt = () => {
             through our expertise and innovative solutions.
           </p>
 
-          <div className="flex gap-3">
+          <div className="grid grid-cols-2 w-full lg:flex gap-3">
             <Button 
-              className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-10 w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-xs font-medium text-white cursor-pointer"
+              className="bg-[#2563EB] hover:bg-[#2563EB]/90 h-10 w-full lg:w-[83px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] opacity-100 text-xs font-medium text-white cursor-pointer"
               onClick={openDemoModal}
             >
               Get a demo
             </Button>
             <Button 
-              className="bg-white border border-[#DEE0E3] h-10 w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-xs font-medium text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden"
+              className="bg-white border border-[#DEE0E3] h-10 w-full lg:w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-xs font-medium text-black cursor-pointer flex items-center justify-center gap-1 relative overflow-hidden"
               onClick={openSalesModal}
             >
               Talk with sales
@@ -60,7 +60,7 @@ const OurImpakt = () => {
           </div>
         </div>
 
-        <div className="bg-white p-12 rounded-2xl border flex relative min-h-[550px] overflow-hidden">
+        <div className="bg-white p-6 lg:p-12 rounded-2xl border flex relative min-h-72 lg:min-h-[550px] overflow-hidden">
           <div className="flex flex-col gap-6 justify-center">
             <div className="font-semibold text-4xl lg:text-5xl">4X</div>
             <h3 className="font-semibold text-lg lg:text-xl">Better low-lights photos</h3>
@@ -78,8 +78,8 @@ const OurImpakt = () => {
             </Button>
           </div>
 
-          <div className="absolute right-0 top-0">
-            <Image src={impakt} alt="Img" className="w-auto h-auto" priority />
+          <div className="hidden lg:block absolute right-0 top-0 bottom-0">
+            <Image src={impakt} alt="Img" className="w-full lg:w-auto h-auto" priority />
           </div>
         </div>
 

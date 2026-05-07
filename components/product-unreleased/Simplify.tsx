@@ -26,7 +26,7 @@ const Simplify = () => {
             <Image
               src={globus}
               alt="globus"
-              className="relative bottom-10 lg:bottom-20 z-10 w-[200px] lg:w-[400px]"
+              className="relative bottom-8 lg:bottom-20 z-10 w-[200px] lg:w-[400px]"
             />
           </div>
 
