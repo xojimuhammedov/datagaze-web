@@ -7,6 +7,7 @@ import cyber from "@/public/ecosystem/cyber_center.svg";
 import certificate from "@/public/ecosystem/certificate.svg";
 import { useModal } from "@/context/ModalContext";
 import { useTranslation } from "react-i18next";
+import { Button } from "../ui/button";
 
 export default function Ecosystem() {
   const { t } = useTranslation();
@@ -33,9 +34,9 @@ export default function Ecosystem() {
     <section className="w-full bg-[#F9FAFB]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 flex flex-col gap-6">
         {/* Top Main Card */}
-        <div className="bg-white pt-6 pl-10 rounded-3xl flex flex-col lg:flex-row items-center gap-12 shadow-sm border border-gray-100">
+        <div className="bg-white pt-6 rounded-3xl flex flex-col lg:flex-row items-start lg:items-center md:gap-8 lg:gap-12 shadow-sm border border-gray-100">
           {/* Left Text Content */}
-          <div className="flex-1 flex flex-col items-start gap-6">
+          <div className="flex-1 flex flex-col items-start gap-6 px-4 lg:pl-10">
             <h2 className="text-4xl md:text-5xl font-medium text-gray-900 leading-[1.15]">
               {t('ecosystem.title')}
             </h2>
@@ -45,19 +46,19 @@ export default function Ecosystem() {
             <p className="text-gray-500">
               {t('ecosystem.desc')}
             </p>
-            <button 
-              className="bg-white border border-[#DEE0E3] h-[40px] w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-[12px] leading-[16px] font-semibold text-black cursor-pointer flex items-center justify-center gap-1 mt-4 hover:bg-gray-50 transition-colors"
+            <Button
+              className="bg-white border border-[#DEE0E3] h-10 w-[123px] rounded-[12px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] text-xs leading-[16px] font-medium text-black cursor-pointer flex items-center justify-center gap-1 mt-1 lg:mt-4 hover:bg-gray-50 transition-colors"
               onClick={openSalesModal}
             >
               {t('ecosystem.talk_sales')}
               <ArrowUpRight className="w-4 h-4 text-gray-500" />
-            </button>
+            </Button>
           </div>
-          <div className="flex-1 w-full md:min-h-[520px] relative">
+          <div className="flex-1 w-full min-h-[400px] md:min-h-[550px] relative px-6 lg:px-0">
             <Image
               src="/images/technoImg.svg"
               alt="Dashboard overview"
-              className="absolute rounded-br-[24px]"
+              className="absolute md:rounded-br-[24px] object-cover p-4 lg:p-0"
               fill
             />
           </div>
@@ -76,7 +77,7 @@ export default function Ecosystem() {
               <h3 className="text-lg font-medium text-[#14151A] leading-snug">
                 {feature.title}
               </h3>
-              <p className="text-base font-normal text-gray-500 leading-relaxed">
+              <p className="text-sm lg:text-base font-normal text-gray-500 leading-relaxed">
                 {feature.description}
               </p>
             </div>

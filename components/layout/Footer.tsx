@@ -10,8 +10,8 @@ const Footer = () => {
   const { t } = useTranslation();
   return (
     <section className="w-full pb-10">
-      <div className=" mx-auto max-w-7xl px-6 pb-15">
-        <div className="flex items-center justify-between mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-6 pb-15">
+        <div className="flex items-center justify-between flex-col lg:flex-row gap-8 md:gap-0">
           <div>
             <Link href="/">
               <Image
@@ -24,22 +24,22 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="flex gap-10">
-            <Link href="/about" className="text-xl text-muted-foreground">
+          <div className="flex gap-6 lg:gap-10 flex-col lg:flex-row items-center">
+            <Link href="/about" className="text-base lg:text-xl text-muted-foreground">
               {t('footer.company')}
             </Link>
-            <Link href="/service" className="text-xl text-muted-foreground">
+            <Link href="/service" className="text-base lg:text-xl text-muted-foreground">
               {t('footer.services')}
             </Link>
-            <Link href="/" className="text-xl text-muted-foreground">
+            <Link href="/" className="text-base lg:text-xl text-muted-foreground">
               {t('footer.blog')}
             </Link>
-            <Link href="/contact" className="text-xl text-muted-foreground">
+            <Link href="/contact" className="text-base lg:text-xl text-muted-foreground">
               {t('footer.contacts')}
             </Link>
           </div>
 
-          <div className=" flex gap-5">
+          <div className="flex gap-5">
             <Link href="" target="blank">
               <IoLogoLinkedin size={25} className="text-muted-foreground" />
             </Link>
@@ -58,10 +58,10 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className=" border-muted-foreground/30 border mx-10  "></div>
+      <div className="border-muted-foreground/30 border mx-10  "></div>
 
       <div className="flex flex-col gap-3 mx-auto max-w-7xl px-6 pt-15 ">
-        <span className="text-[#5E5E5E] text-xl">
+        <span className="text-[#5E5E5E] text-base lg:text-xl">
           {t('footer.rights')}
         </span>
 

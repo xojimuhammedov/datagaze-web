@@ -18,9 +18,9 @@ export default function TrustedCompanies() {
   ];
 
   return (
-    <section className="w-full py-1 pb-20 ">
+    <section className="w-full py-16">
       <div className="mx-auto max-w-7xl px-6 flex flex-col items-center gap-4 overflow-hidden">
-        <h2 className="text-center text-base font-medium ">
+        <h2 className="text-center text-sm md:text-base font-medium ">
           {t('trusted_companies.title')}
         </h2>
 
@@ -46,7 +46,7 @@ export default function TrustedCompanies() {
             ]}
             className="w-full max-w-none"
           >
-            <CarouselContent className=" -ml-4 flex items-center bg-[#F7F7F8]">
+            <CarouselContent className="-ml-1 md:-ml-4 flex items-center bg-[#F7F7F8]">
               {[...companies, ...companies].map((img, index) => (
                 <CarouselItem
                   key={`company-${index}`}

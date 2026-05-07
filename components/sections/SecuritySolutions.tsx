@@ -6,11 +6,11 @@ export default function SecuritySolutions() {
   return (
     <section className="w-full py-16">
       <div className="mx-auto max-w-6xl px-6 flex flex-col items-center text-center gap-6">
-        <h2 className="text-5xl sm:text-4xl lg:text-5xl max-w-2xl font-medium leading-tight text-gray-900 pb-4">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl max-w-2xl font-medium leading-tight text-gray-900 pb-4">
           {t('security_solutions.title')}
         </h2>
 
-        <p className="text-[22px] text-muted-foreground max-w-2xl">
+        <p className="text-lg lg:text-xl text-muted-foreground max-w-2xl">
           {t('security_solutions.description')}
         </p>
       </div>

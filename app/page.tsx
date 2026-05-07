@@ -15,10 +15,10 @@ export default function Home() {
       <TrustedCompanies />
       <SecuritySolutions />
       <Ecosystem />
-      <ImpactNumbers />
+      {/* <ImpactNumbers />
       <SecureSensitive />
       <CtaSection />
-      <Organizations />
+      <Organizations /> */}
       <ExpertInsights />
     </main>
   );

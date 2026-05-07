@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-full bg-[#f7f7f8]`}>
         <I18nProvider>
           <ModalProvider>
-            <Navbar />
+            {/* <Navbar /> */}
             {children}
             <Footer />
             <TalkWithSalesModal />

@@ -34,7 +34,7 @@
     "title": "Tashkilotlar uchun soddalashtirilgan xavfsizlik",
     "description": "Biz ma'lumotlaringizni himoya qilayotganimizda siz o'sishga e'tibor qarating. Bizning yechimlarimiz tizimlaringizni qulay va samarali himoya qilish uchun mo'ljallangan. Bugun demoni oling va ma'lumotlar xavfsizligini qanday soddalashtirishimizni ko'ring.",
     "get_demo": "Demoni olish",
-    "talk_sales": "Sotuvlar bo'limi bilan bog'lanish"
+    "talk_sales": "Bog'lanish"
   },
   "footer": {
     "company": "Kompaniya",
@@ -55,7 +55,7 @@
     "title": "Ma'lumotlar xavfsizligining keng qamrovli ekotizimi",
     "subtitle": "Datagaze ma'lumotlaringiz va infratuzilmangizni himoya qilish uchun uzluksiz xavfsizlik yechimlarini taklif etadi.",
     "desc": "Datagaze tomonidan ishlab chiqilgan dasturiy mahsulotlar Microsoft va Digicert tomonidan sertifikatlangan.",
-    "talk_sales": "Sotuvlar bo'limi bilan bog'lanish",
+    "talk_sales": "Bog'lanish",
     "features": {
       "feature1": {
         "title": "Microsoft va Digicert'dan EV-Code imzolash sertifikatlari",
@@ -75,7 +75,7 @@
     "title": "Bizning ta'sirimiz raqamlarda",
     "description": "Biz ko'plab yirik tashkilotlar bilan ularning ma'lumotlarini himoya qilishda hamkorlik qilamiz. Bizning yechimlarimiz ishonchlilik va samaradorlikni kafolatlaydi.",
     "get_demo": "Demoni olish",
-    "talk_sales": "Sotuvlar bo'limi bilan bog'lanish"
+    "talk_sales": "Bog'lanish"
   },
   "expert_insights": {
     "title": "Ekspert maslahatlari bilan oldinda bo'ling",

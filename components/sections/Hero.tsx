@@ -8,9 +8,9 @@ export default function Hero() {
 
   return (
     <section className="w-full py-16  sm:py-20 lg:py-40">
-      <div className="mx-auto grid w-full max-w-7xl items-center px-6 lg:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-7xl items-center px-4 md:px-6 gap-16 lg:gap-0 lg:grid-cols-2">
         <div className="max-w-xl">
-          <Link href={'/service'}>
+          <Link className="hidden md:block" href={'/service'}>
             <div className="block">
               <div
                 className="relative inline-flex mb-12 cursor-pointer items-center rounded-[277px] p-[1px] overflow-hidden group w-min h-min"
@@ -40,10 +40,10 @@ export default function Hero() {
               </div>
             </div>
           </Link>
-          <h1 className="whitespace-pre-wrap font-medium break-words font-medium not-italic text-[#14151a] text-[32px] md:text-[48px] leading-[40px] md:leading-[56px] tracking-[-0.01em]">
+          <h1 className="font-medium text-[#14151a] text-4xl md:text-[48px] leading-[44px] md:leading-[56px] tracking-[-0.01em] text-center md:text-start">
             {t('hero.title')}
           </h1>
-          <p className="whitespace-pre-wrap break-words text-[#6b6d78] font-medium text-[22px] md:text-[20px] leading-[24px] md:leading-[28px] tracking-[-0.01em] mt-6">
+          <p className="text-[#6b6d78] font-medium text-xl lg::text-[22px] mt-6 text-center md:text-start">
             {t('hero.description')}
           </p>
         </div>
