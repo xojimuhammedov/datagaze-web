@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { GoArrowUpRight } from "react-icons/go";
 import { useModal } from "@/context/ModalContext";
+import IntegrationHub from "../about/IntegrationHub";
 
 const Organization = () => {
   const { openSalesModal, openDemoModal } = useModal();
@@ -14,7 +15,7 @@ const Organization = () => {
       <div className="mx-auto w-full max-w-7xl px-4">
         <div className="flex flex-col lg:flex-row flex-1 justify-center items-center bg-white rounded-[24px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] gap-[10px] w-full h-min p-4 lg:p-10 relative overflow-hidden border border-[#DEE0E3]">
           <div className="w-full">
-            <Image src={img} alt="Img" className="h-[350px] lg:h-full object-cover w-full" />
+            <IntegrationHub />
           </div>
           <div className="w-full">
             <h2 className="font-medium text-3xl lg:text-4xl pb-5 lg:pb-10 max-w-xl">

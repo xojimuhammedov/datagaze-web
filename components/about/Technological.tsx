@@ -39,7 +39,7 @@ const Technological = () => {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-12">
         <div className="bg-white rounded-[20px] p-5 flex items-center flex-col lg:flex-row gap-15 mt-30 border">
           <div>
             <Image
