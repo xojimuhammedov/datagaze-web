@@ -216,3 +216,33 @@ input:focus, select:focus, textarea:focus {
   outline: none !important;
   box-shadow: 0 0 0 1px #0099ff !important;
 }
+
+/* Orbits for Organization animation */
+@keyframes orbit-ccw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); } 
+}
+@keyframes counter-orbit-ccw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes counter-orbit-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.animate-orbit-ccw { animation: orbit-ccw 20s linear infinite; }
+.animate-counter-orbit-ccw { animation: counter-orbit-ccw 20s linear infinite; }
+
+.animate-orbit-cw { animation: orbit-cw 20s linear infinite; }
+.animate-counter-orbit-cw { animation: counter-orbit-cw 20s linear infinite; }
+
+.origin-icon-4 { transform-origin: 3px 426px; }
+.origin-icon-5 { transform-origin: -278px 257px; }
+.origin-icon-2 { transform-origin: -186.7px 313px; }
+.origin-icon-3 { transform-origin: -303.7px 119px; }

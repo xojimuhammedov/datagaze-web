@@ -6,7 +6,6 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { GoArrowUpRight } from "react-icons/go";
 import { useModal } from "@/context/ModalContext";
-import IntegrationHub from "../about/IntegrationHub";
 
 const Organization = () => {
   const { openSalesModal, openDemoModal } = useModal();
@@ -14,10 +13,70 @@ const Organization = () => {
     <section className="w-full py-12 lg:py-30">
       <div className="mx-auto w-full max-w-7xl px-4">
         <div className="flex flex-col lg:flex-row flex-1 justify-center items-center bg-white rounded-[24px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] gap-[10px] w-full h-min p-4 lg:p-10 relative overflow-hidden border border-[#DEE0E3]">
-          <div className="w-full">
-            <IntegrationHub />
+          <div className="w-full relative z-10">
+            <div className="w-[478px] h-[496px] rounded-3xl overflow-hidden relative">
+              {/* Rectangle 11 (Eng kattasi) */}
+              <Image
+                src="/animation/Rectangle 11.png"
+                alt=""
+                width={478}
+                height={471}
+                className="absolute bottom-0 left-0 z-10"
+              />
+
+              {/* Rectangle 12 (1) */}
+              <Image
+                src="/animation/Rectangle 12 (1).png"
+                alt=""
+                width={388}
+                height={382}
+                className="absolute bottom-0 left-0 z-20"
+              />
+              <div className="absolute top-[70px] left-[34px] z-20 w-[85px] h-[85px] origin-icon-4 animate-orbit-ccw">
+                <div className="w-full h-full rounded-[127.5px] bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] flex items-center justify-center animate-counter-orbit-ccw">
+                  <Image src="/animation/4.png" alt="" width={41} height={41} />
+                </div>
+              </div>
+              <div className="absolute top-[239px] left-[315px] z-20 w-[85px] h-[85px] origin-icon-5 animate-orbit-ccw">
+                <div className="w-full h-full rounded-[127.5px] bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] flex items-center justify-center animate-counter-orbit-ccw">
+                  <Image src="/animation/5.png" alt="" width={55} height={34} />
+                </div>
+              </div>
+
+              {/* Rectangle 13 */}
+              <Image
+                src="/animation/Rectangle 13.png"
+                alt=""
+                width={303}
+                height={296}
+                className="absolute bottom-0 left-0 z-30"
+              />
+              <div className="absolute top-[183px] left-[141px] z-30 w-[85px] h-[85px] origin-icon-2 animate-orbit-cw">
+                <div className="w-full h-full rounded-[127.5px] bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] flex items-center justify-center animate-counter-orbit-cw">
+                  <Image src="/animation/2.png" alt="" width={42} height={42} />
+                </div>
+              </div>
+              <div className="absolute top-[377px] left-[258px] z-30 w-[85px] h-[85px] origin-icon-3 animate-orbit-cw">
+                <div className="w-full h-full rounded-[127.5px] bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] flex items-center justify-center animate-counter-orbit-cw">
+                  <Image src="/animation/3.png" alt="" width={49} height={42} />
+                </div>
+              </div>
+
+              {/* Rectangle 14 (Eng kichigi) */}
+              <Image
+                src="/animation/Rectangle 14.png"
+                alt=""
+                width={210}
+                height={203}
+                className="absolute bottom-0 left-0 z-40"
+              />
+              <div className="absolute bottom-0 left-0 z-40 w-[177px] h-[177px] rounded-[127.5px] bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] flex items-center justify-center">
+                <Image src="/animation/1.png" alt="" width={91} height={130} />
+              </div>
+            </div>
           </div>
-          <div className="w-full">
+
+          <div className="w-full relative z-10">
             <h2 className="font-medium text-3xl lg:text-4xl pb-5 lg:pb-10 max-w-xl">
               Simplified Security for Organizations
             </h2>
