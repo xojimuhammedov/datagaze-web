@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-import img from "@/public/services/organization.svg";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { GoArrowUpRight } from "react-icons/go";

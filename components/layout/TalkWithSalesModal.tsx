@@ -4,9 +4,29 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useModal } from '@/context/ModalContext';
 import { X } from 'lucide-react';
+import { sendTelegramMessage } from '@/utils/telegram';
 
 const TalkWithSalesModal = () => {
   const { isSalesModalOpen, closeSalesModal } = useModal();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const fullName = formData.get("fullName") as string;
+    const phoneNumber = formData.get("phoneNumber") as string;
+
+    const text = `<b>📞 Sotuv Bo'limi (Talk With Sales)</b>\n\n<b>👤 F.I.Sh:</b> ${fullName}\n<b>📞 Telefon:</b> ${phoneNumber}`;
+
+    const success = await sendTelegramMessage(text);
+    if (success) {
+      alert("Ariza muvaffaqiyatli yuborildi!");
+      form.reset();
+      closeSalesModal();
+    } else {
+      alert("Xatolik yuz berdi. Iltimos qaytadan urinib ko'ring.");
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -60,17 +80,15 @@ const TalkWithSalesModal = () => {
 
             <form
               className="w-full flex flex-col gap-4"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert('Form submitted! Our sales team will contact you soon.');
-                closeSalesModal();
-              }}
+              onSubmit={handleSubmit}
             >
               <label className="flex flex-col gap-2">
                 <span className="text-xs font-medium text-gray-900">Full name</span>
                 <input
                   type="text"
+                  name="fullName"
                   placeholder="Akmal Karimov"
+                  required
                   className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
                 />
               </label>
@@ -79,7 +97,9 @@ const TalkWithSalesModal = () => {
                 <span className="text-xs font-medium text-gray-900">Phone number</span>
                 <input
                   type="tel"
+                  name="phoneNumber"
                   placeholder="+998"
+                  required
                   className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
                 />
               </label>

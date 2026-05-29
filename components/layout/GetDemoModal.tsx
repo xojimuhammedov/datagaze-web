@@ -4,9 +4,31 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useModal } from '@/context/ModalContext';
 import { X } from 'lucide-react';
+import { sendTelegramMessage } from '@/utils/telegram';
 
 const GetDemoModal = () => {
   const { isDemoModalOpen, closeDemoModal } = useModal();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const fullName = formData.get("fullName") as string;
+    const phoneNumber = formData.get("phoneNumber") as string;
+    const productType = formData.get("productType") as string;
+    const companySize = formData.get("companySize") as string;
+
+    const text = `<b>🖥 Demo So'rovi (Get Demo Modal)</b>\n\n<b>👤 F.I.Sh:</b> ${fullName}\n<b>📞 Telefon:</b> ${phoneNumber}\n<b>📦 Mahsulot:</b> ${productType}\n<b>👥 Xodimlar soni:</b> ${companySize}`;
+
+    const success = await sendTelegramMessage(text);
+    if (success) {
+      alert("Ariza muvaffaqiyatli yuborildi!");
+      form.reset();
+      closeDemoModal();
+    } else {
+      alert("Xatolik yuz berdi. Iltimos qaytadan urinib ko'ring.");
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -60,11 +82,7 @@ const GetDemoModal = () => {
 
             <form
               className="w-full flex flex-col gap-5"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert('Demo scheduled! We will contact you soon.');
-                closeDemoModal();
-              }}
+              onSubmit={handleSubmit}
             >
               <div className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -72,6 +90,7 @@ const GetDemoModal = () => {
                     <span className="text-xs font-medium text-gray-900">Full name</span>
                     <input 
                       type="text" 
+                      name="fullName"
                       placeholder="Akmal Karimov"
                       required
                       className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
@@ -81,6 +100,7 @@ const GetDemoModal = () => {
                     <span className="text-xs font-medium text-gray-900">Phone number</span>
                     <input 
                       type="tel" 
+                      name="phoneNumber"
                       placeholder="+998"
                       required
                       className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
@@ -91,7 +111,7 @@ const GetDemoModal = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label className="flex flex-col gap-2">
                     <span className="text-xs font-medium text-gray-900">Select product type</span>
-                    <select className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
+                    <select name="productType" className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="DLP">Datagaze DLP</option>
                       <option value="SIEM">Datagaze SIEM</option>
                       <option value="Staff">Datagaze Staff</option>
@@ -100,7 +120,7 @@ const GetDemoModal = () => {
                   </label>
                   <label className="flex flex-col gap-2">
                     <span className="text-xs font-medium text-gray-900">Company size</span>
-                    <select className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
+                    <select name="companySize" className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="50-100">50-100</option>
                       <option value="100-200">100-200</option>
                       <option value="200-500">200-500</option>

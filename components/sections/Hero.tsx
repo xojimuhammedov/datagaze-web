@@ -2,9 +2,30 @@
 
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import { sendTelegramMessage } from "@/utils/telegram";
 
 export default function Hero() {
   const { t } = useTranslation();
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const fullName = formData.get("fullName") as string;
+    const phoneNumber = formData.get("phoneNumber") as string;
+    const productType = formData.get("productType") as string;
+    const companySize = formData.get("companySize") as string;
+
+    const text = `<b>🆕 Yangi Ariza (Bosh sahifa)</b>\n\n<b>👤 F.I.Sh:</b> ${fullName}\n<b>📞 Telefon:</b> ${phoneNumber}\n<b>📦 Mahsulot:</b> ${productType}\n<b>👥 Xodimlar soni:</b> ${companySize}`;
+
+    const success = await sendTelegramMessage(text);
+    if (success) {
+      alert("Ariza muvaffaqiyatli yuborildi!");
+      form.reset();
+    } else {
+      alert("Xatolik yuz berdi. Iltimos qaytadan urinib ko'ring.");
+    }
+  };
 
   return (
     <section className="w-full py-16 pt-40 lg:py-40 lg:pb-16">
@@ -53,8 +74,9 @@ export default function Hero() {
             {/* Dual Rotating Border Animation */}
             <div className="absolute inset-[-200%] animate-rotate bg-[conic-gradient(from_0deg,transparent_320deg,#2563eb_360deg,transparent_40deg)] opacity-100" />
             <div className="absolute inset-[-200%] animate-rotate-reverse bg-[conic-gradient(from_0deg,transparent_320deg,#2563eb_360deg,transparent_40deg)] opacity-100" />
-            
+
             <form
+              onSubmit={handleSubmit}
               className="relative z-10 w-full p-5 flex flex-col gap-5 rounded-[11px] overflow-hidden"
               style={{
                 background: "linear-gradient(rgb(222, 233, 255) 0%, rgb(255, 255, 255) 100%)"
@@ -70,17 +92,21 @@ export default function Hero() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label className="flex flex-col gap-2">
                     <span className="text-xs font-medium text-gray-900">{t('hero.full_name')}</span>
-                    <input 
-                      type="text" 
+                    <input
+                      type="text"
+                      name="fullName"
                       placeholder="Akmal Karimov"
+                      required
                       className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
                     />
                   </label>
                   <label className="flex flex-col gap-2">
                     <span className="text-xs font-medium text-gray-900">{t('hero.phone_number')}</span>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
+                      name="phoneNumber"
                       placeholder="+998"
+                      required
                       className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
                     />
                   </label>
@@ -89,14 +115,16 @@ export default function Hero() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label className="flex flex-col gap-2">
                     <span className="text-xs font-medium text-gray-900">{t('hero.product_type')}</span>
-                    <select className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
+                    <select name="productType" className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="DLP">Datagaze DLP</option>
                       <option value="SIEM">Datagaze SIEM</option>
+                      <option value="STAFF">Datagaze STAFF</option>
+                      <option value="WAFF">Datagaze WAFF</option>
                     </select>
                   </label>
                   <label className="flex flex-col gap-2">
                     <span className="text-xs font-medium text-gray-900">{t('hero.company_size')}</span>
-                    <select className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
+                    <select name="companySize" className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="50-100">50-100</option>
                       <option value="100-200">100-200</option>
                       <option value="200 - 500">More than 500 Employees</option>
@@ -105,7 +133,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <button 
+              <button
                 type="submit"
                 className="w-full h-10 cursor-pointer bg-[#2563eb] hover:bg-blue-700 text-white font-medium text-sm rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center"
               >

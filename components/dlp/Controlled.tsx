@@ -123,8 +123,8 @@ const Controlled = () => {
                   <Image
                     src={item.icons}
                     alt={item.name}
-                    width={20}
-                    height={20}
+                    width={24}
+                    height={24}
                   />
                 </div>
 

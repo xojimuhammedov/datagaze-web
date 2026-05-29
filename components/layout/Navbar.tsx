@@ -4,8 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, Globe } from "lucide-react";
 import { useState } from "react";
-
-import { usePathname } from "next/navigation";
 import { useTranslation } from "react-i18next";
 
 import {
@@ -65,7 +63,7 @@ const resources = [
   {
     id: "documentation",
     title: "Documentation",
-    href: "#",
+    href: "https://docs.datagaze.uz/",
     description: "Read about product technical docs",
   },
   {
@@ -284,24 +282,5 @@ export default function Navbar() {
         </div>
       )}
     </nav>
-  );
-}
-
-function ListItem({
-  title,
-  children,
-  href,
-  ...props
-}: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
-  return (
-    <li {...props}>
-      <NavigationMenuLink asChild>
-        <Link href={href} className="block rounded-md p-3 hover:bg-gray-100">
-          <div className="text-sm font-medium">{title}</div>
-
-          <p className="text-sm text-gray-500">{children}</p>
-        </Link>
-      </NavigationMenuLink>
-    </li>
   );
 }

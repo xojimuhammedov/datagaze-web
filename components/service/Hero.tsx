@@ -1,6 +1,28 @@
+"use client";
 
+import React from "react";
+import { sendTelegramMessage } from "@/utils/telegram";
 
 const Hero = () => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const fullName = formData.get("fullName") as string;
+    const phoneNumber = formData.get("phoneNumber") as string;
+    const message = formData.get("message") as string;
+
+    const text = `<b>🆕 Yangi Ariza (Xizmatlar sahifasi)</b>\n\n<b>👤 F.I.Sh:</b> ${fullName}\n<b>📞 Telefon:</b> ${phoneNumber}\n<b>📝 Muammo/Xabar:</b> ${message}`;
+
+    const success = await sendTelegramMessage(text);
+    if (success) {
+      alert("Ariza muvaffaqiyatli yuborildi!");
+      form.reset();
+    } else {
+      alert("Xatolik yuz berdi. Iltimos qaytadan urinib ko'ring.");
+    }
+  };
+
   return (
     <section className="w-full py-10 lg:py-20">
       <div className="mx-auto grid w-full max-w-7xl items-center px-4 lg:px-6 gap-16 lg:grid-cols-2 pt-36">
@@ -20,6 +42,7 @@ const Hero = () => {
             <div className="absolute inset-[-200%] animate-rotate-reverse bg-[conic-gradient(from_0deg,transparent_320deg,#2563eb_360deg,transparent_40deg)] opacity-100" />
 
             <form
+              onSubmit={handleSubmit}
               className="relative z-10 w-full p-5 flex flex-col gap-5 rounded-[11px] overflow-hidden"
               style={{
                 background: "linear-gradient(rgb(222, 233, 255) 0%, rgb(255, 255, 255) 100%)"
@@ -37,7 +60,9 @@ const Hero = () => {
                     <span className="text-xs font-medium text-gray-900">Full name</span>
                     <input
                       type="text"
+                      name="fullName"
                       placeholder="Akmal Karimov"
+                      required
                       className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
                     />
                   </label>
@@ -45,14 +70,16 @@ const Hero = () => {
                     <span className="text-xs font-medium text-gray-900">Phone number</span>
                     <input
                       type="tel"
+                      name="phoneNumber"
                       placeholder="+998"
+                      required
                       className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all"
                     />
                   </label>
                 </div>
                 <label className="flex flex-col gap-2">
                   <span className="text-xs font-medium text-gray-900">Tell us about the issue</span>
-                  <textarea name="message" id="message" placeholder="Message" className="w-full h-[104px] px-3 py-2 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all" ></textarea>
+                  <textarea name="message" id="message" placeholder="Message" required className="w-full h-[104px] px-3 py-2 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all" ></textarea>
                 </label>
               </div>
 

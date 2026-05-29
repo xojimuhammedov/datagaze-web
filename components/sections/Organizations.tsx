@@ -41,6 +41,31 @@ const Organizations = () => {
       name: "Oliy ta'lim",
       url: "https://gov.uz/oz/sanepid",
     },
+    {
+      logo: "/organization/alfa-invest.webp",
+      name: "Alfa Invest",
+      url: "#",
+    },
+    {
+      logo: "/organization/uz-gidro.png",
+      name: "UzGidro",
+      url: "#",
+    },
+    {
+      logo: "/organization/yoshlar.png",
+      name: "Yoshlar",
+      url: "#",
+    },
+    {
+      logo: "/organization/uzpost.png",
+      name: "Uzpost",
+      url: "#",
+    },
+    {
+      logo: "/organization/uz-avtoyol.png",
+      name: "Uz-Avtoyol",
+      url: "#",
+    },
   ];
 
   return (
@@ -66,32 +91,24 @@ const Organizations = () => {
             borderStyle: 'solid'
           }}
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 md:gap-y-20 items-center justify-items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-12 items-center justify-items-center">
             {companies.map((item, index) => (
               <Link
                 key={index}
                 href={item.url}
                 target="_blank"
-                className="group relative flex flex-col items-center justify-center w-full aspect-square max-h-[140px]"
+                className="group relative flex flex-col items-center justify-center w-full aspect-square max-h-[100px]"
               >
                 <div className="relative w-full h-full flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2">
                   <Image
                     src={item.logo}
                     alt={item.name}
+                    className="object-scale-down"
                     fill
                   />
                 </div>
               </Link>
             ))}
-            
-            <div className="flex flex-col items-center justify-center w-full aspect-square max-h-[120px] text-center">
-              <span className="text-3xl md:text-4xl font-semibold text-[#a855f7] bg-gradient-to-r from-fuchsia-600 via-purple-600 to-blue-600 bg-clip-text text-transparent mb-1">
-                40+
-              </span>
-              <span className="text-lg md:text-xl font-medium text-[#a855f7] bg-gradient-to-r from-fuchsia-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-                {t('organizations.orgs_count')}
-              </span>
-            </div>
           </div>
         </div>
       </div>
