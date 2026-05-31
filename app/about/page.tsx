@@ -1,6 +1,7 @@
 import AboutHero from "@/components/about/AboutHero";
 import Environment from "@/components/about/Environment";
 import Partnership from "@/components/about/Partnership";
+import OrbitSection from "@/components/about/OrbitSection";
 import Technological from "@/components/about/Technological";
 import Organization from "@/components/service/Organization";
 
@@ -10,6 +11,7 @@ export default function About() {
       <AboutHero />
       <Technological />
       <Partnership />
+      <OrbitSection />
       <Environment />
       <Organization />
     </main>

@@ -8,7 +8,7 @@ import it_sertifikat from "@/public/texnological/it-park.jpg";
 const Partnership = () => {
   return (
     <section className="w-full py-16">
-      <div className="mx-auto max-w-7xl px-6 ">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="pb-8 lg:p-30 flex flex-col items-center text-center gap-6">
           <h2 className="text-3xl lg:text-[50px] font-medium text-center text-gray-900 max-w-3xl">
             In Partnership with Leading Organizations
