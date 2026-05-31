@@ -1,86 +1,108 @@
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+
+type Item = {
+  key: string;
+  icons: string;
+  name: string;
+  description: string;
+};
 
 const WaffControlled = () => {
-  const channels = [
+  const { t } = useTranslation();
+
+  const channels: Item[] = [
     {
+      key: "attendances",
       icons: "/staff/icons/attendances.svg",
       name: "Attendances",
       description:
         "Monitor daily employee attendance, check-in statuses, and reasons.",
     },
     {
+      key: "actions",
       icons: "/staff/icons/action.svg",
       name: "Actions",
       description:
         "Track employee entries and exits through various access methods and gates.",
     },
     {
+      key: "screenshots",
       icons: "/staff/icons/screen.svg",
       name: "Screenshots",
       description:
         "Monitor activities across various apps and sites over time.",
     },
     {
+      key: "visited_sites",
       icons: "/staff/icons/visited.svg",
       name: "Visited Sites",
       description: "Track and monitor websites visited by users.",
     },
     {
+      key: "key_logs",
       icons: "/staff/icons/key_logs.svg",
       name: "Key Logs",
       description: "Track employee actions and search queries over time.",
     },
     {
+      key: "blocking_sites_and_apps",
       icons: "/staff/icons/blocking.svg",
       name: "Blocking sites and apps",
       description: "Restrict access to sites/apps.",
     },
     {
+      key: "computer",
       icons: "/staff/icons/computer.svg",
       name: "Computer",
       description:
         "View the list of computers and monitor their current status.",
     },
     {
+      key: "visitors",
       icons: "/staff/icons/visitors.svg",
       name: "Visitors",
       description: "Track organization guests, visit times, and their hosts.",
     },
     {
+      key: "gates",
       icons: "/staff/icons/gates.svg",
       name: "Gates",
       description:
         "Manage access points and assign multiple devices to each gate.",
     },
     {
+      key: "devices",
       icons: "/staff/icons/devices.svg",
       name: "Devices",
       description:
         "Manage gate-attached devices, their details, and operation types.",
     },
     {
+      key: "reason_types",
       icons: "/staff/icons/reason.svg",
       name: "Reason Types",
       description:
         "Manage various reasons directly related to employee attendance.",
     },
     {
+      key: "work_schedules",
       icons: "/staff/icons/work.svg",
       name: "Work Schedules",
       description:
         "Create and manage specific work hours for departments or employees.",
     },
   ];
+
   return (
     <section className="w-full py-10">
       <div className="mx-auto max-w-7xl px-4 lg:px-6">
         <div className="p-0 lg:p-8 flex flex-col gap-10 items-center pb-25">
           <h2 className="text-4xl lg:text-5xl font-medium w-full lg:w-150 text-center ">
-            Controlled Channels
+            {t("dlp.controlled_title")}
           </h2>
           <p className="w-full lg:w-175 text-center text-lg lg:text-xl text-muted-foreground">
-            Monitor and manage secure communication pathways within your
-            network.
+            {t("dlp.controlled_desc")}
           </p>
         </div>
 
@@ -91,16 +113,18 @@ const WaffControlled = () => {
                 <div className="text-2xl text-blue-600 border w-14 h-14 flex items-center justify-center rounded-xl">
                   <Image
                     src={item.icons}
-                    alt={item.name}
+                    alt={t(`staff.controlled.${item.key}.name`)}
                     width={24}
                     height={24}
                   />
                 </div>
 
-                <h3 className="text-base lg:text-lg font-medium">{item.name}</h3>
+                <h3 className="text-base lg:text-lg font-medium">
+                  {t(`staff.controlled.${item.key}.name`)}
+                </h3>
 
                 <p className="text-sm lg:text-base font-normal text-muted-foreground">
-                  {item.description}
+                  {t(`staff.controlled.${item.key}.description`)}
                 </p>
               </div>
             );

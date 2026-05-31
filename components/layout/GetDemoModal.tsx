@@ -5,9 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useModal } from '@/context/ModalContext';
 import { X } from 'lucide-react';
 import { sendTelegramMessage } from '@/utils/telegram';
+import { useTranslation } from 'react-i18next';
 
 const GetDemoModal = () => {
   const { isDemoModalOpen, closeDemoModal } = useModal();
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,11 +24,11 @@ const GetDemoModal = () => {
 
     const success = await sendTelegramMessage(text);
     if (success) {
-      alert("Ariza muvaffaqiyatli yuborildi!");
+      alert(t("modals.success_alert"));
       form.reset();
       closeDemoModal();
     } else {
-      alert("Xatolik yuz berdi. Iltimos qaytadan urinib ko'ring.");
+      alert(t("modals.error_alert"));
     }
   };
 
@@ -77,7 +79,7 @@ const GetDemoModal = () => {
                 color: '#14151a',
               }}
             >
-              Experience innovation firsthand. Schedule your demo today.
+              {t("modals.demo_title")}
             </h2>
 
             <form
@@ -87,7 +89,7 @@ const GetDemoModal = () => {
               <div className="flex flex-col gap-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label className="flex flex-col gap-2">
-                    <span className="text-xs font-medium text-gray-900">Full name</span>
+                    <span className="text-xs font-medium text-gray-900">{t("hero.full_name")}</span>
                     <input 
                       type="text" 
                       name="fullName"
@@ -97,7 +99,7 @@ const GetDemoModal = () => {
                     />
                   </label>
                   <label className="flex flex-col gap-2">
-                    <span className="text-xs font-medium text-gray-900">Phone number</span>
+                    <span className="text-xs font-medium text-gray-900">{t("hero.phone_number")}</span>
                     <input 
                       type="tel" 
                       name="phoneNumber"
@@ -110,7 +112,7 @@ const GetDemoModal = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <label className="flex flex-col gap-2">
-                    <span className="text-xs font-medium text-gray-900">Select product type</span>
+                    <span className="text-xs font-medium text-gray-900">{t("hero.product_type")}</span>
                     <select name="productType" className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="DLP">Datagaze DLP</option>
                       <option value="SIEM">Datagaze SIEM</option>
@@ -119,12 +121,12 @@ const GetDemoModal = () => {
                     </select>
                   </label>
                   <label className="flex flex-col gap-2">
-                    <span className="text-xs font-medium text-gray-900">Company size</span>
+                    <span className="text-xs font-medium text-gray-900">{t("hero.company_size")}</span>
                     <select name="companySize" className="w-full h-10 px-3 bg-white border border-[#DEE0E3] rounded-[10px] text-sm text-gray-900 focus:outline-none shadow-[0px_1px_2px_0px_rgba(0,0,0,0.1)] transition-all cursor-pointer">
                       <option value="50-100">50-100</option>
                       <option value="100-200">100-200</option>
                       <option value="200-500">200-500</option>
-                      <option value="500+">More than 500 Employees</option>
+                      <option value="500+">{t("modals.more_than_500")}</option>
                     </select>
                   </label>
                 </div>
@@ -134,7 +136,7 @@ const GetDemoModal = () => {
                 type="submit"
                 className="w-full h-10 cursor-pointer bg-[#2563eb] hover:bg-blue-700 text-white font-medium text-sm rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center mt-2"
               >
-                Submit
+                {t("hero.submit")}
               </button>
             </form>
           </motion.div>

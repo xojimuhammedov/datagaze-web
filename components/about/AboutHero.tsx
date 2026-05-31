@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const AboutHero = () => {
+  const { t } = useTranslation();
   return (
     <section className="w-full bg-[#F9FAFB] bg-[url('/images/rectangle23.svg')] bg-top bg-no-repeat bg-cover pt-32 pb-20 px-4">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-12 mt-20">
@@ -22,17 +24,11 @@ const AboutHero = () => {
           </div>
 
           <h2 className="text-3xl lg:text-4xl font-medium text-center mb-8">
-            Datagaze LLC is the first national company providing cybersecurity
-            solutions for medium and large enterprises.{" "}
+            {t("about_hero.title")}
           </h2>
 
           <p className="text-center text-muted-foreground text-base md:text-lg text-[#5E5E5E]">
-            Its first product, DLP (Data Loss Prevention), helps monitor and
-            control access, protecting against internal cyber threats and
-            preventing data leaks. Currently, DLP is installed on about 12,000
-            endpoints in Uzbekistan, and the company collaborates with more than
-            40 government agencies and private companies, ensuring the security
-            of their corporate information.
+            {t("about_hero.description")}
           </p>
         </div>
       </div>

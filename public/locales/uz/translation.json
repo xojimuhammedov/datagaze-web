@@ -79,7 +79,7 @@
   },
   "expert_insights": {
     "title": "Ekspert maslahatlari bilan oldinda bo'ling",
-    "description": "Kiberxavfsizlik sohasidagi so'nggi tendentsiyalar bo'yicha qimmatli fikrlarga ega bo'ling. Bizning jamoamiz sizga xabardor va xavfsiz bo'lishingizga yordam berish uchun chuqur tadqiqotlar, kompaniya yangiliklari va amaliy tushunchalar bilan o'rtoqlashadi.",
+    "description": "Kiberxavfsizlik sohasidagi so'nggi tendentsiyalar bo'yicha qimmatli fikrlarga ega bo'ling. Bizning jamoamiz sizga xavfsiz bo'lishingizga yordam berish uchun chuqur tadqiqotlar, kompaniya yangiliklari va amaliy tushunchalar bilan o'rtoqlashadi.",
     "see_more": "Ko'proq maqolalarni ko'rish",
     "articles": {
       "article1": {
@@ -108,7 +108,7 @@
       },
       "tab4": {
         "title": "Xodimlarni monitoring qilish va boshqarishning keng qamrovli tizimi",
-        "description": "Bizning kuchli xodimlarni boshqarish vositalarimiz bilan faoliyatni kuzatish, vazifalarni boshqarish va muammolarga real vaqtda javob berish orqali ishchi kuchingiz samaradorligini oshiring."
+        "description": "Bizning kuchli xodimlarni boshqarish vositalarimiz bilan faoliyatni kuzatish, vazihalarni boshqarish va muammolarga real vaqtda javob berish orqali ishchi kuchingiz samaradorligini oshiring."
       }
     },
     "statistics": {
@@ -134,5 +134,163 @@
     "title": "Eng yaxshi tashkilotlar bilan hamkorlik",
     "description": "Biz o'z ma'lumotlarini xavfsiz saqlash uchun bizning yechimlarimizga tayanadigan yetakchi tashkilotlar bilan hamkorlik qilamiz.",
     "orgs_count": "Tashkilotlar"
+  },
+  "orbit_section": {
+    "title": "Yetakchi tashkilotlar bilan hamkorlikda",
+    "description": "Biz ko'plab yirik tashkilotlar bilan ularning ma'lumotlarini himoya qilishda hamkorlik qilamiz. Bizning yechimlarimiz ishonchlilik va samaradorlikni kafolatlaydi.",
+    "stat1_title": "6 yildan ortiq tajriba",
+    "stat1_desc": "O'n yillik tajribaga ega davlat va biznes sektorlarida moslashtirilgan kiberxavfsizlik yechimlarini yetkazib berish.",
+    "stat2_title": "Himoyalangan qurilmalar",
+    "stat2_desc": "Ma'lumotlar buzilishi va ichki tahdidlarning oldini olish uchun mo'ljallangan zamonaviy vositalar bilan 12 000 dan ortiq so'nggi nuqtalarni himoya qilish.",
+    "stat3_title": "Yuqori malakali mutaxassislar",
+    "stat3_desc": "Bizning ekspert jamoamiz tashkilotingiz uchun ma'lumotlar xavfsizligini ta'minlash uchun ilg'or yechimlarni ishlab chiqadi."
+  },
+  "about_hero": {
+    "title": "Datagaze MChJ o'rta va yirik korxonalar uchun kiberxavfsizlik yechimlarini taqdim etuvchi birinchi milliy kompaniyadir.",
+    "description": "Uning birinchi mahsuloti – DLP (Data Loss Prevention) kirishni nazorat qilish va monitoring qilishga yordam beradi, ichki kibertahdidlardan himoya qiladi va ma'lumotlar sizib chiqishini oldini oladi. Hozirgi kunda DLP O'zbekistondagi 12 000 ga yaqin yakuniy nuqtalarga o'rnatilgan bo'lib, kompaniya 40 dan ortiq davlat tashkilotlari va xususiy kompaniyalar bilan hamkorlik qilib, ularning korporativ ma'lumotlari xavfsizligini ta'minlamoqda."
+  },
+  "partnership": {
+    "title": "Yetakchi tashkilotlar bilan hamkorlikda",
+    "description": "Biz ko'plab yirik tashkilotlar bilan ularning ma'lumotlarini himoya qilishda hamkorlik qilamiz. Bizning yechimlarimiz ishonchlilik va samaradorlikni kafolatlaydi.",
+    "legal_title": "O'zbekistonda yuridik shaxs sifatida ro'yxatdan o'tgan",
+    "legal_desc": "O'zbekiston Respublikasi tomonidan qonuniy tadbirkorlik subyekti sifatida rasman tan olingan bo'lib, bu bizning huquqiy va operatsion faoliyatimizni tasdiqlaydi.",
+    "cert_title": "Kiberxavfsizlik markazi tomonidan sertifikatlangan",
+    "cert_desc": "Tizimimiz Kiberxavfsizlik markazi tomonidan qat'iy sinov va baholashdan o'tgan bo'lib, uning xavfsizligi va ishonchliligi uchun ishonchli sertifikatga ega bo'lgan.",
+    "resident_title": "IT Park rezidenti",
+    "resident_desc": "Innovatsiyalar va texnologik rivojlanish uchun yetakchi muhitga kirish imkonini beruvchi IT Park rezidenti sifatida g'urur bilan tan olinganmiz."
+  },
+  "technological": {
+    "title": "Ma'lumotlar xavfsizligini ta'minlash. Texnologik taraqqiyotni boshqarish.",
+    "description": "Datagaze MChJda bizning asosiy maqsadimiz ma'lumotlar xavfsizligini ta'minlash orqali ishonchli va zamonaviy kiberxavfsizlik yechimlarini taqdim etishdir. Innovatsiyalarni qo'llash orqali biz mijozlarimizga murakkab kiberxavfsizlik muammolarini hal qilishda va xavfsiz bo'lishda yordam beramiz.",
+    "quote": "Bizning asosiy maqsadimiz axborot xavfsizligi va kiberxavfsizlik sohasida ishonchli va uzoq muddatli hamkor bo'lish, mijozlarga qulaylik yaratish hamda mahsulot va xizmatlarni doimiy ravishda rivojlantirishdir. Xavfsizligingizni ishonchli qo'llarga topshiring.",
+    "cto": "Texnik direktor (CTO)"
+  },
+  "dlp": {
+    "hero_title": "Datagaze DLP",
+    "hero_desc": "Datagaze DLP (Ma'lumotlar yo'qolishining oldini olish tizimi) tarmog'ingizda almashiladigan ma'lumotlar oqimini doimiy ravishda kuzatib boradi.",
+    "working_title": "Datagaze DLP ning ishchi muhiti",
+    "working_desc": "Jamoangiz nima ustida ishlayotganidan qat'i nazar, bizning DLP tizimimiz har bir fayl, xabar va hujjatni xavfsiz saqlaydi — ma'lumotlaringiz qayerga bormasin.",
+    "client_side": "Mijoz qismi (Client Side)",
+    "server_side": "Server qismi (Server Side)",
+    "controlled_title": "Nazorat qilinadigan kanallar",
+    "controlled_desc": "Tarmog'ingizdagi xavfsiz aloqa yo'llarini kuzatib boring va boshqaring.",
+    "ai_title": "Sun'iy intellekt yordamida avtomatlashtirilgan vazifalar",
+    "ai_desc": "Datagaze DLP (Ma'lumotlar yo'qolishining oldini olish tizimi) tarmog'ingizda almashiladigan ma'lumotlar oqimini doimiy ravishda kuzatib boradi.",
+    "controlled": {
+      "web_site_control": { "name": "Veb-saytlarni nazorat qilish", "description": "Veb-saytlarga kirishni boshqarish." },
+      "email_control": { "name": "Elektron pochtani nazorat qilish", "description": "Elektron qaerdadir faoliyatini nazorat qilish." },
+      "printing_control": { "name": "Chop etishni nazorat qilish", "description": "Chop etilgan hujjatlarni monitoring qilish." },
+      "usb_storages_control": { "name": "USB xotiralarni nazorat qilish", "description": "USB foydalanishini nazorat qilish." },
+      "audio_surveillance": { "name": "Audio kuzatuv", "description": "Ovozli aloqalarni kuzatib borish." },
+      "employee_monitor_surveillance": { "name": "Xodim monitorini kuzatish", "description": "Xodimning ekran faoliyatini nazorat qilish." },
+      "detecting_sensitive_data": { "name": "Maxfiy ma'lumotlarni aniqlash", "description": "Maxfiy ma'lumotlar sizib chiqishini aniqlash." },
+      "blocking_sites_and_apps": { "name": "Saytlar va ilovalarni bloklash", "description": "Saytlar/ilovalarga kirishni cheklash." },
+      "file_server_control": { "name": "Fayl serverini nazorat qilish", "description": "Server fayllaridan foydalanishni nazorat qilish." },
+      "telegram_monitoring": { "name": "Telegram monitoringi", "description": "Telegram orqali yozishmalarni kuzatish." },
+      "usb_devices_control": { "name": "USB qurilmalarini nazorat qilish", "description": "USB qurilmalarini monitoring qilish." },
+      "keyboard_control": { "name": "Klaviatura nazorati", "description": "Klaviatura orqali kiritishlarni jurnalga yozish." },
+      "video_surveillance": { "name": "Video kuzatuv", "description": "Video faoliyatni monitoring qilish." },
+      "employee_screenshots_tracking": { "name": "Xodim ekran rasmlarini kuzatish", "description": "Ekran tasvirlarini olish." },
+      "clipboard_control": { "name": "Bufer (Clipboard) nazorati", "description": "Almashish buferidan foydalanishni kuzatish." },
+      "tracking_installed_software": { "name": "O'rnatilgan dasturlarni kuzatish", "description": "O'rnatilgan ilovalarni kuzatib borish." },
+      "file_monitoring": { "name": "Fayl monitoringi", "description": "Fayllar harakatini monitoring qilish." },
+      "screen_watermarking": { "name": "Ekran suv belgilari (Watermark)", "description": "Ma'lumotlarni suv belgilari bilan himoya qilish." }
+    }
+  },
+  "siem": {
+    "hero_title": "Datagaze SIEM",
+    "hero_desc": "Datagaze SIEM (Xavfsizlik ma'lumotlari va hodisalarni boshqarish) tarmog'ingizdagi xavfsizlik hodisalarini doimiy ravishda kuzatib boradi va tahlil qiladi, real vaqt rejimida tahdidlar va anomaliyalarni aniqlaydi.",
+    "controlled": {
+      "web_monitoring": { "name": "Veb monitoring", "description": "Shubhali faoliyat uchun veb-trafikni kuzatish." },
+      "email_monitoring": { "name": "E-pochta monitoringi", "description": "Elektron pochta xavfsizligi tahdidlarini qayd etish va ogohlantirish." },
+      "network_device_monitoring": { "name": "Tarmoq qurilmalari monitoringi", "description": "Qurilma faoliyatini kuzatish va tahlil qilish." },
+      "internet_of_things": { "name": "Narsalar interneti (IoT)", "description": "IoT xavfsizlik hodisalarini monitoring qilish." },
+      "user_behavior_monitoring": { "name": "Foydalanuvchi xatti-harakati monitoringi", "description": "Anomaliyalarni aniqlash uchun xodimlar faoliyatini tahlil qilish." },
+      "sensitive_data_alerts": { "name": "Maxfiy ma'lumotlar ogohlantirishlari", "description": "Maxfiy ma'lumotlar harakatini aniqlash." },
+      "file_server_monitoring": { "name": "Fayl serveri monitoringi", "description": "Fayllarga kirish va server jurnallarini kuzatish." },
+      "incident_detection": { "name": "Hodisalarni aniqlash", "description": "Tizimlardagi noodatiy hodisalar haqida ogohlantirish." },
+      "app_activity_monitoring": { "name": "Ilovalar faolligi monitoringi", "description": "Tahdidlar uchun ilovalarga kirishni qayd etish." }
+    }
+  },
+  "staff": {
+    "hero_title": "Datagaze Staff",
+    "hero_desc": "Datagaze Staff (Xodimlarning faolligi va ish vaqtini kuzatish) tarmog'ingizdagi xodimlarning faoliyatini doimiy ravishda kuzatib boradi va tahlil qiladi, xavf-xatarlar hamda anomaliyalarni real vaqt rejimida aniqlaydi.",
+    "controlled": {
+      "attendances": { "name": "Davomat", "description": "Xodimlarning kunlik davomati, kelib-ketish holatlari va sabablarini kuzatish." },
+      "actions": { "name": "Harakatlar", "description": "Turli kirish usullari va eshiklar orqali xodimlarning kirishi va chiqishini kuzatish." },
+      "screenshots": { "name": "Ekran rasmlari", "description": "Vaqt o'tishi bilan turli xil ilovalar va saytlardagi faoliyatni kuzatish." },
+      "visited_sites": { "name": "Tashrif buyurilgan saytlar", "description": "Foydalanuvchilar tashrif buyurgan veb-saytlarni kuzatish." },
+      "key_logs": { "name": "Klaviatura jurnallari", "description": "Vaqt o'tishi bilan xodimlarning harakatlari va qidiruv so'rovlarini kuzatish." },
+      "blocking_sites_and_apps": { "name": "Saytlar va ilovalarni bloklash", "description": "Saytlar/ilovalarga kirishni cheklash." },
+      "computer": { "name": "Kompyuter", "description": "Kompyuterlar ro'yxatini ko'rish va ularning joriy holatini kuzatish." },
+      "visitors": { "name": "Mehmonlar", "description": "Tashkilot mehmonlarini, tashrif vaqtlarini va ularni qabul qilganlarni kuzatish." },
+      "gates": { "name": "Eshiklar/Turniketlar", "description": "Kirish nuqtalarini boshqarish va har bir eshikka bir nechta qurilmani biriktirish." },
+      "devices": { "name": "Qurilmalar", "description": "Eshiklarga ulangan qurilmalarni, ularning tafsilotlarini va ishlash turlarini boshqarish." },
+      "reason_types": { "name": "Sabab turlari", "description": "Xodimlarning davomati bilan bevosita bog'liq bo'lgan turli xil sabablarni boshqarish." },
+      "work_schedules": { "name": "Ish jadvallari", "description": "Bo'limlar yoki xodimlar uchun aniq ish vaqtlarini yaratish va boshqarish." }
+    }
+  },
+  "waff": {
+    "hero_title": "Datagaze Waff",
+    "hero_desc": "Datagaze WAF (Veb-ilovalar fayrvoli) veb-ilovalaringiz va API-laringizni turli xil kiberxavflardan himoya qiladi, doimiy mavjudlik va xavfsizlikni ta'minlaydi."
+  },
+  "service_page": {
+    "hero_title": "To'liq xavfsizlik tekshiruvi: Tizimingizni himoya qiling",
+    "hero_desc": "Bizning auditimiz nafaqat xavflarni aniqlaydi, balki ma'lumotlaringizni rivojlanayotgan tahdidlardan himoya qilish uchun himoyangizni kuchaytiradi.",
+    "form_title": "Innovatsiyani o'z ko'zingiz bilan ko'ring.",
+    "issue_label": "Muammo haqida bizga xabar bering",
+    "message_placeholder": "Xabar"
+  },
+  "modals": {
+    "demo_title": "Innovatsiyani o'z ko'zingiz bilan ko'ring. Demoni bugun rejalashtiring.",
+    "sales_title": "Mukammal yechimingizni toping. Bugun bizning sotuvlar jamoasi bilan bog'laning.",
+    "more_than_500": "500 dan ortiq xodimlar",
+    "success_alert": "Ariza muvaffaqiyatli yuborildi!",
+    "error_alert": "Xatolik yuz berdi. Iltimos qaytadan urinib ko'ring."
+  },
+  "privacy_policy": {
+    "hero_title": "Maxfiylik siyosati",
+    "hero_subtitle": "Sizning maxfiyligingiz – bizning ustuvor vazifamiz.",
+    "introduction_title": "Kirish",
+    "introduction_text": "Datagaze kompaniyasida biz sizning maxfiyligingizni himoya qilishga va shaxsiy ma'lumotlaringiz xavfsizligini ta'minlashga qat'iy sodiqmiz. Ushbu Maxfiylik siyosati sahifasida bizning veb-saytimiz va xizmatlarimizdan foydalanganingizda ma'lumotlaringizni qanday yig'ishimiz, foydalanishimiz va himoya qilishimiz ko'rsatilgan.",
+    "collect_title": "Biz to'playdigan ma'lumotlar",
+    "collect_text": "Biz siz ixtiyoriy ravishda taqdim etadigan shaxsiy ma'lumotlarni yig'ishimiz mumkin, masalan, ismingiz, elektron pochta manzilingiz, telefon raqamingiz va xizmatlarimizga tegishli boshqa ma'lumotlar. Bundan tashqari, veb-saytimizga tashrif buyurganingizda, IP manzilingiz, brauzer turi va ko'rish xatti-harakatlaringiz kabi ma'lum ma'lumotlarni avtomatik ravishda to'plashimiz mumkin.",
+    "use_title": "Ma'lumotlaringizdan qanday foydalanamiz",
+    "use_text": "To'plangan ma'lumotlar quyidagi maqsadlarda ishlatiladi:",
+    "use_bullet1": "Xizmatlarimizni taqdim etish va yaxshilash.",
+    "use_bullet2": "Sizning so'rovlaringiz, arizalaringiz yoki tranzaksiyalaringiz bo'yicha siz bilan bog'lanish.",
+    "use_bullet3": "Veb-saytimizdagi tajribangizni shaxsiylashtirish.",
+    "use_bullet4": "Tizimlarimiz xavfsizligi va yaxlitligini ta'minlash.",
+    "use_bullet5": "Huquqiy majburiyatlarga rioya qilish va firibgarlik harakatlarining oldini olish.",
+    "security_title": "Ma'lumotlar xavfsizligi",
+    "security_text": "Datagaze shaxsiy ma'lumotlaringiz xavfsizligiga jiddiy yondashadi. Biz ma'lumotlaringiz xavfsizligini ta'minlash uchun turli xil xavfsizlik choralarini, jumladan shifrlash, kirishni nazorat qilish va muntazam xavfsizlik auditlarini amalga oshiramiz.",
+    "sharing_title": "Ma'lumotlaringizni bo'lishish",
+    "sharing_text": "Qonun talab qiladigan hollar yoki xizmatlarimizni taqdim etish uchun zarur bo'lgan hollar bundan mustasno, biz sizning shaxsiy ma'lumotlaringizni tashqi tomonlarga sotmaymiz, savdo qilmaymiz yoki boshqa tarzda o'tkazmaymiz. Biz ma'lumotlaringizni veb-saytimizni boshqarishda va biznesimizni yuritishda yordam beradigan ishonchli uchinchi tomon xizmat ko'rsatuvchi provayderlari bilan bo'lishishimiz mumkin, agar mereka ushbu ma'lumotlarning maxfiyligini saqlashga rozi bo'lsalar.",
+    "rights_title": "Sizning huquqlaringiz",
+    "rights_text": "Siz o'z shaxsiy ma'lumotlaringizga kirish, ularni tuzatish yoki o'chirish huquqiga egasiz. Agar ushbu huquqlardan foydalanamiz desangiz, info@datagaze.uz manzili orqali biz bilan bog'laning.",
+    "cookies_title": "Kukilar (Cookies) va kuzatuv texnologiyalari",
+    "cookies_text": "Biz veb-saytimizdan foydalanish tajribangizni yaxshilash va veb-saytimizdan qanday foydalanayotganingiz haqida ma'lumot yig'ish uchun kukilar va shunga o'xshash kuzatuv texnologiyalaridan foydalanamiz. Brauzeringiz sozlamalari orqali kukilarni o'chirib qo'yishingiz mumkin, ammo bu veb-saytimizning ayrim funktsiyalaridan foydalanish imkoniyatingizga ta'sir qilishi mumkin.",
+    "changes_title": "Ushbu siyosatdagi o'zgarishlar",
+    "changes_text": "Datagaze istalgan vaqtda ushbu Maxfiylik siyosati sahifasini yangilash huquqini o'zida saqlab qoladi. Har qanday o'zgarishlar ushbu sahifada joylashtiriladi va biz sizga uni vaqti-vaqti bilan ko'rib chiqishni tavsiya qilamiz.",
+    "contact_title": "Biz bilan bog'lanish",
+    "contact_text": "Agar maxfiylik siyosatimiz bo'yicha savollaringiz yoki xavotirlaringiz bo'lsa, info@datagaze.uz manzili orqali biz bilan bog'laning.",
+    "summary_text": "Ushbu kontent professional va foydalanuvchilar uchun tushunarli bo'lgan ohangni saqlab qolgan holda sizning maxfiylik amaliyotingiz haqida aniq va keng qamrovli umumiy ma'lumot berishi kerak."
+  },
+  "unreleased": {
+    "hero_title": "Datagaze DLP",
+    "hero_desc": "Datagaze DLP (Ma'lumotlar yo'qolishining oldini olish tizimi) tarmog'ingizda almashiladigan ma'lumotlar oqimini doimiy ravishda kuzatib boradi.",
+    "impact_desc": "Bizning tajribamiz va innovatsion yechimlarimiz orqali erishgan muvaffaqiyatlarimiz hamda jamiyatga ko'rsatayotgan ta'sirimiz ortidagi raqamlar bilan tanishing.",
+    "better_photos": "Past yoritishda yaxshiroq suratlar",
+    "better_photos_desc": "Matn va rang uslublari to'plamidan foydalaning, o'zgartirishlarni sozlang va barcha sahifalarga bir vaqtning o'zida qo'llang. Bir necha daqiqada noyob ko'rinish yarating.",
+    "common_desc": "Ijodiy erkinlikni cheklamagan holda yaxshiroq dizayn yarating va kamroq vaqt sarflang.",
+    "stat1_name": "Aniqroq, yorqinroq makro suratlar",
+    "stat2_name": "Eng yuqori sifatli video",
+    "stat3_name": "Kino sanoati standarti",
+    "quote": "Men ulardan bir yildan beri foydalanmoqdaman. Hamma narsa batafsil va yaxshi tashkil etilgan, va albatta, juda chiroyli.",
+    "musk_title": "SpaceX bosh direktori va texnik direktori",
+    "trial_badge": "Sinov muddati",
+    "trial_text": "Bepul sinov muddatini oling",
+    "simplify_title": "Xavfsizlik strategiyangizni soddalashtiring",
+    "simplify_desc": "Biz tashkilotlarni himoya qilishga ixtisoslashganmiz. Biz sizning ma'lumotlaringizni himoya qilamiz, shunda siz asosiy missiyangizga e'tibor qaratishingiz mumkin. Bugun maslahat uchun bog'laning."
   }
 }

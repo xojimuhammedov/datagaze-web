@@ -4,19 +4,20 @@ import guvohnoma from "@/public/texnological/guvohnoma.jpg";
 import Image from "next/image";
 import sertifikat from "@/public/texnological/sertifikat.jpg";
 import it_sertifikat from "@/public/texnological/it-park.jpg";
+import { useTranslation } from "react-i18next";
 
 const Partnership = () => {
+  const { t } = useTranslation();
   return (
     <section className="w-full py-16">
       <div className="mx-auto max-w-7xl px-6">
         <div className="pb-8 lg:p-30 flex flex-col items-center text-center gap-6">
           <h2 className="text-3xl lg:text-[50px] font-medium text-center text-gray-900 max-w-3xl">
-            In Partnership with Leading Organizations
+            {t("partnership.title")}
           </h2>
 
           <p className="text-lg lg:text-xl font-normal text-center text-[#5E5E5E] max-w-2xl">
-            We collaborate with numerous large organizations to help them secure
-            their data. Our solutions guarantee reliability and efficiency.
+            {t("partnership.description")}
           </p>
         </div>
 
@@ -24,11 +25,10 @@ const Partnership = () => {
           {/* left */}
           <div className="z-10 max-w-xl flex flex-col items-center lg:items-start flex-1 gap-[16px]">
             <h2 className="text-2xl font-medium">
-              Registered as a Legal Entity in Uzbekistan
+              {t("partnership.legal_title")}
             </h2>
             <p className="text-muted-foreground text-sm lg:text-base">
-              Officially recognized as a lawful business entity by the Republic
-              of Uzbekistan, solidifying our legal and operational presence.
+              {t("partnership.legal_desc")}
             </p>
           </div>
 
@@ -50,11 +50,9 @@ const Partnership = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_2fr] gap-8">
           <div className="bg-white rounded-[24px] p-4 lg:pt-[40px] lg:px-10 pb-6 lg:pb-0 relative h-auto flex gap-10 lg:gap-[24px] flex-col items-center lg:self-stretch lg:flex-1 overflow-hidden transform-none origin-center">
             <div className="flex flex-col gap-[16px] lg:h-min lg:overflow-hidden lg:p-0 lg:relative lg:w-full">
-              <h3 className="text-2xl lg:text-[24px] font-medium">Certified by the Cybersecurity</h3>
+              <h3 className="text-2xl lg:text-[24px] font-medium">{t("partnership.cert_title")}</h3>
               <p className="text-sm">
-                Our system has undergone rigorous testing and evaluation by the
-                Cyber Security Center, earning a trusted certification for its
-                security and reliability.
+                {t("partnership.cert_desc")}
               </p>
             </div>
             <Image
@@ -66,11 +64,9 @@ const Partnership = () => {
 
           <div className="bg-white rounded-[24px] p-4 lg:pt-10 lg:px-10 pb-0 relative h-auto lg:h-160 flex gap-10 lg:gap-5 flex-col items-center lg:items-start overflow-hidden transform-none origin-center">
             <div className="flex flex-col gap-[16px]">
-              <h3 className="text-xl lg:text-[24px] font-medium">Resident of IT Park</h3>
+              <h3 className="text-xl lg:text-[24px] font-medium">{t("partnership.resident_title")}</h3>
               <p className="w-full lg:w-140">
-                Proudly recognized as a resident of IT Park, granting us access to
-                a leading environment for innovation and technological
-                advancement.
+                {t("partnership.resident_desc")}
               </p>
             </div>
             <Image

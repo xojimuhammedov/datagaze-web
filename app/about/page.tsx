@@ -10,8 +10,8 @@ export default function About() {
     <main className="w-full">
       <AboutHero />
       <Technological />
-      <Partnership />
       <OrbitSection />
+      <Partnership />
       <Environment />
       <Organization />
     </main>

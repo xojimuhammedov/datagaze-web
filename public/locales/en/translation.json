@@ -134,5 +134,163 @@
     "title": "Partnered with Top Organizations",
     "description": "We collaborate with leading organizations that rely on our solutions to keep their data secure.",
     "orgs_count": "Organizations"
+  },
+  "orbit_section": {
+    "title": "In Partnership with Leading Organizations",
+    "description": "We collaborate with numerous large organizations to help them secure their data. Our solutions guarantee reliability and efficiency.",
+    "stat1_title": "Over 6 Years of Expertise",
+    "stat1_desc": "Delivering customized cybersecurity solutions across government and business sectors with decades of experience.",
+    "stat2_title": "Devices Secured",
+    "stat2_desc": "Protecting over 12,000 endpoints with cutting-edge tools designed to prevent data breaches and internal threats.",
+    "stat3_title": "Highly Skilled Specialists",
+    "stat3_desc": "Our expert team crafts advanced solutions to ensure comprehensive data security for your organization."
+  },
+  "about_hero": {
+    "title": "Datagaze LLC is the first national company providing cybersecurity solutions for medium and large enterprises.",
+    "description": "Its first product, DLP (Data Loss Prevention), helps monitor and control access, protecting against internal cyber threats and preventing data leaks. Currently, DLP is installed on about 12,000 endpoints in Uzbekistan, and the company collaborates with more than 40 government agencies and private companies, ensuring the security of their corporate information."
+  },
+  "partnership": {
+    "title": "In Partnership with Leading Organizations",
+    "description": "We collaborate with numerous large organizations to help them secure their data. Our solutions guarantee reliability and efficiency.",
+    "legal_title": "Registered as a Legal Entity in Uzbekistan",
+    "legal_desc": "Officially recognized as a lawful business entity by the Republic of Uzbekistan, solidifying our legal and operational presence.",
+    "cert_title": "Certified by the Cybersecurity",
+    "cert_desc": "Our system has undergone rigorous testing and evaluation by the Cyber Security Center, earning a trusted certification for its security and reliability.",
+    "resident_title": "Resident of IT Park",
+    "resident_desc": "Proudly recognized as a resident of IT Park, granting us access to a leading environment for innovation and technological advancement."
+  },
+  "technological": {
+    "title": "Ensuring Data Security. Driving Technological Progress.",
+    "description": "At Datagaze LLC, our primary goal is to provide reliable and modern cybersecurity solutions by ensuring data security. By applying innovations, we help our clients solve complex cybersecurity challenges and stay protected.",
+    "quote": "Our main goal is to be a reliable and long-term partner in the field of information security and cybersecurity, provide convenience to customers and constantly develop products and services. Give your security in good hands.",
+    "cto": "CTO"
+  },
+  "dlp": {
+    "hero_title": "Datagaze DLP",
+    "hero_desc": "Datagaze DLP (Data Loss Prevention System) constantly monitors the flow of data exchanged on your network.",
+    "working_title": "Working environment of Datagaze DLP",
+    "working_desc": "No matter what your team is working on, our DLP system keeps every file, message, and document secure — everywhere your data goes.",
+    "client_side": "Client Side",
+    "server_side": "Server Side",
+    "controlled_title": "Controlled Channels",
+    "controlled_desc": "Monitor and manage secure communication pathways within your network.",
+    "ai_title": "Automated tasks through artificial intelligence",
+    "ai_desc": "Datagaze DLP (Data Loss Prevention System) constantly monitors the flow of data exchanged on your network.",
+    "controlled": {
+      "web_site_control": { "name": "Web-Site Control", "description": "Manage website access." },
+      "email_control": { "name": "Email control", "description": "Oversee email activity." },
+      "printing_control": { "name": "Printing control", "description": "Monitor printed documents." },
+      "usb_storages_control": { "name": "USB storages Control", "description": "Control USB usage." },
+      "audio_surveillance": { "name": "Audio surveillance", "description": "Track audio interactions." },
+      "employee_monitor_surveillance": { "name": "Employee monitor surveillance", "description": "Screen employee activity." },
+      "detecting_sensitive_data": { "name": "Detecting sensitive data", "description": "Identify sensitive data leaks." },
+      "blocking_sites_and_apps": { "name": "Blocking sites and apps", "description": "Restrict access to sites/apps." },
+      "file_server_control": { "name": "File server control", "description": "Control server file usage." },
+      "telegram_monitoring": { "name": "Telegram monitoring", "description": "Track Telegram communications." },
+      "usb_devices_control": { "name": "USB devices control", "description": "Monitor USB devices." },
+      "keyboard_control": { "name": "Keyboard control", "description": "Log keyboard input." },
+      "video_surveillance": { "name": "Video surveillance", "description": "Monitor video activity." },
+      "employee_screenshots_tracking": { "name": "Employee screenshots tracking", "description": "Capture screen snapshots." },
+      "clipboard_control": { "name": "Clipboard control", "description": "Monitor clipboard usage." },
+      "tracking_installed_software": { "name": "Tracking installed software.", "description": "Track installed applications." },
+      "file_monitoring": { "name": "File monitoring", "description": "Monitor file movement." },
+      "screen_watermarking": { "name": "Screen watermarking", "description": "Protect Data with Watermarks." }
+    }
+  },
+  "siem": {
+    "hero_title": "Datagaze SIEM",
+    "hero_desc": "Datagaze SIEM (Security Information and Event Management) continuously monitors and analyzes security events across your network, detecting threats and anomalies in real time.",
+    "controlled": {
+      "web_monitoring": { "name": "Web Monitoring", "description": "Track web traffic for suspicious activity." },
+      "email_monitoring": { "name": "Email Monitoring", "description": "Log and alert on email security threats." },
+      "network_device_monitoring": { "name": "Network Device Monitoring", "description": "Track and analyze device activity." },
+      "internet_of_things": { "name": "Internet of Things", "description": "Monitor IoT security events." },
+      "user_behavior_monitoring": { "name": "User Behavior Monitoring", "description": "Analyze employee activity for anomalies." },
+      "sensitive_data_alerts": { "name": "Sensitive Data Alerts", "description": "Detect sensitive data movements" },
+      "file_server_monitoring": { "name": "File Server Monitoring", "description": "Track file access and server logs." },
+      "incident_detection": { "name": "Incident Detection", "description": "Alert on unusual events across systems." },
+      "app_activity_monitoring": { "name": "App Activity Monitoring", "description": "Log application access for threats." }
+    }
+  },
+  "staff": {
+    "hero_title": "Datagaze Staff",
+    "hero_desc": "Datagaze Staff (Employee Activity and Worktime Tracking) continuously monitors and analyzes employee activities across your network, detecting threats and anomalies in real time.",
+    "controlled": {
+      "attendances": { "name": "Attendances", "description": "Monitor daily employee attendance, check-in statuses, and reasons." },
+      "actions": { "name": "Actions", "description": "Track employee entries and exits through various access methods and gates." },
+      "screenshots": { "name": "Screenshots", "description": "Monitor activities across various apps and sites over time." },
+      "visited_sites": { "name": "Visited Sites", "description": "Track and monitor websites visited by users." },
+      "key_logs": { "name": "Key Logs", "description": "Track employee actions and search queries over time." },
+      "blocking_sites_and_apps": { "name": "Blocking sites and apps", "description": "Restrict access to sites/apps." },
+      "computer": { "name": "Computer", "description": "View the list of computers and monitor their current status." },
+      "visitors": { "name": "Visitors", "description": "Track organization guests, visit times, and their hosts." },
+      "gates": { "name": "Gates", "description": "Manage access points and assign multiple devices to each gate." },
+      "devices": { "name": "Devices", "description": "Manage gate-attached devices, their details, and operation types." },
+      "reason_types": { "name": "Reason Types", "description": "Manage various reasons directly related to employee attendance." },
+      "work_schedules": { "name": "Work Schedules", "description": "Create and manage specific work hours for departments or employees." }
+    }
+  },
+  "waff": {
+    "hero_title": "Datagaze Waff",
+    "hero_desc": "Datagaze WAF (Web Application Firewall) protects your web applications and APIs from various cyber threats, ensuring constant availability and security."
+  },
+  "service_page": {
+    "hero_title": "Complete Security Check: Protect Your System",
+    "hero_desc": "Our audit not only identifies risks but also reinforces your defenses to keep your data safe from evolving threats.",
+    "form_title": "Experience innovation firsthand.",
+    "issue_label": "Tell us about the issue",
+    "message_placeholder": "Message"
+  },
+  "modals": {
+    "demo_title": "Experience innovation firsthand. Schedule your demo today.",
+    "sales_title": "Discover your perfect solution. Connect with our sales team today.",
+    "more_than_500": "More than 500 Employees",
+    "success_alert": "Application sent successfully!",
+    "error_alert": "An error occurred. Please try again."
+  },
+  "privacy_policy": {
+    "hero_title": "Privacy and Policy",
+    "hero_subtitle": "Your Privacy, Our Priority.",
+    "introduction_title": "Introduction",
+    "introduction_text": "At Datagaze, we are deeply committed to protecting your privacy and ensuring the security of your personal information. This Privacy and Policy page outlines how we collect, use, and safeguard your data when you engage with our website and services.",
+    "collect_title": "Information We Collect",
+    "collect_text": "We may collect personal information that you voluntarily provide to us, such as your name, email address, phone number, and other details relevant to our services. Additionally, we may automatically collect certain information when you visit our website, including your IP address, browser type, and browsing behavior.",
+    "use_title": "How We Use Your Information",
+    "use_text": "The information we collect is used to:",
+    "use_bullet1": "Provide and improve our services.",
+    "use_bullet2": "Communicate with you about your inquiries, requests, or transactions.",
+    "use_bullet3": "Personalize your experience on our website.",
+    "use_bullet4": "Ensure the security and integrity of our systems.",
+    "use_bullet5": "Comply with legal obligations and prevent fraudulent activities.",
+    "security_title": "Data Security",
+    "security_text": "Datagaze takes the security of your personal information seriously. We implement a variety of security measures to maintain the safety of your data, including encryption, access controls, and regular security audits.",
+    "sharing_title": "Sharing Your Information",
+    "sharing_text": "We do not sell, trade, or otherwise transfer your personal information to outside parties, except as required by law or as necessary to provide our services. We may share your information with trusted third-party service providers who assist us in operating our website and conducting our business, as long as they agree to keep this information confidential.",
+    "rights_title": "Your Rights",
+    "rights_text": "You have the right to access, correct, or delete your personal information. If you wish to exercise these rights, please contact us at info@datagaze.uz.",
+    "cookies_title": "Cookies and Tracking Technologies",
+    "cookies_text": "We use cookies and similar tracking technologies to enhance your browsing experience and collect information about how you use our website. You can choose to disable cookies through your browser settings, but this may affect your ability to use certain features of our website.",
+    "changes_title": "Changes to This Policy",
+    "changes_text": "Datagaze reserves the right to update this Privacy and Policy page at any time. Any changes will be posted on this page, and we encourage you to review it periodically.",
+    "contact_title": "Contact Us",
+    "contact_text": "If you have any questions or concerns about our Privacy and Policy, please contact us at info@datagaze.uz.",
+    "summary_text": "This content should provide a clear and comprehensive overview of your privacy practices while keeping the tone professional and user-friendly."
+  },
+  "unreleased": {
+    "hero_title": "Datagaze DLP",
+    "hero_desc": "Datagaze DLP (Data Loss Prevention System) constantly monitors the flow of data exchanged on your network.",
+    "impact_desc": "Discover the numbers behind our success and the impact we make through our expertise and innovative solutions.",
+    "better_photos": "Better low-lights photos",
+    "better_photos_desc": "Use a set of text and color styles, customize and apply changes to all pages at once. Create a unique look in just a few minutes.",
+    "common_desc": "Design better and spend less time without restricting creative freedom.",
+    "stat1_name": "Sharper, brighter macro shots",
+    "stat2_name": "Highest-quality video",
+    "stat3_name": "The film industry standard",
+    "quote": "I have been using them for a year now. Everything is detailed and well organized and, of course, damn beautiful.",
+    "musk_title": "CEO and CTO of SpaceX",
+    "trial_badge": "Trial period",
+    "trial_text": "Get your free trial period",
+    "simplify_title": "Simplify Your Security Strategy",
+    "simplify_desc": "We specialize in safeguarding organizations. Let us protect your data, so you can focus on your core mission. Get in touch for a consultation today."
   }
 }

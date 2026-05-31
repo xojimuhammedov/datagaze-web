@@ -26,13 +26,6 @@ const PurpleSquaresIcon = () => (
     </svg>
 );
 
-const GreenWIcon = () => (
-    <svg width="60%" height="54%" viewBox="0 0 60 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M6 5L16 36L26 12L30 21L34 12L44 36L54 5" stroke="#3dba82" strokeWidth="7" strokeLinejoin="round" strokeLinecap="round" fill="none" />
-        <path d="M6 5L16 36L26 12L30 21L34 12L44 36L54 5" stroke="#2e9d6e" strokeWidth="5" strokeLinejoin="round" strokeLinecap="round" fill="none" />
-        <path d="M6 5L16 36L26 12L30 21L34 12L44 36L54 5" stroke="#48c896" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round" fill="none" />
-    </svg>
-);
 
 const BlueDIcon = () => (
     <svg width="100%" viewBox="0 0 91 130" fill="none" xmlns="http://www.w3.org/2000/svg">

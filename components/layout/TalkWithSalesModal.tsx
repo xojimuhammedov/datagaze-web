@@ -5,9 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useModal } from '@/context/ModalContext';
 import { X } from 'lucide-react';
 import { sendTelegramMessage } from '@/utils/telegram';
+import { useTranslation } from 'react-i18next';
 
 const TalkWithSalesModal = () => {
   const { isSalesModalOpen, closeSalesModal } = useModal();
+  const { t } = useTranslation();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,11 +22,11 @@ const TalkWithSalesModal = () => {
 
     const success = await sendTelegramMessage(text);
     if (success) {
-      alert("Ariza muvaffaqiyatli yuborildi!");
+      alert(t("modals.success_alert"));
       form.reset();
       closeSalesModal();
     } else {
-      alert("Xatolik yuz berdi. Iltimos qaytadan urinib ko'ring.");
+      alert(t("modals.error_alert"));
     }
   };
 
@@ -75,7 +77,7 @@ const TalkWithSalesModal = () => {
                 color: '#14151a',
               }}
             >
-              Discover your perfect solution. Connect with our sales team today.
+              {t("modals.sales_title")}
             </h2>
 
             <form
@@ -83,7 +85,7 @@ const TalkWithSalesModal = () => {
               onSubmit={handleSubmit}
             >
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-medium text-gray-900">Full name</span>
+                <span className="text-xs font-medium text-gray-900">{t("hero.full_name")}</span>
                 <input
                   type="text"
                   name="fullName"
@@ -94,7 +96,7 @@ const TalkWithSalesModal = () => {
               </label>
 
               <label className="flex flex-col gap-2">
-                <span className="text-xs font-medium text-gray-900">Phone number</span>
+                <span className="text-xs font-medium text-gray-900">{t("hero.phone_number")}</span>
                 <input
                   type="tel"
                   name="phoneNumber"
@@ -108,7 +110,7 @@ const TalkWithSalesModal = () => {
                 type="submit"
                 className="w-full h-10 cursor-pointer bg-[#2563eb] hover:bg-blue-700 text-white font-medium text-sm rounded-[10px] transition-all shadow-md active:scale-[0.98] flex items-center justify-center"
               >
-                Submit
+                {t("hero.submit")}
               </button>
             </form>
           </motion.div>

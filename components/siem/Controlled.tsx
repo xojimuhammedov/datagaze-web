@@ -1,48 +1,67 @@
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
+
+type Item = {
+  key: string;
+  icons: string;
+  name: string;
+  description: string;
+};
 
 const ControlledStaff = () => {
-  const channelsSiem = [
+  const { t } = useTranslation();
+
+  const channelsSiem: Item[] = [
     {
+      key: "web_monitoring",
       icons: "/siem/icons/web_monitoring.svg",
       name: "Web Monitoring",
       description: "Track web traffic for suspicious activity.",
     },
     {
+      key: "email_monitoring",
       icons: "/siem/icons/email.svg",
       name: "Email Monitoring",
       description: "Log and alert on email security threats.",
     },
     {
+      key: "network_device_monitoring",
       icons: "/siem/icons/network.svg",
       name: " Network Device Monitoring",
       description: "Track and analyze device activity.",
     },
     {
+      key: "internet_of_things",
       icons: "/siem/icons/internet_globe.svg",
       name: "Internet of Things",
       description: "Monitor IoT security events.",
     },
     {
+      key: "user_behavior_monitoring",
       icons: "/siem/icons/user.svg",
       name: "User Behavior Monitoring",
       description: "Analyze employee activity for anomalies.",
     },
     {
+      key: "sensitive_data_alerts",
       icons: "/siem/icons/sensitive.svg",
       name: "Sensitive Data Alerts",
       description: "Detect sensitive data movements",
     },
     {
+      key: "file_server_monitoring",
       icons: "/siem/icons/server_monitoring.svg",
       name: "File Server Monitoring",
       description: "Track file access and server logs.",
     },
     {
+      key: "incident_detection",
       icons: "/siem/icons/incident.svg",
       name: "Incident Detection",
       description: "Alert on unusual events across systems.",
     },
     {
+      key: "app_activity_monitoring",
       icons: "/siem/icons/pulse.svg",
       name: "App Activity Monitoring",
       description: "Log application access for threats.",
@@ -54,11 +73,10 @@ const ControlledStaff = () => {
       <div className="mx-auto max-w-7xl px-4 lg:px-6">
         <div className="p-0 lg:p-8 flex flex-col gap-10 items-center pb-25">
           <h2 className="text-4xl lg:text-5xl font-medium w-full lg:w-150 text-center ">
-            Controlled Channels
+            {t("dlp.controlled_title")}
           </h2>
           <p className="w-full lg:w-175 text-center text-lg lg:text-xl text-muted-foreground">
-            Monitor and manage secure communication pathways within your
-            network.
+            {t("dlp.controlled_desc")}
           </p>
         </div>
 
@@ -69,16 +87,18 @@ const ControlledStaff = () => {
                 <div className="text-2xl text-blue-600 border w-14 h-14 flex items-center justify-center rounded-xl">
                   <Image
                     src={item.icons}
-                    alt={item.name}
+                    alt={t(`siem.controlled.${item.key}.name`)}
                     width={24}
                     height={24}
                   />
                 </div>
 
-                <h3 className="text-base lg:text-lg font-medium">{item.name}</h3>
+                <h3 className="text-base lg:text-lg font-medium">
+                  {t(`siem.controlled.${item.key}.name`)}
+                </h3>
 
                 <p className="text-sm lg:text-base font-normal text-muted-foreground">
-                  {item.description}
+                  {t(`siem.controlled.${item.key}.description`)}
                 </p>
               </div>
             );

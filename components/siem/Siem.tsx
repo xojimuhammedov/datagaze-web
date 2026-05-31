@@ -1,18 +1,18 @@
 import Image from "next/image";
 import logo from "@/public/siem/siem_logo.svg";
 import siem_img from "@/public/siem/img.svg";
+import { useTranslation } from "react-i18next";
 
 const Siem = () => {
+  const { t } = useTranslation();
   return (
     <section className="w-full py-10">
       <div className="mx-auto max-w-7xl px-4 lg:px-6">
         <div className="flex flex-col gap-8 items-center pt-20 lg:pt-40 pb-20">
           <Image src={logo} alt="logo" />
-          <h1 className="text-4xl lg:text-6xl font-medium mb-4">Datagaze SIEM</h1>
+          <h1 className="text-4xl lg:text-6xl font-medium mb-4">{t("siem.hero_title")}</h1>
           <p className="w-full lg:w-175 text-center text-lg lg:text-xl text-muted-foreground">
-            Datagaze SIEM (Security Information and Event Management)
-            continuously monitors and analyzes security events across your
-            network, detecting threats and anomalies in real time.
+            {t("siem.hero_desc")}
           </p>
         </div>
 

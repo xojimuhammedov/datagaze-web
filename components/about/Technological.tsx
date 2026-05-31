@@ -7,8 +7,10 @@ import icon5 from "@/public/logos/icon5.svg";
 import icon6 from "@/public/logos/icon6.svg";
 import person from "@/public/texnological/photo.avif";
 import d1 from "@/public/texnological/d1.svg";
+import { useTranslation } from "react-i18next";
 
 const Technological = () => {
+  const { t } = useTranslation();
   const icons = [icon1, icon2, icon3, icon4, icon5, icon6];
   return (
     <section className="w-full py-20 pt-40">
@@ -28,13 +30,10 @@ const Technological = () => {
 
           <div className="flex flex-col gap-5 items-center lg:items-start">
             <h2 className="text-2xl md:text-4xl text-center lg:text-start font-medium pb-4">
-              Ensuring Data Security. Driving Technological Progress.
+              {t("technological.title")}
             </h2>
             <p className="text-base font-normal text-center lg:text-start">
-              At Datagaze LLC, our primary goal is to provide reliable and
-              modern cybersecurity solutions by ensuring data security. By
-              applying innovations, we help our clients solve complex
-              cybersecurity challenges and stay protected.
+              {t("technological.description")}
             </p>
           </div>
         </div>
@@ -54,14 +53,11 @@ const Technological = () => {
           <div className="flex flex-col gap-5">
             <Image src={d1} alt="quote" width={90} height={90} />
             <p className="text-lg lg:text-xl font-normal">
-              Our main goal is to be a reliable and long-term partner in the
-              field of information security and cybersecurity, provide
-              convenience to customers and constantly develop products and
-              services. Give your security in good hands.
+              {t("technological.quote")}
             </p>
 
             <span className="text-lg lg:text-xl text-muted-foreground">
-              Azamjon Nabijonov <br /> CTO
+              Azamjon Nabijonov <br /> {t("technological.cto")}
             </span>
           </div>
         </div>

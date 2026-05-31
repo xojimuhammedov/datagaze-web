@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { useAnimationFrame } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 
 const ORBIT_ICONS: { src: string; w: number; h: number }[] = [
@@ -35,6 +36,7 @@ const PILL_SIZE = 80;
 const SPEED = 0.5;
 
 export default function OrbitSection() {
+  const { t } = useTranslation();
   const angle = useRef(-90);
   const pillRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -55,7 +57,18 @@ export default function OrbitSection() {
 
   return (
     <section className="w-full py-10 px-4">
-      <div className="bg-white rounded-[24px] p-4 lg:pt-0 lg:px-[120px] lg:pb-[80px] flex flex-col gap-10 items-center relative h-min w-full mb-8 overflow-hidden transform-none origin-center opacity-100 flex-none">
+      <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-12">
+        <div className="pb-8 lg:p-30 flex flex-col items-center text-center gap-6">
+          <h2 className="text-3xl lg:text-[50px] font-medium text-center text-gray-900 max-w-3xl">
+            {t("orbit_section.title")}
+          </h2>
+
+          <p className="text-lg lg:text-xl font-normal text-center text-[#5E5E5E] max-w-2xl">
+            {t("orbit_section.description")}
+          </p>
+        </div>
+      </div>
+      <div className="bg-white max-w-6xl mx-auto p-4 rounded-[24px] flex flex-col gap-10 items-center relative h-min w-full mb-8 overflow-hidden flex-none">
 
         {/* ── Orbit visual ── */}
         <div className="relative mx-auto w-full h-[557px]">
@@ -98,31 +111,31 @@ export default function OrbitSection() {
         </div>
 
         {/* ── Metrics Section (from Frame 7.png design) ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-[80px] w-full text-center mt-12 pb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full text-center mt-12 pb-4">
           {/* Card 1 */}
           <div className="flex flex-col items-center">
-            <h3 className="text-[54px] font-semibold text-gray-900 leading-none">6+</h3>
-            <h4 className="text-lg font-medium text-gray-900 mt-4 mb-2">Over 6 Years of Expertise</h4>
-            <p className="text-sm text-gray-500 leading-relaxed max-w-[280px]">
-              Delivering customized cybersecurity solutions across government and business sectors with decades of experience.
+            <h3 className="text-4xl font-medium text-gray-900 leading-none">6+</h3>
+            <h4 className="text-lg font-medium text-gray-900 mt-4 mb-2">{t("orbit_section.stat1_title")}</h4>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              {t("orbit_section.stat1_desc")}
             </p>
           </div>
 
           {/* Card 2 */}
           <div className="flex flex-col items-center">
-            <h3 className="text-[54px] font-semibold text-gray-900 leading-none">15000+</h3>
-            <h4 className="text-lg font-medium text-gray-900 mt-4 mb-2">Devices Secured</h4>
-            <p className="text-sm text-gray-500 leading-relaxed max-w-[280px]">
-              Protecting over 12,000 endpoints with cutting-edge tools designed to prevent data breaches and internal threats.
+            <h3 className="text-4xl font-medium text-gray-900 leading-none">15000+</h3>
+            <h4 className="text-lg font-medium text-gray-900 mt-4 mb-2">{t("orbit_section.stat2_title")}</h4>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              {t("orbit_section.stat2_desc")}
             </p>
           </div>
 
           {/* Card 3 */}
           <div className="flex flex-col items-center">
-            <h3 className="text-[54px] font-semibold text-gray-900 leading-none">25+</h3>
-            <h4 className="text-lg font-medium text-gray-900 mt-4 mb-2">Highly Skilled Specialists</h4>
-            <p className="text-sm text-gray-500 leading-relaxed max-w-[280px]">
-              Our expert team crafts advanced solutions to ensure comprehensive data security for your organization.
+            <h3 className="text-4xl font-medium text-gray-900 leading-none">25+</h3>
+            <h4 className="text-lg font-medium text-gray-900 mt-4 mb-2">{t("orbit_section.stat3_title")}</h4>
+            <p className="text-sm text-gray-500 leading-relaxed">
+              {t("orbit_section.stat3_desc")}
             </p>
           </div>
         </div>
