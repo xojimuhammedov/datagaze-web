@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import waff_logo from "@/public/waff/waff_logo.svg";
 import img from "@/public/waff/img_waff.svg";

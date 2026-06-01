@@ -9,8 +9,8 @@ const ImpactNumbers = () => {
   const { t } = useTranslation();
   const { openSalesModal, openDemoModal } = useModal();
   return (
-    <section className="w-full py-16">
-      <div className="mx-auto max-w-7xl px-6 ">
+    <section className="w-full py-40">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center text-center gap-6 pb-8 lg:pb-12">
           <h2 className="text-3xl lg:text-5xl max-w-3xl font-medium leading-tight text-gray-900">
             Our Impact in Numbers

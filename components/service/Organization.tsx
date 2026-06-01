@@ -13,9 +13,10 @@ const Organization = () => {
   return (
     <section className="w-full py-12 lg:py-30">
       <div className="mx-auto w-full max-w-7xl px-4">
-        <div className="flex flex-col lg:flex-row flex-1 justify-center items-center bg-white rounded-[24px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] gap-[10px] w-full h-min p-4 lg:p-10 relative overflow-hidden border border-[#DEE0E3]">
+        <div className="flex flex-col lg:flex-row items-center bg-white rounded-[24px] shadow-[0px_1px_2px_0px_rgba(20,21,26,0.05)] w-full h-min p-4 lg:p-10 relative overflow-hidden border border-[#DEE0E3]">
           <div className="w-full relative z-10">
-            <div className="w-[478px] h-[496px] rounded-3xl overflow-hidden relative">
+            {/* Desktop Animation */}
+            <div className="hidden lg:block w-full h-[496px] rounded-3xl overflow-hidden relative">
               {/* Rectangle 11 (Eng kattasi) */}
               <Image
                 src="/animation/Rectangle 11.png"
@@ -74,6 +75,17 @@ const Organization = () => {
               <div className="absolute bottom-0 left-0 z-40 w-[177px] h-[177px] rounded-[127.5px] bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] flex items-center justify-center">
                 <Image src="/animation/1.png" alt="" width={91} height={130} />
               </div>
+            </div>
+
+            {/* Mobile Image */}
+            <div className="block lg:hidden w-full rounded-3xl overflow-hidden mb-6">
+              <Image
+                src="/mobile-bg-1.jpg"
+                alt="Mobile Background"
+                width={500}
+                height={500}
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
 

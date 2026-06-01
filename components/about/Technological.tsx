@@ -16,7 +16,7 @@ const Technological = () => {
   const icons = [icon1, icon2, icon3, icon4, icon5, icon6];
   return (
     <section className="w-full py-20 pt-40">
-      <div className="mx-auto max-w-6xl px-6 ">
+      <div className="mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-0 items-center">
           <div className="grid grid-cols-3 gap-4 w-fit place-items-center mx-auto lg:mx-0">
             {icons?.map((icon, i) => (

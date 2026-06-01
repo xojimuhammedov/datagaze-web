@@ -51,13 +51,13 @@ export default function OrbitSection() {
       const rad = (deg * Math.PI) / 180;
       const x = CENTER + currentRadius * Math.cos(rad) - PILL_SIZE / 2;
       const y = CENTER + currentRadius * Math.sin(rad) - PILL_SIZE / 2;
-      el.style.transform = `translate(${x}px, ${y}px) rotate(${-deg}deg)`;
+      el.style.transform = `translate(${x}px, ${y}px)`;
     });
   });
 
   return (
-    <section className="w-full py-10 px-4">
-      <div className="mx-auto max-w-6xl px-4 md:px-6 lg:px-12">
+    <section className="w-full py-10 px-4 md:px-6">
+      <div className="mx-auto max-w-7xl">
         <div className="pb-8 lg:p-30 flex flex-col items-center text-center gap-6">
           <h2 className="text-3xl lg:text-[50px] font-medium text-center text-gray-900 max-w-3xl">
             {t("orbit_section.title")}
@@ -68,7 +68,7 @@ export default function OrbitSection() {
           </p>
         </div>
       </div>
-      <div className="mt-20 md:mt-0 bg-white max-w-6xl mx-auto p-4 rounded-[24px] flex flex-col gap-10 items-center relative h-min w-full mb-8 overflow-hidden flex-none">
+      <div className="mt-20 md:mt-0 bg-white max-w-6xl mx-auto p-8 rounded-[24px] flex flex-col gap-10 items-center relative h-min w-full mb-8 overflow-hidden flex-none">
 
         {/* ── Orbit visual ── */}
         {/* Desktop Orbit Animation */}
@@ -76,11 +76,16 @@ export default function OrbitSection() {
           {/* Clipped top-half container for the rings (letting top overflow but clipping bottom) */}
           <div className="relative overflow-hidden w-full h-[460px] mt-10">
             <div className="absolute w-[820px] h-[820px] top-[90px] left-1/2 -translate-x-1/2">
-              {/* Outer dashed ring */}
-              <div className="absolute rounded-full w-[809px] h-[808px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-dashed border-[#7cc4ff]" />
+              {/* Radial gradient background circle for the inner ring */}
+              <div className="absolute rounded-full w-[501px] h-[509px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(circle,_rgba(124,196,255,0.45)_0%,_rgba(255,255,255,0)_70%)]" />
 
-              {/* Inner dashed ring */}
-              <div className="absolute rounded-full w-[501px] h-[509px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-dashed border-[#84caff]" />
+              {/* SVG Dashed Circles with custom dash sizes */}
+              <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[820px] h-[820px] pointer-events-none">
+                {/* Outer dashed ring */}
+                <circle cx="410" cy="410" r="404" fill="none" stroke="#7cc4ff" strokeWidth="1" strokeDasharray="12 8" />
+                {/* Inner dashed ring */}
+                <circle cx="410" cy="410" r="254" fill="none" stroke="#84caff" strokeWidth="1" strokeDasharray="12 8" />
+              </svg>
 
               {/* Orbiting icon badges */}
               {ORBIT_ICONS.map((icon, i) => (
@@ -101,7 +106,7 @@ export default function OrbitSection() {
           </div>
 
           {/* Centered dashed border line under the logo */}
-          <div className="absolute w-[809px] left-1/2 -translate-x-1/2 bottom-[57px] border-b border-dashed border-[#7cc4ff] z-0" />
+          <div className="absolute w-[809px] left-1/2 -translate-x-1/2 bottom-[57px] border-b border-[#7cc4ff] z-0" />
 
           <div className="absolute flex items-center justify-center bg-white border border-gray-200 rounded-full shadow-md z-10 w-[114px] h-[114px] rounded-[110px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] bottom-0 left-1/2 -translate-x-1/2">
             <img
@@ -152,7 +157,6 @@ export default function OrbitSection() {
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );
