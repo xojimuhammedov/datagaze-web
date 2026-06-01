@@ -31,8 +31,8 @@ const Footer = () => {
             <Link href="/service" className="text-base lg:text-xl text-muted-foreground">
               {t('footer.services')}
             </Link>
-            <Link href="/" className="text-base lg:text-xl text-muted-foreground">
-              {t('footer.blog')}
+            <Link href="/news" className="text-base lg:text-xl text-muted-foreground">
+              {t('navbar.news')}
             </Link>
             <Link href="/contact" className="text-base lg:text-xl text-muted-foreground">
               {t('footer.contacts')}
