@@ -1,59 +1,46 @@
+"use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const Comprehensive = () => {
+  const { t } = useTranslation();
+  
   const features = [
     {
+      id: "detection",
       icon: "/services/detection.svg",
-      title: "Threat Monitoring & Detection",
-      description:
-        "We monitor systems 24/7 and detect threats in real time (SOC, SIEM, XDR/EDR, Threat Hunting, UEBA).",
     },
     {
+      id: "audit",
       icon: "/services/security_audit.svg",
-      title: "Security Assessment & Audit",
-      description:
-        "We identify vulnerabilities (Vulnerability Assessment, Pentest, Risk Assessment) and ensure compliance with standards (ISO 27001, PCI DSS, GDPR).",
     },
     {
+      id: "data",
       icon: "/services/data.svg",
-      title: "Data Security & Protection",
-      description:
-        "We safeguard your data (Encryption, Database Security, Secure Storage, Backup, Data Classification).",
     },
     {
+      id: "compliance",
       icon: "/services/security_compliance.svg",
-      title: "Security Policies & Compliance",
-      description:
-        "We create security policies and documentation (ISMS, IT Security Policy, SOP, BCP, DRP).",
     },
     {
+      id: "implementation",
       icon: "/services/implementation.svg",
-      title: "Security Solutions Implementation",
-      description:
-        "We protect your systems from attacks (NGFW, WAF, IDS/IPS, DLP, Anti-DDoS, Secure Email, EPP).",
     },
     {
+      id: "identity",
       icon: "/services/identity.svg",
-      title: "Identity & Access Management",
-      description: "Identity & Access Management",
     },
     {
+      id: "training",
       icon: "/services/training.svg",
-      title: "Training & Awareness",
-      description:
-        "We train staff and reduce phishing risks (Cybersecurity Training, Red Team, SOC Operator, Secure Coding).",
     },
     {
+      id: "incident",
       icon: "/services/incident.svg",
-      title: "Incident Response & Forensics",
-      description:
-        "We respond quickly to cyber incidents and investigate them (Cyber Incident Response, Digital Forensics, Log & Malware Analysis).",
     },
     {
+      id: "software",
       icon: "/services/software.svg",
-      title: "IT & Software Solutions",
-      description:
-        "Complete IT infrastructure and software solutions: we build servers, networks, and cloud systems, integrate platforms, develop applications and SaaS, with 24/7 technical support.",
     },
   ];
 
@@ -62,13 +49,11 @@ const Comprehensive = () => {
       <div className="mx-auto  w-full max-w-7xl px-6">
         <div className="flex flex-col gap-2 items-center pb-15">
           <h2 className="text-center text-3xl lg:text-5xl max-w-2xl font-medium leading-tight text-gray-900 pb-6">
-            Comprehensive Cybersecurity Assessment: Safeguard Your System
+            {t("comprehensive.title")}
           </h2>
 
           <p className="text-center text-base lg:text-lg font-normal text-muted-foreground max-w-2xl">
-            From penetration testing to employee training, our audit identifies
-            vulnerabilities, strengthens defenses, and ensures your security
-            protocols meet industry standards.
+            {t("comprehensive.description")}
           </p>
         </div>
 
@@ -80,16 +65,18 @@ const Comprehensive = () => {
             >
               <Image
                 src={item.icon}
-                alt={item.title}
+                alt={t(`comprehensive.features.${item.id}.title`)}
                 width={20}
                 height={20}
               />
 
               <div className="flex flex-col gap-4">
-                <h6 className="text-xl lg:text-2xl font-medium mb-2">{item.title}</h6>
+                <h6 className="text-xl lg:text-2xl font-medium mb-2">
+                  {t(`comprehensive.features.${item.id}.title`)}
+                </h6>
 
                 <p className="text-sm lg:text-base font-normal text-muted-foreground">
-                  {item.description}
+                  {t(`comprehensive.features.${item.id}.description`)}
                 </p>
               </div>
             </div>

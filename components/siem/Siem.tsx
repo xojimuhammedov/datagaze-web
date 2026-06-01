@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import logo from "@/public/siem/siem_logo.svg";
 import siem_img from "@/public/siem/img.svg";

@@ -276,6 +276,54 @@
     "contact_text": "If you have any questions or concerns about our Privacy and Policy, please contact us at info@datagaze.uz.",
     "summary_text": "This content should provide a clear and comprehensive overview of your privacy practices while keeping the tone professional and user-friendly."
   },
+  "contact_page": {
+    "title": "Contact us",
+    "description": "Do you have any questions or simply want to get in touch? Contact us, and we will respond ASAP!",
+    "call_description": "Call Us Anytime: We’re Here to Help",
+    "email_description": "Drop Us a Line: We’ll Reply Promptly"
+  },
+  "comprehensive": {
+    "title": "Comprehensive Cybersecurity Assessment: Safeguard Your System",
+    "description": "From penetration testing to employee training, our audit identifies vulnerabilities, strengthens defenses, and ensures your security protocols meet industry standards.",
+    "features": {
+      "detection": {
+        "title": "Threat Monitoring & Detection",
+        "description": "We monitor systems 24/7 and detect threats in real time (SOC, SIEM, XDR/EDR, Threat Hunting, UEBA)."
+      },
+      "audit": {
+        "title": "Security Assessment & Audit",
+        "description": "We identify vulnerabilities (Vulnerability Assessment, Pentest, Risk Assessment) and ensure compliance with standards (ISO 27001, PCI DSS, GDPR)."
+      },
+      "data": {
+        "title": "Data Security & Protection",
+        "description": "We safeguard your data (Encryption, Database Security, Secure Storage, Backup, Data Classification)."
+      },
+      "compliance": {
+        "title": "Security Policies & Compliance",
+        "description": "We create security policies and documentation (ISMS, IT Security Policy, SOP, BCP, DRP)."
+      },
+      "implementation": {
+        "title": "Security Solutions Implementation",
+        "description": "We protect your systems from attacks (NGFW, WAF, IDS/IPS, DLP, Anti-DDoS, Secure Email, EPP)."
+      },
+      "identity": {
+        "title": "Identity & Access Management",
+        "description": "Identity & Access Management"
+      },
+      "training": {
+        "title": "Training & Awareness",
+        "description": "We train staff and reduce phishing risks (Cybersecurity Training, Red Team, SOC Operator, Secure Coding)."
+      },
+      "incident": {
+        "title": "Incident Response & Forensics",
+        "description": "We respond quickly to cyber incidents and investigate them (Cyber Incident Response, Digital Forensics, Log & Malware Analysis)."
+      },
+      "software": {
+        "title": "IT & Software Solutions",
+        "description": "Complete IT infrastructure and software solutions: we build servers, networks, and cloud systems, integrate platforms, develop applications and SaaS, with 24/7 technical support."
+      }
+    }
+  },
   "unreleased": {
     "hero_title": "Datagaze DLP",
     "hero_desc": "Datagaze DLP (Data Loss Prevention System) constantly monitors the flow of data exchanged on your network.",

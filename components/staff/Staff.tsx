@@ -1,3 +1,4 @@
+"use client";
 import staff_logo from "@/public/staff/staff_logo.svg";
 import Image from "next/image";
 import staff_img from "@/public/staff/staff.png";

@@ -1,3 +1,5 @@
+"use client"
+
 import windows from "@/public/dlp/icons/windows.svg";
 import server1 from "@/public/dlp/icons/server1.svg";
 import server2 from "@/public/dlp/icons/server2.svg";

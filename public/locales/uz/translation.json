@@ -276,6 +276,54 @@
     "contact_text": "Agar maxfiylik siyosatimiz bo'yicha savollaringiz yoki xavotirlaringiz bo'lsa, info@datagaze.uz manzili orqali biz bilan bog'laning.",
     "summary_text": "Ushbu kontent professional va foydalanuvchilar uchun tushunarli bo'lgan ohangni saqlab qolgan holda sizning maxfiylik amaliyotingiz haqida aniq va keng qamrovli umumiy ma'lumot berishi kerak."
   },
+  "contact_page": {
+    "title": "Biz bilan bog'lanish",
+    "description": "Savollaringiz bormi yoki shunchaki bog'lanmoqchimisiz? Biz bilan bog'laning va biz imkon qadar tezroq javob beramiz!",
+    "call_description": "Bizga istalgan vaqtda qo'ng'iroq qiling: Biz yordam berishga tayyormiz",
+    "email_description": "Bizga xabar yuboring: Biz tezda javob beramiz"
+  },
+  "comprehensive": {
+    "title": "Keng qamrovli kiberxavfsizlik auditi: Tizimingizni himoya qiling",
+    "description": "Penetratsion testlardan tortib xodimlarni o'qitishgacha, bizning auditimiz zaifliklarni aniqlaydi, himoyani kuchaytiradi va xavfsizlik protokollaringiz soha standartlariga muvofiqligini ta'minlaydi.",
+    "features": {
+      "detection": {
+        "title": "Xavflarni monitoring qilish va aniqlash",
+        "description": "Biz tizimlarni 24/7 rejimida nazorat qilamiz va tahdidlarni real vaqt rejimida aniqlaymiz (SOC, SIEM, XDR/EDR, Threat Hunting, UEBA)."
+      },
+      "audit": {
+        "title": "Xavfsizlikni baholash va audit",
+        "description": "Biz zaifliklarni aniqlaymiz (zaifliklarni baholash, Pentest, xavflarni baholash) va standartlarga muvofiqlikni ta'minlaymiz (ISO 27001, PCI DSS, GDPR)."
+      },
+      "data": {
+        "title": "Ma'lumotlar xavfsizligi va himoyasi",
+        "description": "Biz ma'lumotlaringizni himoya qilamiz (shifrlash, ma'lumotlar bazasi xavfsizligi, xavfsiz saqlash, zaxira nusxasi, ma'lumotlar tasnifi)."
+      },
+      "compliance": {
+        "title": "Xavfsizlik siyosati va muvofiqlik",
+        "description": "Biz xavfsizlik siyosati va hujjatlarni yaratamiz (ISMS, IT Xavfsizlik Siyosati, SOP, BCP, DRP)."
+      },
+      "implementation": {
+        "title": "Xavfsizlik yechimlarini joriy etish",
+        "description": "Biz tizimlaringizni hujumlardan himoya qilamiz (NGFW, WAF, IDS/IPS, DLP, Anti-DDoS, Secure Email, EPP)."
+      },
+      "identity": {
+        "title": "Identifikatsiya va kirishni boshqarish",
+        "description": "Identifikatsiyani tekshirish va kirish huquqlarini boshqarish"
+      },
+      "training": {
+        "title": "O'qitish va xabardorlik",
+        "description": "Xodimlarni o'qitamiz va fishing xavfini kamaytiramiz (Cybersecurity Training, Red Team, SOC Operator, Secure Coding)."
+      },
+      "incident": {
+        "title": "Hodisalarga javob berish va ekspertiza",
+        "description": "Kiberhodisalarga tezkor javob beramiz va ularni tekshiramiz (Cyber Incident Response, Digital Forensics, Log & Malware Analysis)."
+      },
+      "software": {
+        "title": "IT va dasturiy yechimlar",
+        "description": "To'liq IT infratuzilma va dasturiy yechimlar: serverlar, tarmoqlar va bulutli tizimlarni quramiz, platformalarni integratsiya qilamiz, ilovalar va SaaS yaratamiz, 24/7 texnik yordam bilan."
+      }
+    }
+  },
   "unreleased": {
     "hero_title": "Datagaze DLP",
     "hero_desc": "Datagaze DLP (Ma'lumotlar yo'qolishining oldini olish tizimi) tarmog'ingizda almashiladigan ma'lumotlar oqimini doimiy ravishda kuzatib boradi.",

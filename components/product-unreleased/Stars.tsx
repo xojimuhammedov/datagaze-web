@@ -1,3 +1,4 @@
+"use client";
 import str from "@/public/product-unreleased/star.svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";

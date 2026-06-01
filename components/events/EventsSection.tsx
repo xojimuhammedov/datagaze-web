@@ -7,8 +7,9 @@ import photo2 from "@/public/expert_insight/photo2.avif";
 import { Button } from "../ui/button";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
+import dayjs from "dayjs";
 
-interface Post {
+interface EventItem {
   id: number;
   title: string;
   description: string;
@@ -16,24 +17,24 @@ interface Post {
   imageUrl: string;
 }
 
-const ExpertInsights = () => {
+const EventsSection = () => {
   const { t, i18n } = useTranslation();
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [events, setEvents] = useState<EventItem[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const currentLang = i18n.language || "uz";
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchEvents = async () => {
       try {
         const apiBase = process.env.NEXT_PUBLIC_API_URL || "http://91.190.159.71:1337/api";
-        const res = await fetch(`${apiBase}/posts?populate=*`);
+        const res = await fetch(`${apiBase}/events?populate=*`);
         if (!res.ok) {
-          throw new Error("Failed to fetch posts");
+          throw new Error("Failed to fetch events");
         }
         const json = await res.json();
         const data = json.data || [];
 
-        const formattedPosts: Post[] = data.map((item: any) => {
+        const formattedEvents: EventItem[] = data.map((item: any) => {
           const attrs = item.attributes || item;
           const id = item.id;
           
@@ -69,15 +70,15 @@ const ExpertInsights = () => {
           };
         });
 
-        setPosts(formattedPosts);
+        setEvents(formattedEvents);
       } catch (error) {
-        console.error("Error fetching posts:", error);
+        console.error("Error fetching events:", error);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchPosts();
+    fetchEvents();
   }, [currentLang]);
 
   const defaultPhotos = [photo1.src, photo2.src];
@@ -87,7 +88,7 @@ const ExpertInsights = () => {
       <div className="mx-auto max-w-7xl px-6 ">
         <div className=" flex flex-col items-center text-center gap-6 pb-24 lg:pb-30">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl max-w-2xl font-medium leading-tight text-gray-900">
-            {t('expert_insights.title')}
+            {t('navbar.resources_list.events')}
           </h2>
 
           <p className="text-lg text-gray-600 max-w-2xl">
@@ -110,25 +111,25 @@ const ExpertInsights = () => {
           </div>
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {posts.map((post, index) => (
-              <Card key={post.id || index} className="relative mx-auto w-full p-3 flex flex-col cursor-pointer">
+            {events?.map((event, index) => (
+              <Card key={event.id || index} className="relative mx-auto w-full p-3 flex flex-col cursor-pointer">
                 <div>
                   <img
-                    src={post.imageUrl || defaultPhotos[index % defaultPhotos.length]}
-                    alt={post.title}
+                    src={event.imageUrl || defaultPhotos[index % defaultPhotos.length]}
+                    alt={event.title}
                     className="rounded-xl object-cover h-80 w-full"
                   />
                   <CardHeader className="pt-10">
                     <CardTitle className="text-xl lg:text-2xl">
-                      {post.title}
+                      {event.title}
                     </CardTitle>
 
                     <CardDescription className="pt-5 flex flex-col gap-0.5 pb-5">
                       <span className="text-base">
-                        {post.date}
+                        {dayjs(event.date).format("DD MMM YYYY")}
                       </span>
                       <span className="text-base text-gray-700 line-clamp-4 mt-4">
-                        {post.description}
+                        {event.description}
                       </span>
                     </CardDescription>
                   </CardHeader>
@@ -148,4 +149,4 @@ const ExpertInsights = () => {
   );
 };
 
-export default ExpertInsights;
+export default EventsSection;

@@ -1,3 +1,5 @@
+"use client"
+
 import img2 from "@/public/dlp/img2.svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";

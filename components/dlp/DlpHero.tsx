@@ -1,3 +1,5 @@
+"use client"
+
 import logo from "@/public/dlp/dlp_logo.svg";
 import Image from "next/image";
 import dlp_img1 from "@/public/dlp/img1.svg";

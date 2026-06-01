@@ -75,7 +75,7 @@ const resources = [
   {
     id: "events",
     title: "Events",
-    href: "#",
+    href: "/events",
     description: "Company and product updates",
   },
 ];
@@ -192,7 +192,7 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="#" className={`${navItemBase} !rounded-[4px] hover:!bg-[rgba(10,15,41,0.08)]`}>
+                  <Link href="/news" className={`${navItemBase} !rounded-[4px] hover:!bg-[rgba(10,15,41,0.08)]`}>
                     {t('navbar.news')}
                   </Link>
                 </NavigationMenuLink>
