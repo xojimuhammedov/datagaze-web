@@ -68,12 +68,13 @@ export default function OrbitSection() {
           </p>
         </div>
       </div>
-      <div className="bg-white max-w-6xl mx-auto p-4 rounded-[24px] flex flex-col gap-10 items-center relative h-min w-full mb-8 overflow-hidden flex-none">
+      <div className="mt-20 md:mt-0 bg-white max-w-6xl mx-auto p-4 rounded-[24px] flex flex-col gap-10 items-center relative h-min w-full mb-8 overflow-hidden flex-none">
 
         {/* ── Orbit visual ── */}
-        <div className="relative mx-auto w-full h-[557px]">
+        {/* Desktop Orbit Animation */}
+        <div className="hidden md:block relative mx-auto w-full h-[557px]">
           {/* Clipped top-half container for the rings (letting top overflow but clipping bottom) */}
-          <div className="relative overflow-hidden w-full h-[500px] mt-10">
+          <div className="relative overflow-hidden w-full h-[460px] mt-10">
             <div className="absolute w-[820px] h-[820px] top-[90px] left-1/2 -translate-x-1/2">
               {/* Outer dashed ring */}
               <div className="absolute rounded-full w-[809px] h-[808px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-dashed border-[#7cc4ff]" />
@@ -86,7 +87,7 @@ export default function OrbitSection() {
                 <div
                   key={i}
                   ref={(el) => { pillRefs.current[i] = el; }}
-                  className="absolute flex items-center justify-center bg-white border border-gray-200 rounded-full shadow-sm w-20 h-20 top-0 left-0 will-change-transform"
+                  className="absolute flex items-center justify-center bg-white border border-gray-200 rounded-full shadow-sm w-25 h-25 top-0 left-0 will-change-transform"
                 >
                   <img
                     src={icon.src}
@@ -99,6 +100,9 @@ export default function OrbitSection() {
             </div>
           </div>
 
+          {/* Centered dashed border line under the logo */}
+          <div className="absolute w-[809px] left-1/2 -translate-x-1/2 bottom-[57px] border-b border-dashed border-[#7cc4ff] z-0" />
+
           <div className="absolute flex items-center justify-center bg-white border border-gray-200 rounded-full shadow-md z-10 w-[114px] h-[114px] rounded-[110px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.1)] bottom-0 left-1/2 -translate-x-1/2">
             <img
               src="/logos/icon4.svg"
@@ -110,8 +114,17 @@ export default function OrbitSection() {
           </div>
         </div>
 
+        {/* Mobile Background Image */}
+        <div className="block md:hidden w-full">
+          <img
+            src="/mobile-bg.jpg"
+            alt="Mobile Background"
+            className="w-full h-auto"
+          />
+        </div>
+
         {/* ── Metrics Section (from Frame 7.png design) ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full text-center mt-12 pb-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-full text-center mt-4 lg:mt-12 pb-4">
           {/* Card 1 */}
           <div className="flex flex-col items-center">
             <h3 className="text-4xl font-medium text-gray-900 leading-none">6+</h3>
