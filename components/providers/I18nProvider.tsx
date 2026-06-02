@@ -14,7 +14,7 @@ export default function I18nProvider({ children }: { children: ReactNode }) {
   }, [i18n.language]);
 
   if (!mounted) {
-    return <div style={{ opacity: 0 }}>{children}</div>;
+    return null;
   }
 
   return <>{children}</>;
