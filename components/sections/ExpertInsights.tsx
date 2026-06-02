@@ -14,6 +14,7 @@ interface Post {
   description: string;
   date: string;
   imageUrl: string;
+  documentId: string;
 }
 
 const ExpertInsights = () => {
@@ -35,7 +36,7 @@ const ExpertInsights = () => {
 
         const formattedPosts: Post[] = data.map((item: any) => {
           const attrs = item.attributes || item;
-          const id = item.id;
+          const id = item.documentId;
           
           // Get localized title and description
           const title = attrs[`title_${currentLang}`] || attrs.title_uz || attrs.title || "";
@@ -80,6 +81,8 @@ const ExpertInsights = () => {
     fetchPosts();
   }, [currentLang]);
 
+  console.log(posts)
+
   const defaultPhotos = [photo1.src, photo2.src];
 
   return (
@@ -111,36 +114,38 @@ const ExpertInsights = () => {
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {posts.map((post, index) => (
-              <Card key={post.id || index} className="relative mx-auto w-full p-3 flex flex-col cursor-pointer">
-                <div>
-                  <img
-                    src={post.imageUrl || defaultPhotos[index % defaultPhotos.length]}
-                    alt={post.title}
-                    className="rounded-xl object-cover h-80 w-full"
-                  />
-                  <CardHeader className="pt-10">
-                    <CardTitle className="text-xl lg:text-2xl">
-                      {post.title}
-                    </CardTitle>
+              <Link href={`/posts/${post.id}`} key={post.id || index} className="w-full block">
+                <Card className="relative mx-auto w-full p-3 flex flex-col cursor-pointer">
+                  <div>
+                    <img
+                      src={post.imageUrl || defaultPhotos[index % defaultPhotos.length]}
+                      alt={post.title}
+                      className="rounded-xl object-cover h-80 w-full"
+                    />
+                    <CardHeader className="pt-10">
+                      <CardTitle className="text-xl lg:text-2xl">
+                        {post.title}
+                      </CardTitle>
 
-                    <CardDescription className="pt-5 flex flex-col gap-0.5 pb-5">
-                      <span className="text-base">
-                        {post.date}
-                      </span>
-                      <span className="text-base text-gray-700 line-clamp-4 mt-4">
-                        {post.description}
-                      </span>
-                    </CardDescription>
-                  </CardHeader>
-                </div>
-              </Card>
+                      <CardDescription className="pt-5 flex flex-col gap-0.5 pb-5">
+                        <span className="text-base">
+                          {post.date}
+                        </span>
+                        <span className="text-base text-gray-700 line-clamp-4 mt-4">
+                          {post.description}
+                        </span>
+                      </CardDescription>
+                    </CardHeader>
+                  </div>
+                </Card>
+              </Link>
             ))}
           </div>
         )}
 
         <div className="flex justify-center mt-10">
           <Button className="rounded-lg py-5 shadow" variant="outline">
-            <Link className="text-xs lg:text-sm" href="/">{t('expert_insights.see_more')}</Link>
+            <Link className="text-xs lg:text-sm" href="/news">{t('expert_insights.see_more')}</Link>
           </Button>
         </div>
       </div>

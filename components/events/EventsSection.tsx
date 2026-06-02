@@ -15,6 +15,7 @@ interface EventItem {
   description: string;
   date: string;
   imageUrl: string;
+  documentId: string;
 }
 
 const EventsSection = () => {
@@ -36,7 +37,7 @@ const EventsSection = () => {
 
         const formattedEvents: EventItem[] = data.map((item: any) => {
           const attrs = item.attributes || item;
-          const id = item.id;
+          const id = item.documentId;
           
           // Get localized title and description
           const title = attrs[`title_${currentLang}`] || attrs.title_uz || attrs.title || "";
@@ -112,38 +113,36 @@ const EventsSection = () => {
         ) : (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {events?.map((event, index) => (
-              <Card key={event.id || index} className="relative mx-auto w-full p-3 flex flex-col cursor-pointer">
-                <div>
-                  <img
-                    src={event.imageUrl || defaultPhotos[index % defaultPhotos.length]}
-                    alt={event.title}
-                    className="rounded-xl object-cover h-80 w-full"
-                  />
-                  <CardHeader className="pt-10">
-                    <CardTitle className="text-xl lg:text-2xl">
-                      {event.title}
-                    </CardTitle>
+              <Link href={`/events/${event.id}`} key={event.id || index} className="w-full block">
+                <Card className="relative mx-auto w-full p-3 flex flex-col cursor-pointer hover:shadow-lg transition-shadow duration-300">
+                  <div>
+                    <img
+                      src={event.imageUrl || defaultPhotos[index % defaultPhotos.length]}
+                      alt={event.title}
+                      className="rounded-xl object-cover h-80 w-full"
+                    />
+                    <CardHeader className="pt-10">
+                      <CardTitle className="text-xl lg:text-2xl">
+                        {event.title}
+                      </CardTitle>
 
-                    <CardDescription className="pt-5 flex flex-col gap-0.5 pb-5">
-                      <span className="text-base">
-                        {dayjs(event.date).format("DD MMM YYYY")}
-                      </span>
-                      <span className="text-base text-gray-700 line-clamp-4 mt-4">
-                        {event.description}
-                      </span>
-                    </CardDescription>
-                  </CardHeader>
-                </div>
-              </Card>
+                      <CardDescription className="pt-5 flex flex-col gap-0.5 pb-5">
+                        <span className="text-base">
+                          {dayjs(event.date).format("DD MMM YYYY")}
+                        </span>
+                        <span className="text-base text-gray-700 line-clamp-4 mt-4">
+                          {event.description}
+                        </span>
+                      </CardDescription>
+                    </CardHeader>
+                  </div>
+                </Card>
+              </Link>
             ))}
           </div>
         )}
 
-        <div className="flex justify-center mt-10">
-          <Button className="rounded-lg py-5 shadow" variant="outline">
-            <Link className="text-xs lg:text-sm" href="/">{t('expert_insights.see_more')}</Link>
-          </Button>
-        </div>
+  
       </div>
     </section>
   );
