@@ -14,8 +14,11 @@
     },
     "resources_list": {
       "documentation": "Documentation",
+      "documentation_desc": "Read about product technical docs",
       "blog": "Blog",
-      "events": "Events"
+      "blog_desc": "Industry articles and and useful insights",
+      "events": "Events",
+      "events_desc": "Company and product updates"
     }
   },
   "hero": {

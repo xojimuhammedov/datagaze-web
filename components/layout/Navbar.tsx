@@ -79,7 +79,6 @@ const resources = [
     description: "Company and product updates",
   },
 ];
-const productOptions = ["Analytics", "Dashboards", "Automation"];
 const languageOptions = [
   { label: "English", value: "en" },
   { label: "O'zbekcha", value: "uz" },
@@ -179,7 +178,7 @@ export default function Navbar() {
                                 {t(`navbar.resources_list.${item.id}`)}
                               </span>
                               <p className="text-sm text-gray-500 leading-relaxed">
-                                {item.description}
+                                {t(`navbar.resources_list.${item.id}_desc`)}
                               </p>
                             </div>
                           </Link>

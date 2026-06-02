@@ -81,8 +81,6 @@ const ExpertInsights = () => {
     fetchPosts();
   }, [currentLang]);
 
-  console.log(posts)
-
   const defaultPhotos = [photo1.src, photo2.src];
 
   return (

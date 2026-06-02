@@ -14,8 +14,11 @@
     },
     "resources_list": {
       "documentation": "Hujjatlar",
+      "documentation_desc": "Mahsulotning texnik hujjatlari haqida o'qing",
       "blog": "Blog",
-      "events": "Tadbirlar"
+      "blog_desc": "Soha maqolalari va foydali ma'lumotlar",
+      "events": "Tadbirlar",
+      "events_desc": "Kompaniya va mahsulot yangiliklari"
     }
   },
   "hero": {
