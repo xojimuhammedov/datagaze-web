@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import waff_logo from "@/public/waff/waff_logo.svg";
-import img from "@/public/waff/img_waff.svg";
+import img from "@/public/waff/waff-bg.jpg";
 import { useTranslation } from "react-i18next";
 
 const WaffHero = () => {
@@ -18,8 +18,12 @@ const WaffHero = () => {
           </p>
         </div>
 
-        <div>
-          <Image src={img} alt="dlp" />
+        <div className="flex justify-center">
+          <Image 
+            src={img} 
+            alt="dlp" 
+            className="w-400 rounded-lg"
+          />
         </div>
       </div>
     </section>
